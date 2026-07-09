@@ -1,0 +1,21 @@
+{
+  "student": "Sam",
+  "items": [
+    {"ja": "一日", "yomi": "ついたち", "en": "1st day of the month", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"},
+    {"ja": "二日", "yomi": "ふつか", "en": "2nd day of the month", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"},
+    {"ja": "三日", "yomi": "みっか", "en": "3rd day of the month", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"},
+    {"ja": "四日", "yomi": "よっか", "en": "4th day of the month", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"},
+    {"ja": "五日", "yomi": "いつか", "en": "5th day of the month", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"},
+    {"ja": "六日", "yomi": "むいか", "en": "6th day of the month", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"},
+    {"ja": "七日", "yomi": "なのか", "en": "7th day of the month", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"},
+    {"ja": "八日", "yomi": "ようか", "en": "8th day of the month", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"},
+    {"ja": "九日", "yomi": "ここのか", "en": "9th day of the month", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"},
+    {"ja": "十日", "yomi": "とおか", "en": "10th day of the month", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"},
+    {"ja": "体調", "yomi": "たいちょう", "en": "physical condition", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"},
+    {"ja": "甥", "yomi": "おい", "en": "nephew", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"},
+    {"ja": "姪", "yomi": "めい", "en": "niece", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"},
+    {"ja": "娘", "yomi": "むすめ", "en": "daughter", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"},
+    {"ja": "興味", "yomi": "きょうみ", "en": "interest", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"},
+    {"ja": "夜遊び", "yomi": "よあそび", "en": "going out at night / nightlife", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"}
+  ]
+}

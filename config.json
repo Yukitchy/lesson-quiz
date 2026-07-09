@@ -1,0 +1,33 @@
+{
+  "base_url": "",
+  "students": {
+    "pedro": {
+      "flag": "🇧🇷",
+      "slug": "pedro-028e"
+    },
+    "rolando": {
+      "flag": "🇺🇸",
+      "slug": ""
+    },
+    "suzy": {
+      "flag": "🇺🇸",
+      "slug": "suzy-7c8f"
+    },
+    "michael": {
+      "flag": "🇺🇸",
+      "slug": "michael-ddbb"
+    },
+    "sam": {
+      "flag": "🇬🇧",
+      "slug": "sam-4158"
+    },
+    "chester": {
+      "flag": "🇨🇦",
+      "slug": "chester-0830"
+    },
+    "kelsi": {
+      "flag": "🇺🇸",
+      "slug": "kelsi-7e76"
+    }
+  }
+}

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Sam's Vocabulary Quiz</title>
+<style>
+  :root {
+    --bg: #F2F2F7; --card: #FFFFFF; --text: #1C1C1E; --text2: #8E8E93;
+    --accent: #007AFF; --green: #34C759; --red: #FF3B30; --line: rgba(60,60,67,.12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #000; --card: #1C1C1E; --text: #F2F2F7; --text2: #98989E; --line: rgba(84,84,88,.4); }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Hiragino Sans", "Noto Sans JP", sans-serif;
+    background: var(--bg); color: var(--text);
+    min-height: 100vh; padding: env(safe-area-inset-top) 16px calc(24px + env(safe-area-inset-bottom));
+    max-width: 480px; margin: 0 auto;
+  }
+  .screen { display: none; animation: fade .25s ease; }
+  .screen.on { display: block; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+  /* ---- Home ---- */
+  header { text-align: center; padding: 28px 0 20px; }
+  .flag { font-size: 44px; line-height: 1; }
+  h1 { font-size: 24px; font-weight: 800; margin-top: 8px; letter-spacing: -.3px; }
+  .sub { color: var(--text2); font-size: 14px; margin-top: 4px; }
+  .seg { display: flex; background: var(--card); border-radius: 12px; padding: 3px; margin: 4px 0 16px; }
+  .seg button {
+    flex: 1; border: 0; background: transparent; color: var(--text2); font-size: 13px; font-weight: 600;
+    padding: 8px 4px; border-radius: 9px; font-family: inherit; cursor: pointer;
+  }
+  .seg button.sel { background: var(--accent); color: #fff; }
+  .label { font-size: 13px; font-weight: 600; color: var(--text2); text-transform: uppercase; letter-spacing: .5px; margin: 0 4px 8px; }
+  .mode {
+    display: flex; align-items: center; gap: 14px; width: 100%; text-align: left;
+    background: var(--card); border: 0; border-radius: 16px; padding: 16px; margin-bottom: 10px;
+    font-family: inherit; color: var(--text); cursor: pointer; box-shadow: 0 1px 2px rgba(0,0,0,.04);
+  }
+  .mode:active { transform: scale(.98); }
+  .mode .ic { font-size: 28px; }
+  .mode .t { font-size: 17px; font-weight: 700; }
+  .mode .d { font-size: 13px; color: var(--text2); margin-top: 2px; }
+  .mode .best { margin-left: auto; font-size: 12px; font-weight: 700; color: var(--accent); white-space: nowrap; }
+  .wordsBtn { display: block; width: 100%; text-align: center; background: none; border: 0; color: var(--accent); font-size: 15px; font-weight: 600; padding: 14px; font-family: inherit; cursor: pointer; }
+  .foot { text-align: center; color: var(--text2); font-size: 12px; margin-top: 18px; }
+
+  /* ---- Quiz ---- */
+  .topbar { display: flex; align-items: center; gap: 12px; padding: 14px 0; }
+  .topbar button { border: 0; background: none; color: var(--accent); font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer; }
+  .bar { flex: 1; height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; }
+  .bar i { display: block; height: 100%; width: 0; background: var(--accent); border-radius: 3px; transition: width .3s ease; }
+  .qnum { font-size: 13px; font-weight: 700; color: var(--text2); min-width: 44px; text-align: right; }
+  .qcard { background: var(--card); border-radius: 20px; padding: 34px 20px; text-align: center; margin-bottom: 16px; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+  .qhint { font-size: 12px; font-weight: 700; letter-spacing: 1px; color: var(--text2); text-transform: uppercase; margin-bottom: 12px; }
+  .qword { font-size: 34px; font-weight: 800; line-height: 1.25; word-break: break-word; }
+  .qword.en { font-size: 28px; }
+  .qyomi { font-size: 16px; color: var(--text2); margin-top: 8px; min-height: 20px; }
+  .ans { display: grid; gap: 10px; }
+  .ans button {
+    background: var(--card); border: 2px solid transparent; border-radius: 14px; padding: 15px 14px;
+    font-size: 17px; font-weight: 600; color: var(--text); font-family: inherit; cursor: pointer;
+    text-align: center; word-break: break-word; box-shadow: 0 1px 2px rgba(0,0,0,.04);
+  }
+  .ans button:active { transform: scale(.98); }
+  .ans button.ok { border-color: var(--green); background: color-mix(in srgb, var(--green) 14%, var(--card)); }
+  .ans button.ng { border-color: var(--red); background: color-mix(in srgb, var(--red) 12%, var(--card)); }
+  .ans button.dim { opacity: .45; }
+  .ans .small { display: block; font-size: 13px; color: var(--text2); font-weight: 500; margin-top: 2px; }
+  .next { width: 100%; margin-top: 16px; background: var(--accent); color: #fff; border: 0; border-radius: 14px; padding: 16px; font-size: 17px; font-weight: 700; font-family: inherit; cursor: pointer; visibility: hidden; }
+  .next.show { visibility: visible; }
+
+  /* ---- Result ---- */
+  .resCard { background: var(--card); border-radius: 20px; padding: 32px 20px; text-align: center; margin: 20px 0 16px; }
+  .resEmoji { font-size: 52px; }
+  .resScore { font-size: 40px; font-weight: 800; margin-top: 10px; }
+  .resMsg { color: var(--text2); font-size: 15px; margin-top: 6px; }
+  .newBest { display: inline-block; margin-top: 10px; background: color-mix(in srgb, var(--accent) 14%, var(--card)); color: var(--accent); font-size: 13px; font-weight: 700; padding: 5px 12px; border-radius: 999px; }
+  .review { background: var(--card); border-radius: 16px; padding: 4px 16px; margin-bottom: 16px; }
+  .review .row { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .review .row:last-child { border-bottom: 0; }
+  .review .ja { font-weight: 700; font-size: 17px; }
+  .review .yo { font-size: 12px; color: var(--text2); }
+  .review .en { color: var(--text2); font-size: 15px; text-align: right; }
+  .btnRow { display: grid; gap: 10px; }
+  .primary { background: var(--accent); color: #fff; border: 0; border-radius: 14px; padding: 16px; font-size: 17px; font-weight: 700; font-family: inherit; cursor: pointer; width: 100%; }
+  .ghost { background: var(--card); color: var(--accent); border: 0; border-radius: 14px; padding: 15px; font-size: 16px; font-weight: 600; font-family: inherit; cursor: pointer; width: 100%; }
+
+  /* ---- Word list ---- */
+  .dateHead { font-size: 13px; font-weight: 700; color: var(--text2); margin: 18px 4px 8px; }
+  .wl { background: var(--card); border-radius: 16px; padding: 4px 16px; }
+  .wl .row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); }
+  .wl .row:last-child { border-bottom: 0; }
+  .empty { text-align: center; color: var(--text2); padding: 40px 20px; font-size: 15px; line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<!-- HOME -->
+<div class="screen on" id="scrHome">
+  <header>
+    <div class="flag">🇬🇧</div>
+    <h1>Sam&rsquo;s Vocabulary Quiz</h1>
+    <div class="sub" id="homeSub"></div>
+  </header>
+  <div class="label">Words from</div>
+  <div class="seg" id="scopeSeg">
+    <button data-scope="all" class="sel">All lessons</button>
+    <button data-scope="last3">Last 3</button>
+    <button data-scope="last1">Latest</button>
+  </div>
+  <div class="label">Quiz mode</div>
+  <div id="modeList"></div>
+  <button class="wordsBtn" onclick="showWords()">📖 Browse all words</button>
+  <div class="foot">Made by Yuuki sensei · Updated 2026-07-09</div>
+</div>
+
+<!-- QUIZ -->
+<div class="screen" id="scrQuiz">
+  <div class="topbar">
+    <button onclick="goHome()">✕</button>
+    <div class="bar"><i id="barFill"></i></div>
+    <div class="qnum" id="qnum"></div>
+  </div>
+  <div class="qcard">
+    <div class="qhint" id="qhint"></div>
+    <div class="qword" id="qword"></div>
+    <div class="qyomi" id="qyomi"></div>
+  </div>
+  <div class="ans" id="ansBox"></div>
+  <button class="next" id="nextBtn" onclick="nextQ()">Next</button>
+</div>
+
+<!-- RESULT -->
+<div class="screen" id="scrResult">
+  <div class="resCard">
+    <div class="resEmoji" id="resEmoji"></div>
+    <div class="resScore" id="resScore"></div>
+    <div class="resMsg" id="resMsg"></div>
+    <div id="resBest"></div>
+  </div>
+  <div class="label" id="reviewLabel" style="display:none">Words to review</div>
+  <div class="review" id="reviewBox" style="display:none"></div>
+  <div class="btnRow">
+    <button class="primary" onclick="startQuiz(state.mode)">Try again</button>
+    <button class="ghost" onclick="goHome()">Home</button>
+  </div>
+</div>
+
+<!-- WORD LIST -->
+<div class="screen" id="scrWords">
+  <div class="topbar">
+    <button onclick="goHome()">‹ Back</button>
+    <div style="flex:1;text-align:center;font-weight:700">All Words</div>
+    <div style="width:44px"></div>
+  </div>
+  <div id="wordList"></div>
+</div>
+
+<script>
+const DATA = {"student": "Sam", "items": [{"ja": "一日", "yomi": "ついたち", "en": "1st day of the month", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"}, {"ja": "二日", "yomi": "ふつか", "en": "2nd day of the month", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"}, {"ja": "三日", "yomi": "みっか", "en": "3rd day of the month", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"}, {"ja": "四日", "yomi": "よっか", "en": "4th day of the month", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"}, {"ja": "五日", "yomi": "いつか", "en": "5th day of the month", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"}, {"ja": "六日", "yomi": "むいか", "en": "6th day of the month", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"}, {"ja": "七日", "yomi": "なのか", "en": "7th day of the month", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"}, {"ja": "八日", "yomi": "ようか", "en": "8th day of the month", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"}, {"ja": "九日", "yomi": "ここのか", "en": "9th day of the month", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"}, {"ja": "十日", "yomi": "とおか", "en": "10th day of the month", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"}, {"ja": "体調", "yomi": "たいちょう", "en": "physical condition", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"}, {"ja": "甥", "yomi": "おい", "en": "nephew", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"}, {"ja": "姪", "yomi": "めい", "en": "niece", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"}, {"ja": "娘", "yomi": "むすめ", "en": "daughter", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"}, {"ja": "興味", "yomi": "きょうみ", "en": "interest", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"}, {"ja": "夜遊び", "yomi": "よあそび", "en": "going out at night / nightlife", "d": "2026-05-31", "src": "2026-05-31-Sam-8月来日旅行計画.md"}]};
+const KANJI = /[一-鿿]/;
+const QLEN = 10;
+const state = { scope: "all", mode: null, qs: [], i: 0, score: 0, wrong: [], locked: false };
+
+const dates = [...new Set(DATA.items.map(x => x.d))].sort().reverse();
+function pool(scope) {
+  if (scope === "last1") return DATA.items.filter(x => x.d === dates[0]);
+  if (scope === "last3") { const s = new Set(dates.slice(0, 3)); return DATA.items.filter(x => s.has(x.d)); }
+  return DATA.items;
+}
+const MODES = [
+  { id: "ja2en", ic: "🇯🇵", t: "Japanese → English", d: "Read the word, pick the meaning",
+    ok: p => p.length >= 4 },
+  { id: "en2ja", ic: "🇬🇧", t: "English → Japanese", d: "Pick the Japanese word",
+    ok: p => p.length >= 4 },
+  { id: "yomi", ic: "🔤", t: "Reading Quiz", d: "Kanji → correct reading",
+    ok: p => p.filter(x => x.yomi && KANJI.test(x.ja)).length >= 4 },
+];
+function shuffle(a) { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function bestKey(m) { return `lq-${DATA.student}-${m}-${state.scope}`; }
+
+function renderHome() {
+  const p = pool(state.scope);
+  document.getElementById("homeSub").textContent =
+    `${DATA.items.length} words · ${dates.length} lessons`;
+  const box = document.getElementById("modeList");
+  box.innerHTML = "";
+  MODES.forEach(m => {
+    const b = document.createElement("button");
+    b.className = "mode";
+    const usable = m.ok(p);
+    const best = localStorage.getItem(bestKey(m.id));
+    b.innerHTML = `<span class="ic">${m.ic}</span><span><span class="t">${m.t}</span><br><span class="d">${usable ? m.d : "Not enough words in this range yet"}</span></span>` +
+      (best ? `<span class="best">★ ${best}</span>` : "");
+    if (!usable) b.style.opacity = .45; else b.onclick = () => startQuiz(m.id);
+    box.appendChild(b);
+  });
+}
+document.getElementById("scopeSeg").querySelectorAll("button").forEach(b => {
+  b.onclick = () => {
+    document.getElementById("scopeSeg").querySelectorAll("button").forEach(x => x.classList.remove("sel"));
+    b.classList.add("sel"); state.scope = b.dataset.scope; renderHome();
+  };
+});
+
+function show(id) { document.querySelectorAll(".screen").forEach(s => s.classList.remove("on")); document.getElementById(id).classList.add("on"); }
+function goHome() { renderHome(); show("scrHome"); }
+
+function startQuiz(mode) {
+  state.mode = mode;
+  let p = pool(state.scope);
+  if (mode === "yomi") p = p.filter(x => x.yomi && KANJI.test(x.ja));
+  state.qs = shuffle(p).slice(0, QLEN);
+  state.i = 0; state.score = 0; state.wrong = [];
+  show("scrQuiz"); renderQ();
+}
+function distractors(item, mode) {
+  let src = DATA.items;
+  if (mode === "yomi") src = src.filter(x => x.yomi && x.yomi !== item.yomi);
+  const key = mode === "ja2en" ? "en" : mode === "en2ja" ? "ja" : "yomi";
+  const seen = new Set([item[key]]);
+  const out = [];
+  for (const c of shuffle(src)) {
+    if (c === item || seen.has(c[key])) continue;
+    seen.add(c[key]); out.push(c);
+    if (out.length === 3) break;
+  }
+  return out;
+}
+function renderQ() {
+  const item = state.qs[state.i];
+  state.locked = false;
+  document.getElementById("barFill").style.width = (state.i / state.qs.length * 100) + "%";
+  document.getElementById("qnum").textContent = `${state.i + 1} / ${state.qs.length}`;
+  const hint = { ja2en: "What does this mean?", en2ja: "Which word is this?", yomi: "How do you read this?" }[state.mode];
+  document.getElementById("qhint").textContent = hint;
+  const qw = document.getElementById("qword");
+  qw.className = "qword" + (state.mode === "en2ja" ? " en" : "");
+  qw.textContent = state.mode === "en2ja" ? item.en : item.ja;
+  document.getElementById("qyomi").textContent = (state.mode === "ja2en" && item.yomi) ? item.yomi : "";
+  document.getElementById("nextBtn").classList.remove("show");
+
+  const opts = shuffle([item, ...distractors(item, state.mode)]);
+  const box = document.getElementById("ansBox");
+  box.innerHTML = "";
+  opts.forEach(o => {
+    const b = document.createElement("button");
+    if (state.mode === "ja2en") b.textContent = o.en;
+    else if (state.mode === "yomi") b.textContent = o.yomi;
+    else b.innerHTML = `${o.ja}${o.yomi ? `<span class="small">${o.yomi}</span>` : ""}`;
+    b.onclick = () => answer(b, o === item, item, box);
+    box.appendChild(b);
+  });
+}
+function answer(btn, correct, item, box) {
+  if (state.locked) return; state.locked = true;
+  box.querySelectorAll("button").forEach(b => { b.classList.add("dim"); b.style.pointerEvents = "none"; });
+  if (correct) { btn.classList.remove("dim"); btn.classList.add("ok"); state.score++; }
+  else {
+    btn.classList.remove("dim"); btn.classList.add("ng"); state.wrong.push(item);
+    const key = state.mode === "ja2en" ? "en" : state.mode === "yomi" ? "yomi" : "ja";
+    box.querySelectorAll("button").forEach(b => {
+      if (b.textContent.startsWith(item[key])) { b.classList.remove("dim"); b.classList.add("ok"); }
+    });
+    if (state.mode === "ja2en" && item.yomi) document.getElementById("qyomi").textContent = item.yomi;
+  }
+  document.getElementById("nextBtn").classList.add("show");
+  document.getElementById("nextBtn").textContent = state.i + 1 === state.qs.length ? "See results" : "Next";
+}
+function nextQ() {
+  state.i++;
+  if (state.i >= state.qs.length) return showResult();
+  renderQ();
+}
+function showResult() {
+  show("scrResult");
+  const pct = state.score / state.qs.length;
+  document.getElementById("resEmoji").textContent = pct === 1 ? "🏆" : pct >= .8 ? "🎉" : pct >= .5 ? "💪" : "📚";
+  document.getElementById("resScore").textContent = `${state.score} / ${state.qs.length}`;
+  document.getElementById("resMsg").textContent =
+    pct === 1 ? "Perfect! すごい！" : pct >= .8 ? "Great job! いいね！" : pct >= .5 ? "Nice — keep going! その調子！" : "Review time — がんばって！";
+  const prev = +(localStorage.getItem(bestKey(state.mode)) || 0);
+  const scoreStr = `${state.score}/${state.qs.length}`;
+  let isBest = false;
+  if (state.score / state.qs.length >= prev) { localStorage.setItem(bestKey(state.mode), scoreStr); isBest = state.score > 0 && pct > prev; }
+  document.getElementById("resBest").innerHTML = isBest ? `<span class="newBest">New best score!</span>` : "";
+  const has = state.wrong.length > 0;
+  document.getElementById("reviewLabel").style.display = has ? "" : "none";
+  const rb = document.getElementById("reviewBox");
+  rb.style.display = has ? "" : "none";
+  rb.innerHTML = state.wrong.map(w =>
+    `<div class="row"><div><div class="ja">${w.ja}</div>${w.yomi ? `<div class="yo">${w.yomi}</div>` : ""}</div><div class="en">${w.en}</div></div>`).join("");
+}
+function showWords() {
+  const box = document.getElementById("wordList");
+  box.innerHTML = "";
+  dates.forEach(d => {
+    const items = DATA.items.filter(x => x.d === d);
+    const h = document.createElement("div"); h.className = "dateHead";
+    h.textContent = `📅 ${d} (${items.length} words)`;
+    const card = document.createElement("div"); card.className = "wl";
+    card.innerHTML = items.map(w =>
+      `<div class="row"><div><span class="ja" style="font-weight:700">${w.ja}</span>${w.yomi ? ` <span class="yo" style="font-size:12px;color:var(--text2)">${w.yomi}</span>` : ""}</div><div class="en" style="color:var(--text2);text-align:right">${w.en}</div></div>`).join("");
+    box.appendChild(h); box.appendChild(card);
+  });
+  show("scrWords");
+}
+renderHome();
+</script>
+</body>
+</html>
