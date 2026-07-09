@@ -1,44 +1,264 @@
 {
-  "student": "Pedro",
-  "items": [
-    {"ja": "前回", "yomi": "ぜんかい", "en": "last time", "d": "2026-06-29", "src": "2026-06-29-Pedro-BreakingBadと日常系アニメ談義.md"},
-    {"ja": "今回", "yomi": "こんかい", "en": "this time", "d": "2026-06-29", "src": "2026-06-29-Pedro-BreakingBadと日常系アニメ談義.md"},
-    {"ja": "次回", "yomi": "じかい", "en": "next time", "d": "2026-06-29", "src": "2026-06-29-Pedro-BreakingBadと日常系アニメ談義.md"},
-    {"ja": "くしゃみ", "yomi": null, "en": "sneeze", "d": "2026-06-29", "src": "2026-06-29-Pedro-BreakingBadと日常系アニメ談義.md"},
-
-    {"ja": "それとも", "yomi": null, "en": "or (used for alternatives)", "d": "2026-06-30", "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"},
-    {"ja": "それと", "yomi": null, "en": "and, also (adds something extra)", "d": "2026-06-30", "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"},
-    {"ja": "AとBの違いは何ですか", "yomi": null, "en": "What is the difference between A and B?", "d": "2026-06-30", "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"},
-    {"ja": "カウンターアタック", "yomi": null, "en": "counterattack", "d": "2026-06-30", "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"},
-    {"ja": "サイドアタック", "yomi": null, "en": "side attack (attacking from the flank)", "d": "2026-06-30", "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"},
-    {"ja": "守備", "yomi": "しゅび", "en": "defense", "d": "2026-06-30", "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"},
-    {"ja": "ディフェンス", "yomi": null, "en": "defense", "d": "2026-06-30", "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"},
-    {"ja": "ゴールキーパー", "yomi": null, "en": "goalkeeper", "d": "2026-06-30", "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"},
-    {"ja": "ポゼッション", "yomi": null, "en": "possession (of the ball)", "d": "2026-06-30", "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"},
-    {"ja": "前半", "yomi": "ぜんはん", "en": "first half", "d": "2026-06-30", "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"},
-    {"ja": "後半", "yomi": "こうはん", "en": "second half", "d": "2026-06-30", "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"},
-    {"ja": "死にゲー", "yomi": "しにげー", "en": "brutally difficult video game (genre)", "d": "2026-06-30", "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"},
-    {"ja": "ソウルスライク", "yomi": null, "en": "souls-like (video game genre)", "d": "2026-06-30", "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"},
-    {"ja": "匿名", "yomi": "とくめい", "en": "anonymity", "d": "2026-06-30", "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"},
-    {"ja": "サイレントマジョリティ", "yomi": null, "en": "silent majority", "d": "2026-06-30", "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"},
-    {"ja": "馬鹿にする", "yomi": "ばかにする", "en": "to make fun of, to mock", "d": "2026-06-30", "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"},
-    {"ja": "嘲笑", "yomi": "ちょうしょう", "en": "ridicule, mockery", "d": "2026-06-30", "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"},
-    {"ja": "非難", "yomi": "ひなん", "en": "criticism, blame", "d": "2026-06-30", "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"},
-
-    {"ja": "〜のせいで", "yomi": null, "en": "because of ~ (blames a negative result)", "d": "2026-07-07", "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"},
-    {"ja": "仕方なく", "yomi": "しかたなく", "en": "reluctantly, having no other choice", "d": "2026-07-07", "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"},
-    {"ja": "抜け出す", "yomi": "ぬけだす", "en": "to escape, to get out of (a situation)", "d": "2026-07-07", "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"},
-    {"ja": "逃げ出す", "yomi": "にげだす", "en": "to run away, to flee (urgent)", "d": "2026-07-07", "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"},
-    {"ja": "ありがたいことに", "yomi": null, "en": "thankfully, fortunately", "d": "2026-07-07", "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"},
-    {"ja": "言い訳", "yomi": "いいわけ", "en": "excuse, pretext", "d": "2026-07-07", "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"},
-    {"ja": "共産主義", "yomi": "きょうさんしゅぎ", "en": "communism", "d": "2026-07-07", "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"},
-    {"ja": "独裁", "yomi": "どくさい", "en": "dictatorship", "d": "2026-07-07", "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"},
-    {"ja": "恐怖", "yomi": "きょうふ", "en": "fear", "d": "2026-07-07", "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"},
-    {"ja": "拉致", "yomi": "らち", "en": "abduction", "d": "2026-07-07", "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"},
-    {"ja": "軍隊", "yomi": "ぐんたい", "en": "military", "d": "2026-07-07", "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"},
-    {"ja": "国会議員", "yomi": "こっかいぎいん", "en": "member of parliament, congressman", "d": "2026-07-07", "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"},
-    {"ja": "犯罪者", "yomi": "はんざいしゃ", "en": "criminal", "d": "2026-07-07", "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"},
-    {"ja": "貧富の差", "yomi": "ひんぷのさ", "en": "gap between rich and poor", "d": "2026-07-07", "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"},
-    {"ja": "治る", "yomi": "なおる", "en": "to be cured, to recover", "d": "2026-07-07", "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"}
-  ]
+ "student": "Pedro",
+ "items": [
+  {
+   "ja": "前回",
+   "yomi": "ぜんかい",
+   "en": "last time",
+   "d": "2026-06-29",
+   "src": "2026-06-29-Pedro-BreakingBadと日常系アニメ談義.md"
+  },
+  {
+   "ja": "今回",
+   "yomi": "こんかい",
+   "en": "this time",
+   "d": "2026-06-29",
+   "src": "2026-06-29-Pedro-BreakingBadと日常系アニメ談義.md"
+  },
+  {
+   "ja": "次回",
+   "yomi": "じかい",
+   "en": "next time",
+   "d": "2026-06-29",
+   "src": "2026-06-29-Pedro-BreakingBadと日常系アニメ談義.md"
+  },
+  {
+   "ja": "くしゃみ",
+   "yomi": null,
+   "en": "sneeze",
+   "d": "2026-06-29",
+   "src": "2026-06-29-Pedro-BreakingBadと日常系アニメ談義.md"
+  },
+  {
+   "ja": "それとも",
+   "yomi": null,
+   "en": "or (used for alternatives)",
+   "d": "2026-06-30",
+   "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"
+  },
+  {
+   "ja": "それと",
+   "yomi": null,
+   "en": "and, also (adds something extra)",
+   "d": "2026-06-30",
+   "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"
+  },
+  {
+   "ja": "AとBの違いは何ですか",
+   "yomi": null,
+   "en": "What is the difference between A and B?",
+   "d": "2026-06-30",
+   "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"
+  },
+  {
+   "ja": "カウンターアタック",
+   "yomi": null,
+   "en": "counterattack",
+   "d": "2026-06-30",
+   "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"
+  },
+  {
+   "ja": "サイドアタック",
+   "yomi": null,
+   "en": "side attack (attacking from the flank)",
+   "d": "2026-06-30",
+   "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"
+  },
+  {
+   "ja": "守備",
+   "yomi": "しゅび",
+   "en": "defense",
+   "d": "2026-06-30",
+   "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"
+  },
+  {
+   "ja": "ディフェンス",
+   "yomi": null,
+   "en": "defense",
+   "d": "2026-06-30",
+   "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"
+  },
+  {
+   "ja": "ゴールキーパー",
+   "yomi": null,
+   "en": "goalkeeper",
+   "d": "2026-06-30",
+   "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"
+  },
+  {
+   "ja": "ポゼッション",
+   "yomi": null,
+   "en": "possession (of the ball)",
+   "d": "2026-06-30",
+   "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"
+  },
+  {
+   "ja": "前半",
+   "yomi": "ぜんはん",
+   "en": "first half",
+   "d": "2026-06-30",
+   "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"
+  },
+  {
+   "ja": "後半",
+   "yomi": "こうはん",
+   "en": "second half",
+   "d": "2026-06-30",
+   "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"
+  },
+  {
+   "ja": "死にゲー",
+   "yomi": "しにげー",
+   "en": "brutally difficult video game (genre)",
+   "d": "2026-06-30",
+   "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"
+  },
+  {
+   "ja": "ソウルスライク",
+   "yomi": null,
+   "en": "souls-like (video game genre)",
+   "d": "2026-06-30",
+   "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"
+  },
+  {
+   "ja": "匿名",
+   "yomi": "とくめい",
+   "en": "anonymity",
+   "d": "2026-06-30",
+   "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"
+  },
+  {
+   "ja": "サイレントマジョリティ",
+   "yomi": null,
+   "en": "silent majority",
+   "d": "2026-06-30",
+   "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"
+  },
+  {
+   "ja": "馬鹿にする",
+   "yomi": "ばかにする",
+   "en": "to make fun of, to mock",
+   "d": "2026-06-30",
+   "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"
+  },
+  {
+   "ja": "嘲笑",
+   "yomi": "ちょうしょう",
+   "en": "ridicule, mockery",
+   "d": "2026-06-30",
+   "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"
+  },
+  {
+   "ja": "非難",
+   "yomi": "ひなん",
+   "en": "criticism, blame",
+   "d": "2026-06-30",
+   "src": "2026-06-30-Pedro-ワールドカップとTTRPGと死にゲー談義.md"
+  },
+  {
+   "ja": "〜のせいで",
+   "yomi": null,
+   "en": "because of ~ (blames a negative result)",
+   "d": "2026-07-07",
+   "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"
+  },
+  {
+   "ja": "仕方なく",
+   "yomi": "しかたなく",
+   "en": "reluctantly, having no other choice",
+   "d": "2026-07-07",
+   "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"
+  },
+  {
+   "ja": "抜け出す",
+   "yomi": "ぬけだす",
+   "en": "to escape, to get out of (a situation)",
+   "d": "2026-07-07",
+   "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"
+  },
+  {
+   "ja": "逃げ出す",
+   "yomi": "にげだす",
+   "en": "to run away, to flee (urgent)",
+   "d": "2026-07-07",
+   "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"
+  },
+  {
+   "ja": "ありがたいことに",
+   "yomi": null,
+   "en": "thankfully, fortunately",
+   "d": "2026-07-07",
+   "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"
+  },
+  {
+   "ja": "言い訳",
+   "yomi": "いいわけ",
+   "en": "excuse, pretext",
+   "d": "2026-07-07",
+   "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"
+  },
+  {
+   "ja": "共産主義",
+   "yomi": "きょうさんしゅぎ",
+   "en": "communism",
+   "d": "2026-07-07",
+   "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"
+  },
+  {
+   "ja": "独裁",
+   "yomi": "どくさい",
+   "en": "dictatorship",
+   "d": "2026-07-07",
+   "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"
+  },
+  {
+   "ja": "恐怖",
+   "yomi": "きょうふ",
+   "en": "fear",
+   "d": "2026-07-07",
+   "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"
+  },
+  {
+   "ja": "拉致",
+   "yomi": "らち",
+   "en": "abduction",
+   "d": "2026-07-07",
+   "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"
+  },
+  {
+   "ja": "軍隊",
+   "yomi": "ぐんたい",
+   "en": "military",
+   "d": "2026-07-07",
+   "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"
+  },
+  {
+   "ja": "国会議員",
+   "yomi": "こっかいぎいん",
+   "en": "member of parliament, congressman",
+   "d": "2026-07-07",
+   "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"
+  },
+  {
+   "ja": "犯罪者",
+   "yomi": "はんざいしゃ",
+   "en": "criminal",
+   "d": "2026-07-07",
+   "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"
+  },
+  {
+   "ja": "貧富の差",
+   "yomi": "ひんぷのさ",
+   "en": "gap between rich and poor",
+   "d": "2026-07-07",
+   "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"
+  },
+  {
+   "ja": "治る",
+   "yomi": "なおる",
+   "en": "to be cured, to recover",
+   "d": "2026-07-07",
+   "src": "2026-07-07-Pedro-ブラジル映画とギャング社会.md"
+  }
+ ]
 }
