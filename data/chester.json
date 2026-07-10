@@ -1,54 +1,460 @@
 {
-  "student": "Chester",
-  "items": [
-    {"ja": "どういうわけか", "yomi": null, "en": "for some reason; for whatever reason", "d": "2026-07-02", "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"},
-    {"ja": "〜と比べたら", "yomi": "くらべたら", "en": "compared to ~", "d": "2026-07-02", "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"},
-    {"ja": "〜わけじゃない", "yomi": null, "en": "it's not that ~; doesn't mean ~", "d": "2026-07-02", "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"},
-    {"ja": "壊れている", "yomi": "こわれている", "en": "broken", "d": "2026-07-02", "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"},
-    {"ja": "ヤンデレ", "yomi": null, "en": "yandere (obsessively lovesick character trope)", "d": "2026-07-02", "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"},
-    {"ja": "スパダリ", "yomi": null, "en": "'super darling'; a suave, dominant male romantic lead trope", "d": "2026-07-02", "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"},
-    {"ja": "萌え", "yomi": "もえ", "en": "moe (affection for cute characters)", "d": "2026-07-02", "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"},
-    {"ja": "ショタ", "yomi": null, "en": "shota (younger boy character trope)", "d": "2026-07-02", "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"},
-    {"ja": "悪役令嬢", "yomi": "あくやくれいじょう", "en": "villainess (noble lady antagonist trope)", "d": "2026-07-02", "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"},
-    {"ja": "検閲版", "yomi": "けんえつばん", "en": "censored version", "d": "2026-07-02", "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"},
-    {"ja": "無修正版", "yomi": "むしゅうせいばん", "en": "uncensored version", "d": "2026-07-02", "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"},
-    {"ja": "吹き替え", "yomi": "ふきかえ", "en": "dubbing", "d": "2026-07-02", "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"},
-    {"ja": "字幕", "yomi": "じまく", "en": "subtitles", "d": "2026-07-02", "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"},
-    {"ja": "原作", "yomi": "げんさく", "en": "original work; source material", "d": "2026-07-02", "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"},
-    {"ja": "都合のいい", "yomi": "つごうのいい", "en": "convenient (self-serving)", "d": "2026-07-05", "src": "2026-07-05-Chester-成人向けアニメレビューと韓国ドラマ談義.md"},
-    {"ja": "反撃する", "yomi": "はんげきする", "en": "to counterattack", "d": "2026-07-05", "src": "2026-07-05-Chester-成人向けアニメレビューと韓国ドラマ談義.md"},
-    {"ja": "典型的な", "yomi": "てんけいてきな", "en": "typical", "d": "2026-07-05", "src": "2026-07-05-Chester-成人向けアニメレビューと韓国ドラマ談義.md"},
-    {"ja": "浅い", "yomi": "あさい", "en": "shallow", "d": "2026-07-05", "src": "2026-07-05-Chester-成人向けアニメレビューと韓国ドラマ談義.md"},
-    {"ja": "格差", "yomi": "かくさ", "en": "disparity; gap", "d": "2026-07-05", "src": "2026-07-05-Chester-成人向けアニメレビューと韓国ドラマ談義.md"},
-    {"ja": "不平等", "yomi": "ふびょうどう", "en": "unequal; inequality", "d": "2026-07-05", "src": "2026-07-05-Chester-成人向けアニメレビューと韓国ドラマ談義.md"},
-    {"ja": "腐敗", "yomi": "ふはい", "en": "corruption", "d": "2026-07-05", "src": "2026-07-05-Chester-成人向けアニメレビューと韓国ドラマ談義.md"},
-    {"ja": "バリカン", "yomi": null, "en": "hair clippers", "d": "2026-07-05", "src": "2026-07-05-Chester-成人向けアニメレビューと韓国ドラマ談義.md"},
-    {"ja": "ご都合主義", "yomi": "ごつごうしゅぎ", "en": "convenient plot device; self-serving logic", "d": "2026-07-05", "src": "2026-07-05-Chester-成人向けアニメレビューと韓国ドラマ談義.md"},
-    {"ja": "キャラクターデベロップメント", "yomi": null, "en": "character development", "d": "2026-07-05", "src": "2026-07-05-Chester-成人向けアニメレビューと韓国ドラマ談義.md"},
-    {"ja": "財閥", "yomi": "ざいばつ", "en": "zaibatsu; business conglomerate", "d": "2026-07-05", "src": "2026-07-05-Chester-成人向けアニメレビューと韓国ドラマ談義.md"},
-    {"ja": "受験戦争", "yomi": "じゅけんせんそう", "en": "exam war; fierce entrance-exam competition", "d": "2026-07-05", "src": "2026-07-05-Chester-成人向けアニメレビューと韓国ドラマ談義.md"},
-    {"ja": "ブルーカラー", "yomi": null, "en": "blue-collar", "d": "2026-07-05", "src": "2026-07-05-Chester-成人向けアニメレビューと韓国ドラマ談義.md"},
-    {"ja": "〜ばかり", "yomi": null, "en": "nothing but; only ~", "d": "2026-07-06", "src": "2026-07-06-Chester-アニメレビュー企画.md"},
-    {"ja": "〜せい", "yomi": null, "en": "due to; the fault of ~", "d": "2026-07-06", "src": "2026-07-06-Chester-アニメレビュー企画.md"},
-    {"ja": "依存する", "yomi": "いぞんする", "en": "to depend on", "d": "2026-07-06", "src": "2026-07-06-Chester-アニメレビュー企画.md"},
-    {"ja": "概念", "yomi": "がいねん", "en": "concept", "d": "2026-07-06", "src": "2026-07-06-Chester-アニメレビュー企画.md"},
-    {"ja": "腐る", "yomi": "くさる", "en": "to rot; decay (e.g. skills going stale)", "d": "2026-07-06", "src": "2026-07-06-Chester-アニメレビュー企画.md"},
-    {"ja": "足を引っ張る", "yomi": "あしをひっぱる", "en": "to hold someone back; be a drag on", "d": "2026-07-06", "src": "2026-07-06-Chester-アニメレビュー企画.md"},
-    {"ja": "労働組合", "yomi": "ろうどうくみあい", "en": "labor union", "d": "2026-07-06", "src": "2026-07-06-Chester-アニメレビュー企画.md"},
-    {"ja": "尊重する", "yomi": "そんちょうする", "en": "to respect (a decision/opinion)", "d": "2026-07-06", "src": "2026-07-06-Chester-アニメレビュー企画.md"},
-    {"ja": "尊敬する", "yomi": "そんけいする", "en": "to respect; admire (a person)", "d": "2026-07-06", "src": "2026-07-06-Chester-アニメレビュー企画.md"},
-    {"ja": "独立", "yomi": "どくりつ", "en": "independence", "d": "2026-07-06", "src": "2026-07-06-Chester-アニメレビュー企画.md"},
-    {"ja": "収入", "yomi": "しゅうにゅう", "en": "income", "d": "2026-07-06", "src": "2026-07-06-Chester-アニメレビュー企画.md"},
-    {"ja": "副業", "yomi": "ふくぎょう", "en": "side job; side business", "d": "2026-07-06", "src": "2026-07-06-Chester-アニメレビュー企画.md"},
-    {"ja": "コンテンツ", "yomi": null, "en": "content", "d": "2026-07-06", "src": "2026-07-06-Chester-アニメレビュー企画.md"},
-    {"ja": "ナレーター", "yomi": null, "en": "narrator", "d": "2026-07-06", "src": "2026-07-06-Chester-アニメレビュー企画.md"},
-    {"ja": "タイムリープ", "yomi": null, "en": "time leap", "d": "2026-07-06", "src": "2026-07-06-Chester-アニメレビュー企画.md"},
-    {"ja": "グッドエンド", "yomi": null, "en": "good ending", "d": "2026-07-06", "src": "2026-07-06-Chester-アニメレビュー企画.md"},
-    {"ja": "ベストエンド", "yomi": null, "en": "best ending", "d": "2026-07-06", "src": "2026-07-06-Chester-アニメレビュー企画.md"},
-    {"ja": "制作進行", "yomi": "せいさくしんこう", "en": "production coordinator (anime industry role)", "d": "2026-07-06", "src": "2026-07-06-Chester-アニメレビュー企画.md"},
-    {"ja": "ハーレム", "yomi": null, "en": "harem (anime genre)", "d": "2026-07-06", "src": "2026-07-06-Chester-アニメレビュー企画.md"},
-    {"ja": "説明不足", "yomi": "せつめいぶそく", "en": "insufficient explanation; lack of explanation", "d": "2026-07-06", "src": "2026-07-06-Chester-アニメレビュー企画.md"},
-    {"ja": "腑に落ちる", "yomi": "ふにおちる", "en": "to make sense; to click (understand)", "d": "2026-07-06", "src": "2026-07-06-Chester-アニメレビュー企画.md"},
-    {"ja": "ペースが悪い", "yomi": null, "en": "the pacing is bad", "d": "2026-07-06", "src": "2026-07-06-Chester-アニメレビュー企画.md"}
-  ]
+ "student": "Chester",
+ "items": [
+  {
+   "ja": "どういうわけか",
+   "yomi": null,
+   "en": "for some reason; for whatever reason",
+   "d": "2026-07-02",
+   "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"
+  },
+  {
+   "ja": "〜と比べたら",
+   "yomi": "くらべたら",
+   "en": "compared to ~",
+   "d": "2026-07-02",
+   "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"
+  },
+  {
+   "ja": "〜わけじゃない",
+   "yomi": null,
+   "en": "it's not that ~; doesn't mean ~",
+   "d": "2026-07-02",
+   "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"
+  },
+  {
+   "ja": "壊れている",
+   "yomi": "こわれている",
+   "en": "broken",
+   "d": "2026-07-02",
+   "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"
+  },
+  {
+   "ja": "ヤンデレ",
+   "yomi": null,
+   "en": "yandere (obsessively lovesick character trope)",
+   "d": "2026-07-02",
+   "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"
+  },
+  {
+   "ja": "スパダリ",
+   "yomi": null,
+   "en": "'super darling'; a suave, dominant male romantic lead trope",
+   "d": "2026-07-02",
+   "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"
+  },
+  {
+   "ja": "萌え",
+   "yomi": "もえ",
+   "en": "moe (affection for cute characters)",
+   "d": "2026-07-02",
+   "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"
+  },
+  {
+   "ja": "ショタ",
+   "yomi": null,
+   "en": "shota (younger boy character trope)",
+   "d": "2026-07-02",
+   "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"
+  },
+  {
+   "ja": "悪役令嬢",
+   "yomi": "あくやくれいじょう",
+   "en": "villainess (noble lady antagonist trope)",
+   "d": "2026-07-02",
+   "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"
+  },
+  {
+   "ja": "検閲版",
+   "yomi": "けんえつばん",
+   "en": "censored version",
+   "d": "2026-07-02",
+   "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"
+  },
+  {
+   "ja": "無修正版",
+   "yomi": "むしゅうせいばん",
+   "en": "uncensored version",
+   "d": "2026-07-02",
+   "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"
+  },
+  {
+   "ja": "吹き替え",
+   "yomi": "ふきかえ",
+   "en": "dubbing",
+   "d": "2026-07-02",
+   "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"
+  },
+  {
+   "ja": "字幕",
+   "yomi": "じまく",
+   "en": "subtitles",
+   "d": "2026-07-02",
+   "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"
+  },
+  {
+   "ja": "原作",
+   "yomi": "げんさく",
+   "en": "original work; source material",
+   "d": "2026-07-02",
+   "src": "2026-07-02-Chester-国際ニュース談義とアニメレビュー.md"
+  },
+  {
+   "ja": "都合のいい",
+   "yomi": "つごうのいい",
+   "en": "convenient (self-serving)",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Chester-成人向けアニメレビューと韓国ドラマ談義.md"
+  },
+  {
+   "ja": "反撃する",
+   "yomi": "はんげきする",
+   "en": "to counterattack",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Chester-成人向けアニメレビューと韓国ドラマ談義.md"
+  },
+  {
+   "ja": "典型的な",
+   "yomi": "てんけいてきな",
+   "en": "typical",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Chester-成人向けアニメレビューと韓国ドラマ談義.md"
+  },
+  {
+   "ja": "浅い",
+   "yomi": "あさい",
+   "en": "shallow",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Chester-成人向けアニメレビューと韓国ドラマ談義.md"
+  },
+  {
+   "ja": "格差",
+   "yomi": "かくさ",
+   "en": "disparity; gap",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Chester-成人向けアニメレビューと韓国ドラマ談義.md"
+  },
+  {
+   "ja": "不平等",
+   "yomi": "ふびょうどう",
+   "en": "unequal; inequality",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Chester-成人向けアニメレビューと韓国ドラマ談義.md"
+  },
+  {
+   "ja": "腐敗",
+   "yomi": "ふはい",
+   "en": "corruption",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Chester-成人向けアニメレビューと韓国ドラマ談義.md"
+  },
+  {
+   "ja": "バリカン",
+   "yomi": null,
+   "en": "hair clippers",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Chester-成人向けアニメレビューと韓国ドラマ談義.md"
+  },
+  {
+   "ja": "ご都合主義",
+   "yomi": "ごつごうしゅぎ",
+   "en": "convenient plot device; self-serving logic",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Chester-成人向けアニメレビューと韓国ドラマ談義.md"
+  },
+  {
+   "ja": "キャラクターデベロップメント",
+   "yomi": null,
+   "en": "character development",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Chester-成人向けアニメレビューと韓国ドラマ談義.md"
+  },
+  {
+   "ja": "財閥",
+   "yomi": "ざいばつ",
+   "en": "zaibatsu; business conglomerate",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Chester-成人向けアニメレビューと韓国ドラマ談義.md"
+  },
+  {
+   "ja": "受験戦争",
+   "yomi": "じゅけんせんそう",
+   "en": "exam war; fierce entrance-exam competition",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Chester-成人向けアニメレビューと韓国ドラマ談義.md"
+  },
+  {
+   "ja": "ブルーカラー",
+   "yomi": null,
+   "en": "blue-collar",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Chester-成人向けアニメレビューと韓国ドラマ談義.md"
+  },
+  {
+   "ja": "〜ばかり",
+   "yomi": null,
+   "en": "nothing but; only ~",
+   "d": "2026-07-06",
+   "src": "2026-07-06-Chester-アニメレビュー企画.md"
+  },
+  {
+   "ja": "〜せい",
+   "yomi": null,
+   "en": "due to; the fault of ~",
+   "d": "2026-07-06",
+   "src": "2026-07-06-Chester-アニメレビュー企画.md"
+  },
+  {
+   "ja": "依存する",
+   "yomi": "いぞんする",
+   "en": "to depend on",
+   "d": "2026-07-06",
+   "src": "2026-07-06-Chester-アニメレビュー企画.md"
+  },
+  {
+   "ja": "概念",
+   "yomi": "がいねん",
+   "en": "concept",
+   "d": "2026-07-06",
+   "src": "2026-07-06-Chester-アニメレビュー企画.md"
+  },
+  {
+   "ja": "腐る",
+   "yomi": "くさる",
+   "en": "to rot; decay (e.g. skills going stale)",
+   "d": "2026-07-06",
+   "src": "2026-07-06-Chester-アニメレビュー企画.md"
+  },
+  {
+   "ja": "足を引っ張る",
+   "yomi": "あしをひっぱる",
+   "en": "to hold someone back; be a drag on",
+   "d": "2026-07-06",
+   "src": "2026-07-06-Chester-アニメレビュー企画.md"
+  },
+  {
+   "ja": "労働組合",
+   "yomi": "ろうどうくみあい",
+   "en": "labor union",
+   "d": "2026-07-06",
+   "src": "2026-07-06-Chester-アニメレビュー企画.md"
+  },
+  {
+   "ja": "尊重する",
+   "yomi": "そんちょうする",
+   "en": "to respect (a decision/opinion)",
+   "d": "2026-07-06",
+   "src": "2026-07-06-Chester-アニメレビュー企画.md"
+  },
+  {
+   "ja": "尊敬する",
+   "yomi": "そんけいする",
+   "en": "to respect; admire (a person)",
+   "d": "2026-07-06",
+   "src": "2026-07-06-Chester-アニメレビュー企画.md"
+  },
+  {
+   "ja": "独立",
+   "yomi": "どくりつ",
+   "en": "independence",
+   "d": "2026-07-06",
+   "src": "2026-07-06-Chester-アニメレビュー企画.md"
+  },
+  {
+   "ja": "収入",
+   "yomi": "しゅうにゅう",
+   "en": "income",
+   "d": "2026-07-06",
+   "src": "2026-07-06-Chester-アニメレビュー企画.md"
+  },
+  {
+   "ja": "副業",
+   "yomi": "ふくぎょう",
+   "en": "side job; side business",
+   "d": "2026-07-06",
+   "src": "2026-07-06-Chester-アニメレビュー企画.md"
+  },
+  {
+   "ja": "コンテンツ",
+   "yomi": null,
+   "en": "content",
+   "d": "2026-07-06",
+   "src": "2026-07-06-Chester-アニメレビュー企画.md"
+  },
+  {
+   "ja": "ナレーター",
+   "yomi": null,
+   "en": "narrator",
+   "d": "2026-07-06",
+   "src": "2026-07-06-Chester-アニメレビュー企画.md"
+  },
+  {
+   "ja": "タイムリープ",
+   "yomi": null,
+   "en": "time leap",
+   "d": "2026-07-06",
+   "src": "2026-07-06-Chester-アニメレビュー企画.md"
+  },
+  {
+   "ja": "グッドエンド",
+   "yomi": null,
+   "en": "good ending",
+   "d": "2026-07-06",
+   "src": "2026-07-06-Chester-アニメレビュー企画.md"
+  },
+  {
+   "ja": "ベストエンド",
+   "yomi": null,
+   "en": "best ending",
+   "d": "2026-07-06",
+   "src": "2026-07-06-Chester-アニメレビュー企画.md"
+  },
+  {
+   "ja": "制作進行",
+   "yomi": "せいさくしんこう",
+   "en": "production coordinator (anime industry role)",
+   "d": "2026-07-06",
+   "src": "2026-07-06-Chester-アニメレビュー企画.md"
+  },
+  {
+   "ja": "ハーレム",
+   "yomi": null,
+   "en": "harem (anime genre)",
+   "d": "2026-07-06",
+   "src": "2026-07-06-Chester-アニメレビュー企画.md"
+  },
+  {
+   "ja": "説明不足",
+   "yomi": "せつめいぶそく",
+   "en": "insufficient explanation; lack of explanation",
+   "d": "2026-07-06",
+   "src": "2026-07-06-Chester-アニメレビュー企画.md"
+  },
+  {
+   "ja": "腑に落ちる",
+   "yomi": "ふにおちる",
+   "en": "to make sense; to click (understand)",
+   "d": "2026-07-06",
+   "src": "2026-07-06-Chester-アニメレビュー企画.md"
+  },
+  {
+   "ja": "ペースが悪い",
+   "yomi": null,
+   "en": "the pacing is bad",
+   "d": "2026-07-06",
+   "src": "2026-07-06-Chester-アニメレビュー企画.md"
+  },
+  {
+   "ja": "二重国籍",
+   "yomi": "にじゅうこくせき",
+   "en": "dual citizenship",
+   "d": "2026-07-08",
+   "src": "2026-07-08-Chester-アニメ10点レビュー企画（アイドリッシュセブン他）.md"
+  },
+  {
+   "ja": "憲法",
+   "yomi": "けんぽう",
+   "en": "constitution",
+   "d": "2026-07-08",
+   "src": "2026-07-08-Chester-アニメ10点レビュー企画（アイドリッシュセブン他）.md"
+  },
+  {
+   "ja": "基本的権利",
+   "yomi": "きほんてきけんり",
+   "en": "fundamental rights",
+   "d": "2026-07-08",
+   "src": "2026-07-08-Chester-アニメ10点レビュー企画（アイドリッシュセブン他）.md"
+  },
+  {
+   "ja": "愛国心",
+   "yomi": "あいこくしん",
+   "en": "patriotism",
+   "d": "2026-07-08",
+   "src": "2026-07-08-Chester-アニメ10点レビュー企画（アイドリッシュセブン他）.md"
+  },
+  {
+   "ja": "スピンオフ",
+   "yomi": null,
+   "en": "spin-off",
+   "d": "2026-07-08",
+   "src": "2026-07-08-Chester-アニメ10点レビュー企画（アイドリッシュセブン他）.md"
+  },
+  {
+   "ja": "癒し系",
+   "yomi": "いやしけい",
+   "en": "healing/soothing type",
+   "d": "2026-07-08",
+   "src": "2026-07-08-Chester-アニメ10点レビュー企画（アイドリッシュセブン他）.md"
+  },
+  {
+   "ja": "幼馴染",
+   "yomi": "おさななじみ",
+   "en": "childhood friend",
+   "d": "2026-07-08",
+   "src": "2026-07-08-Chester-アニメ10点レビュー企画（アイドリッシュセブン他）.md"
+  },
+  {
+   "ja": "告白",
+   "yomi": "こくはく",
+   "en": "confession (of love)",
+   "d": "2026-07-08",
+   "src": "2026-07-08-Chester-アニメ10点レビュー企画（アイドリッシュセブン他）.md"
+  },
+  {
+   "ja": "悪役令嬢",
+   "yomi": "あくやくれいじょう",
+   "en": "villainess",
+   "d": "2026-07-08",
+   "src": "2026-07-08-Chester-アニメ10点レビュー企画（アイドリッシュセブン他）.md"
+  },
+  {
+   "ja": "転生",
+   "yomi": "てんせい",
+   "en": "reincarnation",
+   "d": "2026-07-08",
+   "src": "2026-07-08-Chester-アニメ10点レビュー企画（アイドリッシュセブン他）.md"
+  },
+  {
+   "ja": "挿入曲",
+   "yomi": "そうにゅうきょく",
+   "en": "insert song",
+   "d": "2026-07-08",
+   "src": "2026-07-08-Chester-アニメ10点レビュー企画（アイドリッシュセブン他）.md"
+  },
+  {
+   "ja": "先輩",
+   "yomi": "せんぱい",
+   "en": "senior (upperclassman)",
+   "d": "2026-07-08",
+   "src": "2026-07-08-Chester-アニメ10点レビュー企画（アイドリッシュセブン他）.md"
+  },
+  {
+   "ja": "後輩",
+   "yomi": "こうはい",
+   "en": "junior (underclassman)",
+   "d": "2026-07-08",
+   "src": "2026-07-08-Chester-アニメ10点レビュー企画（アイドリッシュセブン他）.md"
+  },
+  {
+   "ja": "台無しにする",
+   "yomi": "だいなしにする",
+   "en": "to ruin/spoil",
+   "d": "2026-07-08",
+   "src": "2026-07-08-Chester-アニメ10点レビュー企画（アイドリッシュセブン他）.md"
+  },
+  {
+   "ja": "区別する",
+   "yomi": "くべつする",
+   "en": "to distinguish",
+   "d": "2026-07-08",
+   "src": "2026-07-08-Chester-アニメ10点レビュー企画（アイドリッシュセブン他）.md"
+  },
+  {
+   "ja": "忠実",
+   "yomi": "ちゅうじつ",
+   "en": "faithful",
+   "d": "2026-07-08",
+   "src": "2026-07-08-Chester-アニメ10点レビュー企画（アイドリッシュセブン他）.md"
+  }
+ ]
 }
