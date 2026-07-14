@@ -1,12 +1,187 @@
 {
-  "student": "Ben",
-  "items": [
-    {"ja": "逆張り", "yomi": "ぎゃくばり", "en": "contrarian (taking the opposite, less popular stance)", "d": "2026-07-04", "src": "2026-07-04-Ben-体験レッスン自己紹介とオタク趣味談義.md"},
-    {"ja": "読み切り", "yomi": "よみきり", "en": "one-shot manga (a self-contained single-episode manga)", "d": "2026-07-04", "src": "2026-07-04-Ben-体験レッスン自己紹介とオタク趣味談義.md"},
-    {"ja": "渋谷系", "yomi": "しぶやけい", "en": "Shibuya-kei (a Japanese pop music genre from the 1990s)", "d": "2026-07-04", "src": "2026-07-04-Ben-体験レッスン自己紹介とオタク趣味談義.md"},
-    {"ja": "アニソン", "yomi": null, "en": "anime song", "d": "2026-07-04", "src": "2026-07-04-Ben-体験レッスン自己紹介とオタク趣味談義.md"},
-    {"ja": "ボカロP", "yomi": null, "en": "Vocaloid producer (a music producer who creates songs using Vocaloid software)", "d": "2026-07-04", "src": "2026-07-04-Ben-体験レッスン自己紹介とオタク趣味談義.md"},
-    {"ja": "実機", "yomi": "じっき", "en": "real/actual hardware (e.g. a game console, as opposed to an emulator)", "d": "2026-07-04", "src": "2026-07-04-Ben-体験レッスン自己紹介とオタク趣味談義.md"},
-    {"ja": "ALT", "yomi": null, "en": "Assistant Language Teacher", "d": "2026-07-04", "src": "2026-07-04-Ben-体験レッスン自己紹介とオタク趣味談義.md"}
-  ]
+ "student": "Ben",
+ "items": [
+  {
+   "ja": "逆張り",
+   "yomi": "ぎゃくばり",
+   "en": "contrarian (taking the opposite, less popular stance)",
+   "d": "2026-07-04",
+   "src": "2026-07-04-Ben-体験レッスン自己紹介とオタク趣味談義.md"
+  },
+  {
+   "ja": "読み切り",
+   "yomi": "よみきり",
+   "en": "one-shot manga (a self-contained single-episode manga)",
+   "d": "2026-07-04",
+   "src": "2026-07-04-Ben-体験レッスン自己紹介とオタク趣味談義.md"
+  },
+  {
+   "ja": "渋谷系",
+   "yomi": "しぶやけい",
+   "en": "Shibuya-kei (a Japanese pop music genre from the 1990s)",
+   "d": "2026-07-04",
+   "src": "2026-07-04-Ben-体験レッスン自己紹介とオタク趣味談義.md"
+  },
+  {
+   "ja": "アニソン",
+   "yomi": null,
+   "en": "anime song",
+   "d": "2026-07-04",
+   "src": "2026-07-04-Ben-体験レッスン自己紹介とオタク趣味談義.md"
+  },
+  {
+   "ja": "ボカロP",
+   "yomi": null,
+   "en": "Vocaloid producer (a music producer who creates songs using Vocaloid software)",
+   "d": "2026-07-04",
+   "src": "2026-07-04-Ben-体験レッスン自己紹介とオタク趣味談義.md"
+  },
+  {
+   "ja": "実機",
+   "yomi": "じっき",
+   "en": "real/actual hardware (e.g. a game console, as opposed to an emulator)",
+   "d": "2026-07-04",
+   "src": "2026-07-04-Ben-体験レッスン自己紹介とオタク趣味談義.md"
+  },
+  {
+   "ja": "ALT",
+   "yomi": null,
+   "en": "Assistant Language Teacher",
+   "d": "2026-07-04",
+   "src": "2026-07-04-Ben-体験レッスン自己紹介とオタク趣味談義.md"
+  },
+  {
+   "ja": "断捨離",
+   "yomi": "だんしゃり",
+   "en": "decluttering (getting rid of unneeded things)",
+   "d": "2026-07-14",
+   "src": "2026-07-14-Ben-弾幕シューティングとコミケ談義.md"
+  },
+  {
+   "ja": "避ける",
+   "yomi": "よける",
+   "en": "to dodge (something physical)",
+   "d": "2026-07-14",
+   "src": "2026-07-14-Ben-弾幕シューティングとコミケ談義.md"
+  },
+  {
+   "ja": "弾幕",
+   "yomi": "だんまく",
+   "en": "barrage of bullets (bullet hell)",
+   "d": "2026-07-14",
+   "src": "2026-07-14-Ben-弾幕シューティングとコミケ談義.md"
+  },
+  {
+   "ja": "現実逃避",
+   "yomi": "げんじつとうひ",
+   "en": "escapism",
+   "d": "2026-07-14",
+   "src": "2026-07-14-Ben-弾幕シューティングとコミケ談義.md"
+  },
+  {
+   "ja": "リア充",
+   "yomi": "リアじゅう",
+   "en": "person with a fulfilling real life",
+   "d": "2026-07-14",
+   "src": "2026-07-14-Ben-弾幕シューティングとコミケ談義.md"
+  },
+  {
+   "ja": "二次創作",
+   "yomi": "にじそうさく",
+   "en": "fan-made derivative works",
+   "d": "2026-07-14",
+   "src": "2026-07-14-Ben-弾幕シューティングとコミケ談義.md"
+  },
+  {
+   "ja": "同人誌",
+   "yomi": "どうじんし",
+   "en": "self-published fan magazine",
+   "d": "2026-07-14",
+   "src": "2026-07-14-Ben-弾幕シューティングとコミケ談義.md"
+  },
+  {
+   "ja": "獣人",
+   "yomi": "じゅうじん",
+   "en": "beast-person (anthropomorphic animal)",
+   "d": "2026-07-14",
+   "src": "2026-07-14-Ben-弾幕シューティングとコミケ談義.md"
+  },
+  {
+   "ja": "フリーター",
+   "yomi": null,
+   "en": "person living on part-time work",
+   "d": "2026-07-14",
+   "src": "2026-07-14-Ben-弾幕シューティングとコミケ談義.md"
+  },
+  {
+   "ja": "場所を取る",
+   "yomi": "ばしょをとる",
+   "en": "to take up space",
+   "d": "2026-07-14",
+   "src": "2026-07-14-Ben-弾幕シューティングとコミケ談義.md"
+  },
+  {
+   "ja": "絶版",
+   "yomi": "ぜっぱん",
+   "en": "out of print",
+   "d": "2026-07-14",
+   "src": "2026-07-14-Ben-弾幕シューティングとコミケ談義.md"
+  },
+  {
+   "ja": "再版",
+   "yomi": "さいはん",
+   "en": "reprint",
+   "d": "2026-07-14",
+   "src": "2026-07-14-Ben-弾幕シューティングとコミケ談義.md"
+  },
+  {
+   "ja": "個人営業",
+   "yomi": "こじんえいぎょう",
+   "en": "independently run business",
+   "d": "2026-07-14",
+   "src": "2026-07-14-Ben-弾幕シューティングとコミケ談義.md"
+  },
+  {
+   "ja": "缶バッジ",
+   "yomi": "かんバッジ",
+   "en": "pin badge (button)",
+   "d": "2026-07-14",
+   "src": "2026-07-14-Ben-弾幕シューティングとコミケ談義.md"
+  },
+  {
+   "ja": "アクスタ",
+   "yomi": null,
+   "en": "acrylic stand (character goods)",
+   "d": "2026-07-14",
+   "src": "2026-07-14-Ben-弾幕シューティングとコミケ談義.md"
+  },
+  {
+   "ja": "ガチャゲー",
+   "yomi": null,
+   "en": "gacha game",
+   "d": "2026-07-14",
+   "src": "2026-07-14-Ben-弾幕シューティングとコミケ談義.md"
+  },
+  {
+   "ja": "アケコン",
+   "yomi": null,
+   "en": "arcade controller (arcade stick)",
+   "d": "2026-07-14",
+   "src": "2026-07-14-Ben-弾幕シューティングとコミケ談義.md"
+  },
+  {
+   "ja": "ノーコンティニュー",
+   "yomi": null,
+   "en": "clearing a game without using continues",
+   "d": "2026-07-14",
+   "src": "2026-07-14-Ben-弾幕シューティングとコミケ談義.md"
+  },
+  {
+   "ja": "オンリーイベント",
+   "yomi": null,
+   "en": "single-series fan convention",
+   "d": "2026-07-14",
+   "src": "2026-07-14-Ben-弾幕シューティングとコミケ談義.md"
+  }
+ ]
 }
