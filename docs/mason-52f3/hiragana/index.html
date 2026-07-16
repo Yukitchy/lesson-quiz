@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Mason's Nihongo Quest</title>
+<meta name="theme-color" content="#D7263D">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Nihongo Quest">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#D7263D; --red-dark:#A81B2E; --cream:#FFF6E7; --card:#FFFFFF;
+    --ink:#2B2320; --sub:#8A7A6E; --gold:#F5A623; --gold-dark:#C4841B;
+    --green:#2E9E5B; --green-dark:#227945; --line:#EFDFC8; --mute:#E4D6C4;
+    --r-lg:20px; --r-md:14px; --r-sm:8px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  body{background:var(--cream);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Helvetica Neue",sans-serif;
+    max-width:480px;margin:0 auto;min-height:100vh;
+    padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+  h1,h2,.display{font-family:"Lilita One",-apple-system,sans-serif;letter-spacing:.5px}
+  .screen{display:none;padding:20px 18px 40px}
+  .screen.active{display:block}
+  button{font-family:inherit;border:none;cursor:pointer;color:var(--ink)}
+
+  /* ---- shared components ---- */
+  .card{background:var(--card);border:2px solid var(--line);border-radius:var(--r-lg)}
+  .primary{display:block;width:100%;background:var(--red);color:#fff;border-radius:16px;padding:15px;
+    font-size:16px;font-weight:800;margin-top:22px;box-shadow:0 4px 0 var(--red-dark)}
+  .ghost{display:block;width:100%;background:none;color:var(--sub);padding:14px;font-size:14px;font-weight:700}
+  .seclabel{font-size:12px;font-weight:800;color:var(--sub);letter-spacing:2px;margin:20px 0 8px}
+
+  /* ---- home hub ---- */
+  .hero{background:var(--red);color:#fff;border-radius:var(--r-lg);padding:18px;margin-bottom:10px;
+    box-shadow:0 4px 0 var(--red-dark)}
+  .hero h1{font-size:27px;line-height:1.15}
+  .hero .tagline{font-size:13px;opacity:.92;margin-top:4px}
+  .chips{display:flex;gap:8px;margin-bottom:4px}
+  .chip{flex:1;background:var(--card);border:2px solid var(--line);border-radius:var(--r-md);padding:9px 6px;text-align:center}
+  .chip .num{font-size:19px;font-weight:800}
+  .chip .lbl{font-size:11px;color:var(--sub);margin-top:1px}
+  .cta{display:block;width:100%;background:var(--gold);color:#fff;border-radius:16px;
+    padding:15px;font-size:17px;font-weight:800;margin-top:14px;box-shadow:0 4px 0 var(--gold-dark);text-align:center}
+  .cta:disabled{background:var(--mute);box-shadow:none;color:#B3A594}
+  .modecard{width:100%;text-align:left;background:var(--card);border:2px solid var(--line);
+    border-radius:var(--r-lg);padding:14px;display:flex;align-items:center;gap:13px;margin-bottom:10px;
+    box-shadow:0 3px 0 var(--line)}
+  .modecard:disabled{opacity:.5;box-shadow:none}
+  .modecard .icon{font-size:30px;min-width:44px;height:44px;background:var(--cream);
+    border-radius:var(--r-md);display:flex;align-items:center;justify-content:center}
+  .modecard .t{font-weight:800;font-size:16px}
+  .modecard .k{font-size:12.5px;color:var(--sub);margin-top:2px}
+  .modecard .go{margin-left:auto;color:var(--gold);font-size:16px;font-weight:800;white-space:nowrap}
+  .senseilink{display:block;width:100%;margin-top:16px;background:none;border:2px dashed #D9C8B0;
+    border-radius:var(--r-md);padding:12px;color:var(--sub);font-size:14px;font-weight:700}
+
+  /* ---- kana map ---- */
+  .path{position:relative;padding-left:26px;margin-top:14px}
+  .path::before{content:"";position:absolute;left:11px;top:10px;bottom:10px;width:4px;background:var(--line);border-radius:2px}
+  .node{position:relative;margin-bottom:12px}
+  .node::before{content:"";position:absolute;left:-22px;top:20px;width:14px;height:14px;border-radius:50%;
+    background:#D9C8B0;border:3px solid var(--cream)}
+  .node.cleared::before{background:var(--green)}
+  .node.next::before{background:var(--red)}
+  .stagecard{width:100%;text-align:left;background:var(--card);border:2px solid var(--line);border-radius:16px;
+    padding:12px 14px;display:flex;align-items:center;gap:12px}
+  .node.next .stagecard{border-color:var(--red);box-shadow:0 3px 0 var(--red)}
+  .node.locked .stagecard{opacity:.45}
+  .stagecard .big{font-size:28px;min-width:44px;text-align:center}
+  .stagecard .t{font-weight:800;font-size:15px}
+  .stagecard .k{font-size:13px;color:var(--sub);margin-top:2px}
+  .stagecard .stars{margin-left:auto;color:var(--gold);font-size:14px;white-space:nowrap}
+  .boss .stagecard{background:#3A2E2A;color:#fff;border-color:#3A2E2A}
+  .boss .stagecard .k{color:#C9B8A8}
+
+  /* ---- learn ---- */
+  .learncard{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:34px 20px 26px;
+    text-align:center;margin:14px 0 18px;box-shadow:0 4px 0 var(--line)}
+  .learncard .kana{font-size:110px;line-height:1;font-weight:700}
+  .learncard .romaji{font-size:26px;color:var(--red);font-weight:800;margin-top:10px}
+  .learncard .mnemo{font-size:15px;color:var(--sub);margin-top:14px;line-height:1.5}
+  .dots{text-align:center;margin-bottom:14px;color:#D9C8B0;font-size:13px;letter-spacing:4px}
+  .dots .on{color:var(--red)}
+
+  /* ---- MCQ quiz ---- */
+  .qtop{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+  .bar{flex:1;height:10px;background:#EFE2CD;border-radius:5px;overflow:hidden}
+  .bar>div{height:100%;background:var(--green);width:0%;transition:width .25s;border-radius:5px}
+  .qcount{font-size:13px;color:var(--sub)}
+  .qword{background:var(--card);border:2px solid var(--line);border-radius:22px;text-align:center;
+    padding:36px 12px;margin:14px 0 16px}
+  .qword .k{font-size:84px;line-height:1.05;font-weight:700}
+  .qword.small .k{font-size:44px}
+  .qword .hint{font-size:14px;color:var(--sub);margin-top:8px;min-height:20px;font-weight:700}
+  .choices{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .choice{background:var(--card);border:2px solid var(--line);border-radius:var(--r-md);padding:13px 6px;
+    box-shadow:0 3px 0 var(--line);text-align:center}
+  .choice .t{font-size:21px;font-weight:800}
+  .choice .s{font-size:11px;color:var(--sub);font-weight:700;margin-top:1px}
+  .choice.good{background:var(--green);border-color:var(--green);box-shadow:none}
+  .choice.good .t,.choice.good .s{color:#fff}
+  .choice.bad{background:var(--red);border-color:var(--red);box-shadow:none}
+  .choice.bad .t,.choice.bad .s{color:#fff}
+
+  /* ---- word dojo (spell) ---- */
+  .dojoword{background:var(--card);border:2px solid var(--line);border-radius:18px;text-align:center;
+    padding:16px 10px 12px;margin:10px 0 4px}
+  .dojoword .k{font-size:44px;line-height:1.1;font-weight:700}
+  .dojoword .hint{font-size:14px;color:var(--sub);margin-top:4px;min-height:20px;font-weight:700}
+  .slots{display:flex;gap:6px;justify-content:center;margin:10px 0 12px;min-height:46px;flex-wrap:wrap}
+  .slots span{width:36px;height:44px;border-bottom:3px solid #D9C8B0;font-size:26px;text-align:center;
+    line-height:44px;font-weight:700}
+  .slots span.filled{border-color:var(--red)}
+  .kb{display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+  .kb button{background:var(--card);border:1.5px solid var(--line);border-radius:var(--r-sm);padding:7px 0;
+    font-size:17px;font-weight:600}
+  .kb button:disabled{visibility:hidden}
+  .kbmods{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 2fr;gap:4px;margin-top:6px}
+  .kbmods button{background:#EFE2CD;border:1.5px solid var(--line);border-radius:var(--r-sm);padding:10px 0;
+    font-size:16px;font-weight:700}
+  .kbmods .gobtn{background:var(--green);border-color:var(--green);color:#fff}
+
+  /* ---- sentence build ---- */
+  .buildprompt{background:var(--card);border:2px solid var(--line);border-radius:18px;text-align:center;
+    padding:18px 12px;margin:12px 0}
+  .buildprompt .en{font-size:20px;font-weight:800;line-height:1.35}
+  .buildprompt .hint{font-size:13px;color:var(--sub);margin-top:6px;font-weight:700;min-height:18px}
+  .answerline{min-height:64px;border:2px dashed #D9C8B0;border-radius:var(--r-md);padding:8px;
+    display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:14px}
+  .pool{display:flex;flex-wrap:wrap;gap:8px}
+  .tile{background:var(--card);border:2px solid var(--line);border-radius:var(--r-md);padding:8px 12px;
+    box-shadow:0 3px 0 var(--line);text-align:center}
+  .tile .t{font-size:17px;font-weight:800}
+  .tile .s{font-size:10px;color:var(--sub);font-weight:700}
+  .tile:disabled{opacity:.25;box-shadow:none}
+  .answerline .tile{border-color:var(--gold);box-shadow:0 3px 0 var(--gold)}
+  .buildgo{display:block;width:100%;background:var(--green);color:#fff;border-radius:16px;padding:14px;
+    font-size:16px;font-weight:800;margin-top:16px;box-shadow:0 4px 0 var(--green-dark)}
+
+  /* ---- clear / sensei ---- */
+  .center{text-align:center;padding-top:40px}
+  .center .bigstars{font-size:52px;letter-spacing:6px;margin:18px 0 6px;color:var(--gold)}
+  .center h2{font-size:28px}
+  .center .msg{color:var(--sub);margin-top:10px;font-size:15px;line-height:1.6}
+  .report{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:18px;margin-top:14px;text-align:left}
+  .report h3{font-size:13px;color:var(--sub);margin-bottom:10px;text-transform:uppercase;letter-spacing:1.5px;font-weight:800}
+  .report .row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed var(--line);font-size:15px}
+  .report .row:last-child{border-bottom:none}
+  .report .row b{font-weight:800}
+  .weak{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+  .weak span{background:#FDEBEA;color:var(--red);border-radius:10px;padding:6px 12px;font-size:20px;font-weight:700}
+  .weak span.word{font-size:15px;line-height:1.9}
+</style>
+</head>
+<body>
+
+<!-- ================= HOME HUB ================= -->
+<div class="screen active" id="scr-home">
+  <div class="hero">
+    <h1>NIHONGO QUEST</h1>
+    <div class="tagline">Mason's daily 3-minute adventure ⚔️</div>
+  </div>
+  <div class="chips">
+    <div class="chip"><div class="num" id="h-streak">0</div><div class="lbl">🔥 day streak</div></div>
+    <div class="chip"><div class="num" id="h-kana">0<span style="font-size:12px;color:var(--sub)">/46</span></div><div class="lbl">かな learned</div></div>
+    <div class="chip"><div class="num" id="h-stars">0</div><div class="lbl">⭐ stars</div></div>
+  </div>
+  <button class="cta" id="btn-train">⚡ Today's Training (3 min)</button>
+  <div class="seclabel">QUESTS</div>
+  <button class="modecard" id="mc-kana">
+    <div class="icon">🗺️</div>
+    <div><div class="t">Hiragana Quest</div><div class="k" id="mc-kana-sub"></div></div>
+    <div class="go">▶</div>
+  </button>
+  <button class="modecard" id="mc-dojo">
+    <div class="icon">🥋</div>
+    <div><div class="t">Word Dojo</div><div class="k" id="mc-dojo-sub"></div></div>
+    <div class="go" id="mc-dojo-go">▶</div>
+  </button>
+  <button class="modecard" id="mc-genki">
+    <div class="icon">📖</div>
+    <div><div class="t">Genki Drills</div><div class="k" id="mc-genki-sub">Lesson 1 · numbers, words & sentences</div></div>
+    <div class="go">▶</div>
+  </button>
+  <button class="senseilink" onclick="showSensei()">📋 Sensei Check — show this to Yuuki-sensei</button>
+</div>
+
+<!-- ================= KANA MAP ================= -->
+<div class="screen" id="scr-kana">
+  <h2 class="display" style="font-size:22px">🗺️ Hiragana Quest</h2>
+  <div class="path" id="path"></div>
+  <button class="ghost" onclick="showHome()">← Back to home</button>
+</div>
+
+<!-- ================= LEARN ================= -->
+<div class="screen" id="scr-learn">
+  <h2 class="display" id="learn-title" style="font-size:22px"></h2>
+  <div class="learncard">
+    <div class="kana" id="lc-kana"></div>
+    <div class="romaji" id="lc-romaji"></div>
+    <div class="mnemo" id="lc-mnemo"></div>
+  </div>
+  <div class="dots" id="lc-dots"></div>
+  <button class="primary" id="lc-next">Next →</button>
+  <button class="ghost" onclick="showKana()">← Back to map</button>
+</div>
+
+<!-- ================= MCQ QUIZ ================= -->
+<div class="screen" id="scr-quiz">
+  <div class="qtop"><div class="bar"><div id="q-bar"></div></div><div class="qcount" id="q-count"></div></div>
+  <div class="qword" id="q-box"><div class="k" id="q-big"></div><div class="hint" id="q-hint"></div></div>
+  <div class="choices" id="q-choices"></div>
+  <button class="ghost" onclick="goBack()" style="margin-top:18px">✕ Quit</button>
+</div>
+
+<!-- ================= WORD DOJO (SPELL) ================= -->
+<div class="screen" id="scr-dojo">
+  <div class="qtop"><div class="bar"><div id="d-bar"></div></div><div class="qcount" id="d-count"></div></div>
+  <div class="dojoword"><div class="k" id="d-word"></div><div class="hint" id="d-hint"></div></div>
+  <div class="slots" id="d-slots"></div>
+  <div class="kb" id="d-kb"></div>
+  <div class="kbmods">
+    <button onclick="dojoMod('dak')">゛</button>
+    <button onclick="dojoMod('han')">゜</button>
+    <button onclick="dojoMod('small')">小</button>
+    <button onclick="dojoDel()">⌫</button>
+    <button class="gobtn" onclick="dojoCheck()">GO!</button>
+  </div>
+  <button class="ghost" onclick="goBack()">✕ Quit</button>
+</div>
+
+<!-- ================= SENTENCE BUILD ================= -->
+<div class="screen" id="scr-build">
+  <div class="qtop"><div class="bar"><div id="b-bar"></div></div><div class="qcount" id="b-count"></div></div>
+  <div class="buildprompt"><div class="en" id="b-en"></div><div class="hint" id="b-hint">Tap the tiles in order!</div></div>
+  <div class="answerline" id="b-answer"></div>
+  <div class="pool" id="b-pool"></div>
+  <button class="buildgo" onclick="buildCheck()">GO!</button>
+  <button class="ghost" onclick="goBack()">✕ Quit</button>
+</div>
+
+<!-- ================= CLEAR ================= -->
+<div class="screen" id="scr-clear">
+  <div class="center">
+    <h2 class="display" id="cl-title">CLEAR!</h2>
+    <div class="bigstars" id="cl-stars"></div>
+    <div class="msg" id="cl-msg"></div>
+    <button class="primary" onclick="goBack()">Continue 🗺️</button>
+  </div>
+</div>
+
+<!-- ================= SENSEI ================= -->
+<div class="screen" id="scr-sensei">
+  <h2 class="display" style="font-size:22px">📋 Sensei Check</h2>
+  <div class="report">
+    <h3>Mason's progress</h3>
+    <div class="row"><span>Kana rows cleared</span><b id="sn-rows">0 / 10</b></div>
+    <div class="row"><span>Kana learned</span><b id="sn-kana">0 / 46</b></div>
+    <div class="row"><span>Day streak</span><b id="sn-streak">0 🔥</b></div>
+    <div class="row"><span>Total training days</span><b id="sn-days">0</b></div>
+    <div class="row"><span>Last played</span><b id="sn-last">—</b></div>
+    <div class="row"><span>Word Dojo runs</span><b id="sn-dojo">0</b></div>
+    <div class="row"><span>Genki Drill runs</span><b id="sn-genki">0</b></div>
+    <div class="row"><span>Final Boss</span><b id="sn-boss">not yet</b></div>
+  </div>
+  <div class="report">
+    <h3>Needs practice</h3>
+    <div class="weak" id="sn-weak"></div>
+  </div>
+  <button class="primary" onclick="showHome()">Back to home 🏠</button>
+</div>
+
+<script>
+/* ================= DATA ================= */
+const ROWS=[
+ {t:"The A Row",j:"あ行",kana:[["あ","a","An Apple with an antenna on top"],["い","i",'Two eels swimming side by side — "ee!"'],["う","u",'A wave with a splash on top — "oo!"'],["え","e","An exotic bird flapping its wings"],["お","o",'A cannonball splash — "oh!"']]},
+ {t:"The K Row",j:"か行",kana:[["か","ka","A kite with a little tail"],["き","ki","An old-fashioned key"],["く","ku",'A bird\'s beak going "coo"'],["け","ke","A keg with a lid on it"],["こ","ko","Two koi fish gliding in a pond"]]},
+ {t:"The S Row",j:"さ行",kana:[["さ","sa","A salsa dancer kicking a leg"],["し","shi","A fishing hook — SHE caught one!"],["す","su","A swing doing a full loop"],["せ","se",'A mouth with a big tooth saying "SAY!"'],["そ","so",'A lightning bolt going "SO fast!"']]},
+ {t:"The T Row",j:"た行",kana:[["た","ta",'Literally "t" + "a" — ta-daa!'],["ち","chi",'A cheerleader shaped like a 5 — "chee!"'],["つ","tsu","A tsunami wave rolling in"],["て","te","A tall telephone pole"],["と","to","A toe with a splinter in it"]]},
+ {t:"The N Row",j:"な行",kana:[["な","na","A knot tied under a cross"],["に","ni","A knee between two little sticks"],["ぬ","nu","Noodles twirled into a loop"],["ね","ne","A cat — neko! — with a curled tail"],["の","no",'A big "NO entry" sign']]},
+ {t:"The H Row",j:"は行",kana:[["は","ha",'An "H" wearing a hat — "ha!"'],["ひ","hi",'A big grin going "hee hee"'],["ふ","fu","Mt. Fuji puffing out steam"],["へ","he",'A tiny hill — "heh, easy climb"'],["ほ","ho",'は\'s twin with a horn — "ho ho ho!"']]},
+ {t:"The M Row",j:"ま行",kana:[["ま","ma","Mama tied a double knot"],["み","mi",'The number 21 — "ME, level 21!"'],["む","mu",'A cow face saying "MOO"'],["め","me","An eye with a lash (me = eye in Japanese!)"],["も","mo","A hook catching MORE worms"]]},
+ {t:"The Y Row",j:"や行",kana:[["や","ya","A yak with one horn"],["ゆ","yu","A fish passing a U-boat periscope"],["よ","yo","A yo-yo hanging from a finger"]]},
+ {t:"The R Row",j:"ら行",kana:[["ら","ra",'A rapper holding a mic — "ra!"'],["り","ri","A river between two banks"],["る","ru","A route ending in a loop"],["れ","re","A runner ready at the start line"],["ろ","ro","The same road — but no loop"]]},
+ {t:"The W Row + N",j:"わ・を・ん",kana:[["わ","wa",'A swan gliding on water — "wah!"'],["を","wo",'A cartwheel — "WHOA!"'],["ん","n",'Looks just like an English "n"']]}
+];
+const ALL=ROWS.flatMap(r=>r.kana);
+console.assert(ALL.length===46,"kana count should be 46, got "+ALL.length);
+
+// lesson words from Yuuki-sensei's board notes (Genki L1, 2026-07-16): [kanji, yomi, english, romaji]
+const WORDS=[["名前","なまえ","name","namae"],["友達","ともだち","friend","tomodachi"],["学生","がくせい","student","gakusei"],["先生","せんせい","teacher","sensei"],["大学","だいがく","college","daigaku"],["専攻","せんこう","major (of study)","senkou"],["歴史","れきし","history","rekishi"],["日本人","にほんじん","Japanese person","nihonjin"],["留学生","りゅうがくせい","international student","ryuugakusei"],["大丈夫","だいじょうぶ","all right / OK","daijoubu"]];
+const BOSS_WORDS=[["なまえ","namae","name"],["せんせい","sensei","teacher"],["れきし","rekishi","history"],["すし","sushi","sushi"],["ねこ","neko","cat"],["やま","yama","mountain"],["ふね","fune","boat"],["そら","sora","sky"]];
+
+// Genki L1 sentences (tests the の / は particles from the board): tiles = [japanese, romaji]
+const SENTS=[
+ {en:"My name is Mason.",tiles:[["わたし","watashi"],["の","no"],["なまえ","namae"],["は","wa"],["Mason","Mason"],["です","desu"]]},
+ {en:"I am 14 years old.",tiles:[["わたし","watashi"],["は","wa"],["じゅうよんさい","juuyon-sai"],["です","desu"]]},
+ {en:"Mary's major is history.",tiles:[["メアリーさん","Mary-san"],["の","no"],["せんこう","senkou"],["は","wa"],["れきし","rekishi"],["です","desu"]]},
+ {en:"Takeshi is a student.",tiles:[["たけしさん","Takeshi-san"],["は","wa"],["がくせい","gakusei"],["です","desu"]]},
+ {en:"Kim is my friend.",tiles:[["キムさん","Kim-san"],["は","wa"],["わたし","watashi"],["の","no"],["ともだち","tomodachi"],["です","desu"]]},
+ {en:"What is your major?",tiles:[["せんこう","senkou"],["は","wa"],["なん","nan"],["ですか","desuka"]]}
+];
+
+// numbers (Genki L1: 1-20, Mason struggles with 11-19)
+const N1=["","いち","に","さん","よん","ご","ろく","なな","はち","きゅう","じゅう"];
+const R1=["","ichi","ni","san","yon","go","roku","nana","hachi","kyuu","juu"];
+const numJ=n=>n<=10?N1[n]:n<20?"じゅう"+N1[n-10]:N1[Math.floor(n/10)]+"じゅう"+(n%10?N1[n%10]:"");
+const numR=n=>n<=10?R1[n]:n<20?"juu"+R1[n-10]:R1[Math.floor(n/10)]+"juu"+(n%10?R1[n%10]:"");
+
+// kana keyboard
+const KB_ROWS=["あいうえお","かきくけこ","さしすせそ","たちつてと","なにぬねの","はひふへほ","まみむめも","や ゆ よ","らりるれろ","わ を ん"];
+const pairMap=(a,b)=>{const m={};[...a].forEach((c,i)=>{m[c]=b[i];m[b[i]]=c});return m};
+const DAK=pairMap("かきくけこさしすせそたちつてとはひふへほ","がぎぐげござじずぜぞだぢづでどばびぶべぼ");
+const HAN=pairMap("はひふへほ","ぱぴぷぺぽ");
+const SML=pairMap("あいうえおつやゆよ","ぁぃぅぇぉっゃゅょ");
+
+/* ================= STATE ================= */
+const KEY="hq_mason";
+let S=JSON.parse(localStorage.getItem(KEY)||"{}");
+S.cleared=S.cleared||{}; S.missed=S.missed||{}; S.missedW=S.missedW||{}; S.missedG=S.missedG||{};
+S.streak=S.streak||0; S.days=S.days||0; S.lastDay=S.lastDay||null; S.boss=S.boss||0;
+S.dojoRuns=S.dojoRuns||0; S.genkiRuns=S.genkiRuns||0;
+const save=()=>localStorage.setItem(KEY,JSON.stringify(S));
+const fmtDay=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+const today=()=>fmtDay(new Date());
+function touchStreak(){
+  const t=today();
+  if(S.lastDay===t)return;
+  const y=fmtDay(new Date(Date.now()-864e5));
+  S.streak=(S.lastDay===y)?S.streak+1:1;
+  S.lastDay=t; S.days++; save();
+}
+const learnedRows=()=>Object.keys(S.cleared).length;
+const learnedKana=()=>ROWS.slice(0,learnedRows()).flatMap(r=>r.kana);
+const shuf=a=>a.map(x=>[Math.random(),x]).sort((p,q)=>p[0]-q[0]).map(x=>x[1]);
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+
+/* ================= SCREENS ================= */
+const scr=id=>{document.querySelectorAll(".screen").forEach(e=>e.classList.remove("active"));
+  document.getElementById(id).classList.add("active");window.scrollTo(0,0);};
+let RET="home"; // where Quit / Continue goes: "home" | "kana"
+function goBack(){RET==="kana"?showKana():showHome();}
+
+function showHome(){
+  scr("scr-home");
+  document.getElementById("h-streak").textContent=S.streak;
+  document.getElementById("h-kana").firstChild.textContent=learnedKana().length;
+  document.getElementById("h-stars").textContent=
+    Object.values(S.cleared).reduce((a,b)=>a+b,0)+(S.boss?3:0);
+  const rows=learnedRows();
+  document.getElementById("btn-train").onclick=startTraining;
+  document.getElementById("mc-kana-sub").textContent=
+    rows===ROWS.length?(S.boss?"All clear! Replay any stage 👑":"Time for the FINAL BOSS 👹"):
+    `${learnedKana().length}/46 kana · next: Stage ${rows+1}`;
+  document.getElementById("mc-kana").onclick=showKana;
+  document.getElementById("mc-dojo-sub").textContent="Spell real lesson words on the kana board";
+  document.getElementById("mc-dojo").onclick=startDojo;
+  document.getElementById("mc-genki").onclick=startGenki;
+}
+
+function showKana(){
+  scr("scr-kana");
+  const path=document.getElementById("path");
+  path.innerHTML="";
+  ROWS.forEach((r,i)=>{
+    const cleared=S.cleared[i]!=null, next=!cleared&&i===learnedRows();
+    const n=document.createElement("div");
+    n.className="node "+(cleared?"cleared":next?"next":"locked");
+    n.innerHTML=`<button class="stagecard" ${cleared||next?"":"disabled"}>
+      <div class="big">${r.kana[0][0]}</div>
+      <div><div class="t">Stage ${i+1} · ${r.t}</div><div class="k">${r.kana.map(k=>k[0]).join(" ")}</div></div>
+      <div class="stars">${cleared?"⭐".repeat(S.cleared[i]):next?"▶":"🔒"}</div></button>`;
+    if(cleared||next)n.querySelector("button").onclick=()=>startLearn(i);
+    path.appendChild(n);
+  });
+  const bossOpen=learnedRows()===ROWS.length;
+  const b=document.createElement("div");
+  b.className="node boss "+(S.boss?"cleared":bossOpen?"next":"locked");
+  b.innerHTML=`<button class="stagecard" ${bossOpen||S.boss?"":"disabled"}>
+    <div class="big">👹</div>
+    <div><div class="t">FINAL BOSS</div><div class="k">All 46 kana + real words!</div></div>
+    <div class="stars">${S.boss?"👑":bossOpen?"▶":"🔒"}</div></button>`;
+  if(bossOpen||S.boss)b.querySelector("button").onclick=startBoss;
+  path.appendChild(b);
+}
+
+/* ================= LEARN ================= */
+let L={row:0,i:0};
+function startLearn(row){
+  L={row,i:0};
+  document.getElementById("learn-title").textContent=`Stage ${row+1} · ${ROWS[row].t}（${ROWS[row].j}）`;
+  renderLearn();
+  scr("scr-learn");
+}
+function renderLearn(){
+  const kana=ROWS[L.row].kana,[k,r,m]=kana[L.i];
+  document.getElementById("lc-kana").textContent=k;
+  document.getElementById("lc-romaji").textContent=r;
+  document.getElementById("lc-mnemo").textContent=m;
+  document.getElementById("lc-dots").innerHTML=kana.map((_,j)=>`<span class="${j===L.i?"on":""}">●</span>`).join("");
+  const btn=document.getElementById("lc-next");
+  btn.textContent=L.i<kana.length-1?"Next →":"⚔️ Start the quiz!";
+  btn.onclick=()=>{
+    if(L.i<kana.length-1){L.i++;renderLearn();}
+    else startSession(stageItems(L.row),{kind:"stage",stage:L.row,ret:"kana"});
+  };
+}
+
+/* ================= ITEM BUILDERS ================= */
+// MCQ item: {type:"mcq", big, sub, small?, opts:[{t,s?}], correct, missKind, missKey}
+function kanaMCQ(k){
+  const wrong=shuf(ALL.map(x=>x[1]).filter(r=>r!==k[1])).slice(0,3);
+  return {type:"mcq",big:k[0],sub:"",opts:shuf([k[1],...wrong]).map(t=>({t})),correct:k[1],
+    missKind:"kana",missKey:k[0]};
+}
+function wordMCQ(w){ // boss: read a whole word
+  const wrong=shuf(BOSS_WORDS.map(x=>x[1]).filter(r=>r!==w[1])).slice(0,3);
+  return {type:"mcq",big:w[0],sub:`(${w[2]})`,small:true,opts:shuf([w[1],...wrong]).map(t=>({t})),correct:w[1],
+    missKind:"kana",missKey:w[0][0]};
+}
+function numMCQ(){
+  const n=pick([2,3,4,6,7,8,9,11,12,13,14,15,16,17,18,19,11,13,14,17,19,20]); // teens weighted
+  const c=new Set();
+  if(n>=11&&n<=19)c.add((n%10)*10);          // 14 vs 40 trap
+  c.add(n===20?19:n+1); c.add(n<=1?3:n-1);
+  while(c.size<3)c.add(1+Math.floor(Math.random()*20));
+  c.delete(n);
+  const wrong=[...c].slice(0,3);
+  return {type:"mcq",big:String(n),sub:"Read this number!",small:true,
+    opts:shuf([n,...wrong]).map(x=>({t:numJ(x),s:numR(x)})),correct:numJ(n),
+    missKind:"genki",missKey:"Numbers"};
+}
+function ageMCQ(){
+  const ages=[9,13,14,15,16,19], a=pick(ages);
+  const wrong=shuf(ages.filter(x=>x!==a)).slice(0,3);
+  return {type:"mcq",big:`${a} years old`,sub:"Say the age! (〜さい)",small:true,
+    opts:shuf([a,...wrong]).map(x=>({t:numJ(x)+"さい",s:numR(x)+"-sai"})),correct:numJ(a)+"さい",
+    missKind:"genki",missKey:"Numbers"};
+}
+function vocabMCQ(){
+  const w=pick(WORDS);
+  const wrong=shuf(WORDS.filter(x=>x!==w)).slice(0,3);
+  return {type:"mcq",big:w[2],sub:"Pick the Japanese word!",small:true,
+    opts:shuf([w,...wrong]).map(x=>({t:x[1],s:x[3]})),correct:w[1],
+    missKind:"genki",missKey:"Vocab"};
+}
+const spellItem=w=>({type:"spell",ja:w[0],yomi:w[1],en:w[2],missKind:"word",missKey:w[0]});
+const buildItem=s=>({type:"build",en:s.en,tiles:s.tiles,answer:s.tiles.map(t=>t[0]).join(" "),
+  missKind:"genki",missKey:"Sentences"});
+
+/* ================= SESSION POOLS ================= */
+function stageItems(row){
+  const q=ROWS[row].kana.flatMap(k=>[kanaMCQ(k),kanaMCQ(k)]);
+  const prev=shuf(ROWS.slice(0,row).flatMap(r=>r.kana)).slice(0,4).map(kanaMCQ);
+  return shuf(q.concat(prev));
+}
+function trainingItems(){
+  const pool=learnedKana();
+  const weak=[...pool].sort((a,b)=>(S.missed[b[0]]||0)-(S.missed[a[0]]||0)).slice(0,4);
+  const rest=shuf(pool.filter(k=>!weak.includes(k))).slice(0,Math.max(0,8-weak.length));
+  const kana=shuf(weak.concat(rest)).map(kanaMCQ);
+  if(!kana.length)                                            // day 1, no kana yet: all-Genki training
+    return shuf([numMCQ(),numMCQ(),ageMCQ(),vocabMCQ(),vocabMCQ(),vocabMCQ()]);
+  return kana.concat([pick([numMCQ,ageMCQ])(),vocabMCQ()]);   // + Genki mix-in
+}
+function genkiItems(){
+  return shuf([numMCQ(),numMCQ(),ageMCQ(),vocabMCQ(),vocabMCQ(),
+    ...shuf([...SENTS]).slice(0,2).map(buildItem)]);
+}
+const dojoItems=()=>shuf([...WORDS]).slice(0,6).map(spellItem);
+const bossItems=()=>shuf(shuf([...ALL]).slice(0,15).map(kanaMCQ).concat(BOSS_WORDS.map(wordMCQ)));
+
+const startTraining=()=>startSession(trainingItems(),{kind:"training",ret:"home"});
+const startGenki   =()=>startSession(genkiItems(),{kind:"genki",ret:"home"});
+const startDojo    =()=>startSession(dojoItems(),{kind:"dojo",ret:"home"});
+const startBoss    =()=>startSession(bossItems(),{kind:"boss",ret:"kana"});
+
+/* ================= SESSION ENGINE ================= */
+let SES={};
+function startSession(items,opts){
+  SES={queue:[...items],total:items.length,done:0,miss:0,lock:false,...opts};
+  RET=opts.ret;
+  if(items.some(i=>i.type==="spell"))buildKB();
+  sesNext();
+}
+function sesProgress(prefix){
+  document.getElementById(prefix+"-bar").style.width=(SES.done/SES.total*100)+"%";
+  document.getElementById(prefix+"-count").textContent=`${SES.done}/${SES.total}`;
+}
+function sesNext(){
+  const it=SES.queue[0];
+  if(it.type==="mcq")renderMCQ(it);
+  else if(it.type==="spell")renderSpell(it);
+  else renderBuild(it);
+}
+function sesAnswer(ok,it){
+  if(!ok){
+    SES.miss++; SES.total++;
+    if(it.missKind==="kana")S.missed[it.missKey]=(S.missed[it.missKey]||0)+1;
+    if(it.missKind==="word")S.missedW[it.missKey]=(S.missedW[it.missKey]||0)+1;
+    if(it.missKind==="genki")S.missedG[it.missKey]=(S.missedG[it.missKey]||0)+1;
+    save();
+    SES.queue.push(SES.queue.shift());        // retry later
+  }else{SES.done++;SES.queue.shift();}
+}
+function sesFinish(){
+  touchStreak();
+  const stars=SES.miss===0?3:SES.miss<=2?2:1;
+  if(SES.kind==="stage"){S.cleared[SES.stage]=Math.max(S.cleared[SES.stage]||0,stars);}
+  if(SES.kind==="boss")S.boss=1;
+  if(SES.kind==="dojo")S.dojoRuns++;
+  if(SES.kind==="genki")S.genkiRuns++;
+  save();
+  const titles={stage:"STAGE CLEAR!",boss:"QUEST COMPLETE!",dojo:"DOJO COMPLETE!",
+    genki:"DRILL COMPLETE!",training:"TRAINING DONE!"};
+  document.getElementById("cl-title").textContent=titles[SES.kind];
+  document.getElementById("cl-stars").textContent=SES.kind==="boss"?"👑":"★".repeat(stars)+"☆".repeat(3-stars);
+  document.getElementById("cl-msg").textContent=
+    SES.kind==="boss"?"You can read hiragana. Show Yuuki-sensei this screen! 🎉":
+    SES.miss===0?"Perfect run! See you tomorrow for 3 more minutes 🔥":
+    `${SES.miss} slip${SES.miss>1?"s":""} — they'll come back until you beat them 💪`;
+  scr("scr-clear");
+}
+
+/* ================= MCQ RENDER ================= */
+function renderMCQ(it){
+  sesProgress("q");
+  document.getElementById("q-box").className="qword"+(it.small?" small":"");
+  document.getElementById("q-big").textContent=it.big;
+  const h=document.getElementById("q-hint");
+  h.textContent=it.sub; h.style.color="";
+  const box=document.getElementById("q-choices");
+  box.innerHTML="";
+  it.opts.forEach(o=>{
+    const b=document.createElement("button");
+    b.className="choice";
+    b.innerHTML=`<div class="t">${o.t}</div>`+(o.s?`<div class="s">${o.s}</div>`:"");
+    b.onclick=()=>{
+      if(SES.lock)return; SES.lock=true;
+      const ok=o.t===it.correct;
+      b.classList.add(ok?"good":"bad");
+      if(!ok)[...box.children].find(x=>x.querySelector(".t").textContent===it.correct).classList.add("good");
+      sesAnswer(ok,it);
+      setTimeout(()=>{SES.lock=false;SES.queue.length?sesNext():sesFinish();},ok?350:1100);
+    };
+    box.appendChild(b);
+  });
+  scr("scr-quiz");
+}
+
+/* ================= SPELL (KANA KEYBOARD) RENDER ================= */
+function buildKB(){
+  const kb=document.getElementById("d-kb"); kb.innerHTML="";
+  KB_ROWS.forEach(row=>[...row].forEach(c=>{
+    const b=document.createElement("button");
+    if(c===" ")b.disabled=true;
+    else{b.textContent=c;b.onclick=()=>{
+      if(SES.lock||SES.input.length>=SES.queue[0].yomi.length)return;
+      SES.input.push(c);renderSlots();};}
+    kb.appendChild(b);
+  }));
+}
+function renderSpell(it){
+  sesProgress("d");
+  document.getElementById("d-word").textContent=it.ja;
+  const h=document.getElementById("d-hint");
+  h.textContent=`(${it.en}) — spell the reading!`; h.style.color="";
+  SES.input=[]; renderSlots();
+  scr("scr-dojo");
+}
+function renderSlots(){
+  document.getElementById("d-slots").innerHTML=
+    [...SES.queue[0].yomi].map((_,i)=>`<span class="${SES.input[i]?"filled":""}">${SES.input[i]||""}</span>`).join("");
+}
+function dojoMod(kind){
+  if(SES.lock)return;
+  const m=kind==="dak"?DAK:kind==="han"?HAN:SML;
+  const last=SES.input[SES.input.length-1];
+  if(last&&m[last]){SES.input[SES.input.length-1]=m[last];renderSlots();}
+}
+function dojoDel(){if(!SES.lock){SES.input.pop();renderSlots();}}
+function dojoCheck(){
+  if(SES.lock||!SES.input.length)return;
+  SES.lock=true;
+  const it=SES.queue[0], ok=SES.input.join("")===it.yomi, h=document.getElementById("d-hint");
+  h.textContent=(ok?"⭕ ":"❌ ")+it.yomi; h.style.color=ok?"var(--green)":"var(--red)";
+  sesAnswer(ok,it);
+  setTimeout(()=>{SES.lock=false;SES.queue.length?sesNext():sesFinish();},ok?700:1400);
+}
+
+/* ================= SENTENCE BUILD RENDER ================= */
+function renderBuild(it){
+  sesProgress("b");
+  document.getElementById("b-en").textContent=it.en;
+  const h=document.getElementById("b-hint");
+  h.textContent="Tap the tiles in order!"; h.style.color="";
+  SES.placed=[];
+  SES.pool=shuf(it.tiles.map((t,i)=>({t,i})));
+  renderTiles();
+  scr("scr-build");
+}
+function renderTiles(){
+  const ans=document.getElementById("b-answer"), pool=document.getElementById("b-pool");
+  ans.innerHTML=""; pool.innerHTML="";
+  SES.placed.forEach((p,idx)=>{
+    const b=document.createElement("button");
+    b.className="tile";
+    b.innerHTML=`<div class="t">${p.t[0]}</div><div class="s">${p.t[1]}</div>`;
+    b.onclick=()=>{if(!SES.lock){SES.placed.splice(idx,1);renderTiles();}};
+    ans.appendChild(b);
+  });
+  SES.pool.forEach(p=>{
+    const used=SES.placed.includes(p);
+    const b=document.createElement("button");
+    b.className="tile"; b.disabled=used;
+    b.innerHTML=`<div class="t">${p.t[0]}</div><div class="s">${p.t[1]}</div>`;
+    b.onclick=()=>{if(!SES.lock){SES.placed.push(p);renderTiles();}};
+    pool.appendChild(b);
+  });
+}
+function buildCheck(){
+  if(SES.lock||!SES.placed.length)return;
+  SES.lock=true;
+  const it=SES.queue[0];
+  const got=SES.placed.map(p=>p.t[0]).join(" ");
+  const ok=got===it.answer;
+  const h=document.getElementById("b-hint");
+  h.textContent=(ok?"⭕ ":"❌ ")+it.answer;
+  h.style.color=ok?"var(--green)":"var(--red)";
+  sesAnswer(ok,it);
+  setTimeout(()=>{SES.lock=false;SES.queue.length?sesNext():sesFinish();},ok?800:1800);
+}
+
+/* ================= SENSEI ================= */
+function showSensei(){
+  document.getElementById("sn-rows").textContent=`${learnedRows()} / 10`;
+  document.getElementById("sn-kana").textContent=`${learnedKana().length} / 46`;
+  document.getElementById("sn-streak").textContent=`${S.streak} 🔥`;
+  document.getElementById("sn-days").textContent=S.days;
+  document.getElementById("sn-last").textContent=S.lastDay||"—";
+  document.getElementById("sn-dojo").textContent=S.dojoRuns;
+  document.getElementById("sn-genki").textContent=S.genkiRuns;
+  document.getElementById("sn-boss").textContent=S.boss?"DEFEATED 👑":"not yet";
+  const chips=
+    Object.entries(S.missed).sort((a,b)=>b[1]-a[1]).slice(0,6)
+      .map(([k,n])=>`<span>${k}<small style="font-size:11px;color:var(--sub)"> ×${n}</small></span>`)
+    .concat(Object.entries(S.missedW).sort((a,b)=>b[1]-a[1]).slice(0,4)
+      .map(([w,n])=>`<span class="word">${w}<small style="font-size:11px;color:var(--sub)"> ×${n}</small></span>`))
+    .concat(Object.entries(S.missedG).sort((a,b)=>b[1]-a[1]).slice(0,3)
+      .map(([g,n])=>`<span class="word">Genki: ${g}<small style="font-size:11px;color:var(--sub)"> ×${n}</small></span>`));
+  document.getElementById("sn-weak").innerHTML=
+    chips.length?chips.join(""):'<span style="background:#EAF7EF;color:var(--green);font-size:14px">No weak spots yet 💪</span>';
+  scr("scr-sensei");
+}
+
+showHome();
+</script>
+</body>
+</html>

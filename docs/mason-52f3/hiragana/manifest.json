@@ -1,0 +1,9 @@
+{
+  "name": "Nihongo Quest",
+  "short_name": "NihongoQuest",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#FFF6E7",
+  "theme_color": "#D7263D",
+  "icons": [{ "src": "icon.png", "sizes": "180x180", "type": "image/png" }]
+}
