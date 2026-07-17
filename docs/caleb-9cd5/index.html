@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex">
-<title>Mason's Vocabulary Quiz</title>
+<title>Caleb's Vocabulary Quiz</title>
 <style>
   :root {
     --bg: #F2F2F7; --card: #FFFFFF; --text: #1C1C1E; --text2: #8E8E93;
@@ -104,7 +104,7 @@
 <div class="screen on" id="scrHome">
   <header>
     <div class="flag">🇺🇸</div>
-    <h1>Mason&rsquo;s Vocabulary Quiz</h1>
+    <h1>Caleb&rsquo;s Vocabulary Quiz</h1>
     <div class="sub" id="homeSub"></div>
   </header>
   <div class="label">Words from</div>
@@ -162,7 +162,7 @@
 </div>
 
 <script>
-const DATA = {"student": "Mason", "items": [{"ja": "名前", "yomi": "なまえ", "en": "name", "d": "2026-07-16", "src": "2026-07-16-Mason-Genki第1課の数字と所有の「の」.md"}, {"ja": "友達", "yomi": "ともだち", "en": "friend", "d": "2026-07-16", "src": "2026-07-16-Mason-Genki第1課の数字と所有の「の」.md"}, {"ja": "学生", "yomi": "がくせい", "en": "student", "d": "2026-07-16", "src": "2026-07-16-Mason-Genki第1課の数字と所有の「の」.md"}, {"ja": "留学生", "yomi": "りゅうがくせい", "en": "international student", "d": "2026-07-16", "src": "2026-07-16-Mason-Genki第1課の数字と所有の「の」.md"}, {"ja": "先生", "yomi": "せんせい", "en": "teacher", "d": "2026-07-16", "src": "2026-07-16-Mason-Genki第1課の数字と所有の「の」.md"}, {"ja": "大学", "yomi": "だいがく", "en": "university", "d": "2026-07-16", "src": "2026-07-16-Mason-Genki第1課の数字と所有の「の」.md"}, {"ja": "専攻", "yomi": "せんこう", "en": "major (field of study)", "d": "2026-07-16", "src": "2026-07-16-Mason-Genki第1課の数字と所有の「の」.md"}, {"ja": "歴史", "yomi": "れきし", "en": "history", "d": "2026-07-16", "src": "2026-07-16-Mason-Genki第1課の数字と所有の「の」.md"}, {"ja": "日本人", "yomi": "にほんじん", "en": "Japanese person", "d": "2026-07-16", "src": "2026-07-16-Mason-Genki第1課の数字と所有の「の」.md"}, {"ja": "大丈夫", "yomi": "だいじょうぶ", "en": "OK / all right", "d": "2026-07-16", "src": "2026-07-16-Mason-Genki第1課の数字と所有の「の」.md"}, {"ja": "〜歳", "yomi": "〜さい", "en": "~ years old", "d": "2026-07-16", "src": "2026-07-16-Mason-Genki第1課の数字と所有の「の」.md"}, {"ja": "〜年生", "yomi": "〜ねんせい", "en": "~th grader / ~ year student", "d": "2026-07-16", "src": "2026-07-16-Mason-Genki第1課の数字と所有の「の」.md"}]};
+const DATA = {"student": "Caleb", "items": [{"ja": "質問", "yomi": "しつもん", "en": "question", "d": "2026-07-06", "src": "2026-07-06-Caleb-初回体験レッスン.md"}, {"ja": "出身", "yomi": "しゅっしん", "en": "origin / hometown", "d": "2026-07-06", "src": "2026-07-06-Caleb-初回体験レッスン.md"}, {"ja": "趣味", "yomi": "しゅみ", "en": "hobby", "d": "2026-07-06", "src": "2026-07-06-Caleb-初回体験レッスン.md"}, {"ja": "仕事", "yomi": "しごと", "en": "job / work", "d": "2026-07-06", "src": "2026-07-06-Caleb-初回体験レッスン.md"}, {"ja": "働く", "yomi": "はたらく", "en": "to work", "d": "2026-07-06", "src": "2026-07-06-Caleb-初回体験レッスン.md"}, {"ja": "大好き", "yomi": "だいすき", "en": "to love / like very much", "d": "2026-07-06", "src": "2026-07-06-Caleb-初回体験レッスン.md"}, {"ja": "苗字", "yomi": "みょうじ", "en": "surname / last name", "d": "2026-07-06", "src": "2026-07-06-Caleb-初回体験レッスン.md"}, {"ja": "バックグラウンド", "yomi": null, "en": "background", "d": "2026-07-06", "src": "2026-07-06-Caleb-初回体験レッスン.md"}, {"ja": "ディスクゴルフ", "yomi": null, "en": "disc golf", "d": "2026-07-06", "src": "2026-07-06-Caleb-初回体験レッスン.md"}]};
 const KANJI = /[一-鿿]/;
 const QLEN = 10;
 const state = { scope: "all", mode: null, qs: [], i: 0, score: 0, wrong: [], locked: false };
