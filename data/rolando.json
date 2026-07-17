@@ -1,8 +1,96 @@
 {
-  "student": "Rolando",
-  "items": [
-    {"ja": "光景", "yomi": "こうけい", "en": "scene, sight (a view or spectacle)", "d": "2026-06-29", "src": "2026-06-29-Rolando-文化マナーとメキシコ修学旅行ツアー談義.md"},
-    {"ja": "景色", "yomi": "けしき", "en": "scenery, view", "d": "2026-06-29", "src": "2026-06-29-Rolando-文化マナーとメキシコ修学旅行ツアー談義.md"},
-    {"ja": "健康的", "yomi": "けんこうてき", "en": "healthy, health-conscious", "d": "2026-06-29", "src": "2026-06-29-Rolando-文化マナーとメキシコ修学旅行ツアー談義.md"}
-  ]
+ "student": "Rolando",
+ "items": [
+  {
+   "ja": "光景",
+   "yomi": "こうけい",
+   "en": "scene, sight (a view or spectacle)",
+   "d": "2026-06-29",
+   "src": "2026-06-29-Rolando-文化マナーとメキシコ修学旅行ツアー談義.md"
+  },
+  {
+   "ja": "景色",
+   "yomi": "けしき",
+   "en": "scenery, view",
+   "d": "2026-06-29",
+   "src": "2026-06-29-Rolando-文化マナーとメキシコ修学旅行ツアー談義.md"
+  },
+  {
+   "ja": "健康的",
+   "yomi": "けんこうてき",
+   "en": "healthy, health-conscious",
+   "d": "2026-06-29",
+   "src": "2026-06-29-Rolando-文化マナーとメキシコ修学旅行ツアー談義.md"
+  },
+  {
+   "ja": "放銃",
+   "yomi": "ほうじゅう",
+   "en": "dealing into a winning hand (mahjong)",
+   "d": "2026-07-17",
+   "src": "2026-07-17-Rolando-マレーシア土産話と麻雀クラブ・3Dプリンター沼.md"
+  },
+  {
+   "ja": "自動卓",
+   "yomi": "じどうたく",
+   "en": "automatic mahjong table",
+   "d": "2026-07-17",
+   "src": "2026-07-17-Rolando-マレーシア土産話と麻雀クラブ・3Dプリンター沼.md"
+  },
+  {
+   "ja": "捨て牌",
+   "yomi": "すてはい",
+   "en": "a discarded tile (mahjong)",
+   "d": "2026-07-17",
+   "src": "2026-07-17-Rolando-マレーシア土産話と麻雀クラブ・3Dプリンター沼.md"
+  },
+  {
+   "ja": "半額",
+   "yomi": "はんがく",
+   "en": "half price",
+   "d": "2026-07-17",
+   "src": "2026-07-17-Rolando-マレーシア土産話と麻雀クラブ・3Dプリンター沼.md"
+  },
+  {
+   "ja": "神聖",
+   "yomi": "しんせい",
+   "en": "sacred / holy",
+   "d": "2026-07-17",
+   "src": "2026-07-17-Rolando-マレーシア土産話と麻雀クラブ・3Dプリンター沼.md"
+  },
+  {
+   "ja": "恐怖心",
+   "yomi": "きょうふしん",
+   "en": "fear",
+   "d": "2026-07-17",
+   "src": "2026-07-17-Rolando-マレーシア土産話と麻雀クラブ・3Dプリンター沼.md"
+  },
+  {
+   "ja": "汚い",
+   "yomi": "きたない",
+   "en": "dirty",
+   "d": "2026-07-17",
+   "src": "2026-07-17-Rolando-マレーシア土産話と麻雀クラブ・3Dプリンター沼.md"
+  },
+  {
+   "ja": "迷惑",
+   "yomi": "めいわく",
+   "en": "trouble / nuisance",
+   "d": "2026-07-17",
+   "src": "2026-07-17-Rolando-マレーシア土産話と麻雀クラブ・3Dプリンター沼.md"
+  },
+  {
+   "ja": "沼",
+   "yomi": "ぬま",
+   "en": "swamp (slang: an obsession you can't get out of)",
+   "d": "2026-07-17",
+   "src": "2026-07-17-Rolando-マレーシア土産話と麻雀クラブ・3Dプリンター沼.md"
+  },
+  {
+   "ja": "季節",
+   "yomi": "きせつ",
+   "en": "season",
+   "d": "2026-07-17",
+   "src": "2026-07-17-Rolando-マレーシア土産話と麻雀クラブ・3Dプリンター沼.md"
+  }
+ ]
 }
