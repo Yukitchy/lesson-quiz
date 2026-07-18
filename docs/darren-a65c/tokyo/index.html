@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ja" data-lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){var l=localStorage.getItem('darren-lang')||'ja';document.documentElement.setAttribute('data-lang',l);document.documentElement.setAttribute('lang',l);})();</script>
+<title>Darren's Tokyo Mission 2026.11</title>
+<style>
+  :root{
+    --ink:#1d2430;
+    --sub:#5b6675;
+    --bg:#f6f4ef;
+    --card:#ffffff;
+    --line:#e3ded4;
+    --accent:#1f6f5c;      /* 深緑 = メインカラー */
+    --accent-soft:#e4f0ec;
+    --gold:#b8860b;
+    --warn:#a15c00;
+    --warn-soft:#fdf3e3;
+    --kr:#3d5aa9;
+    --kr-soft:#e9edf9;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;
+    background:var(--bg); color:var(--ink);
+    line-height:1.75; font-size:15.5px;
+    -webkit-text-size-adjust:100%;
+    word-break:auto-phrase; /* 文節折り返し(対応ブラウザのみ)・語中折り返し防止 */
+  }
+  html[data-lang="ko"] body{word-break:keep-all;} /* 韓国語は語中折り返し防止 */
+  .wrap{max-width:720px; margin:0 auto; padding:0 18px 64px;}
+  h1,h2,h3{word-break:keep-all; overflow-wrap:anywhere; line-height:1.4;}
+
+  /* ---- language switch ---- */
+  .l{display:none;}
+  html[data-lang="ja"] .l-ja{display:inline;}
+  html[data-lang="en"] .l-en{display:inline;}
+  html[data-lang="ko"] .l-ko{display:inline;}
+  .langswitch{
+    position:fixed; top:8px; right:8px; z-index:100;
+    display:flex; gap:2px; background:rgba(0,0,0,.28);
+    border-radius:999px; padding:3px;
+  }
+  .langbtn{
+    border:0; background:transparent; color:#fff; cursor:pointer;
+    font-family:inherit; font-size:12px; line-height:1;
+    padding:5px 10px; border-radius:999px; opacity:.82;
+  }
+  .langbtn[aria-pressed="true"]{background:#fff; color:var(--accent); opacity:1; font-weight:700;}
+
+  /* ---- header ---- */
+  header{
+    background:var(--accent); color:#fff;
+    padding:36px 18px 30px; margin-bottom:24px;
+  }
+  .hinner{max-width:720px;margin:0 auto;}
+  .kicker{font-size:12.5px; letter-spacing:.18em; opacity:.85; margin-bottom:6px;}
+  h1{font-size:26px; font-weight:800; margin-bottom:10px;}
+  .lead{font-size:14px; opacity:.92; max-width:38em;}
+  .trip-facts{
+    display:flex; flex-wrap:wrap; gap:8px; margin-top:16px;
+  }
+  .fact{
+    background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.25);
+    border-radius:999px; padding:3px 14px; font-size:12.5px;
+  }
+
+  /* ---- sections ---- */
+  section{margin-bottom:36px;}
+  h2{
+    font-size:19px; font-weight:800; color:var(--accent);
+    padding-bottom:6px; border-bottom:2px solid var(--accent);
+    margin-bottom:6px;
+  }
+  .h2sub{font-size:13px; color:var(--sub); margin-bottom:14px;}
+
+  /* ---- top3 ---- */
+  .top3{display:grid; gap:12px;}
+  .topcard{
+    background:var(--accent-soft); border:1.5px solid var(--accent);
+    border-radius:12px; padding:14px 16px;
+  }
+  .topcard .rank{
+    display:inline-block; background:var(--accent); color:#fff;
+    font-size:11.5px; font-weight:700; border-radius:6px;
+    padding:1px 8px; margin-bottom:4px; letter-spacing:.06em;
+  }
+  .topcard h3{font-size:16.5px; margin-bottom:2px;}
+  .topcard p{font-size:13.5px; color:var(--ink);}
+
+  /* ---- venue cards ---- */
+  .card{
+    background:var(--card); border:1px solid var(--line);
+    border-radius:12px; padding:14px 16px 12px; margin-bottom:12px;
+  }
+  .card h3{font-size:16px; margin-bottom:2px;}
+  .card h3 a{color:var(--ink); text-decoration:none; border-bottom:1.5px dotted var(--accent);}
+  .meta{font-size:12.5px; color:var(--sub); margin-bottom:6px;}
+  .meta b{color:var(--ink); font-weight:600;}
+  .card p{font-size:13.5px; margin-bottom:6px;}
+  .badges{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;}
+  .badge{
+    font-size:11px; font-weight:700; border-radius:999px;
+    padding:1px 10px; letter-spacing:.03em;
+  }
+  .b-easy{background:var(--accent-soft); color:var(--accent);}
+  .b-mid{background:#eef1f5; color:#4a5568;}
+  .b-hard{background:#f3e9f2; color:#7c4a74;}
+  .b-near{background:#fff3d6; color:#8a6100;}
+  .b-check{background:var(--warn-soft); color:var(--warn);}
+  .b-kr{background:var(--kr-soft); color:var(--kr);}
+  .phrase{
+    background:var(--bg); border-left:3px solid var(--accent);
+    border-radius:0 8px 8px 0; padding:7px 12px;
+    font-size:13.5px; margin-top:4px;
+  }
+  .phrase .en{display:block; font-size:11.5px; color:var(--sub);}
+
+  /* ---- week plan table ---- */
+  table{width:100%; border-collapse:collapse; background:var(--card);
+        border:1px solid var(--line); border-radius:12px; overflow:hidden; font-size:13.5px;}
+  th,td{padding:9px 12px; text-align:left; vertical-align:top;}
+  th{background:var(--accent); color:#fff; font-size:12.5px; font-weight:700; white-space:nowrap;}
+  tr:nth-child(even) td{background:#faf8f4;}
+  td:first-child{white-space:nowrap; font-weight:700; color:var(--accent);}
+  .tablewrap{overflow-x:auto;}
+
+  /* ---- phrases ---- */
+  .ph-group{margin-bottom:18px;}
+  .ph-group h3{font-size:15px; color:var(--accent); margin-bottom:8px;}
+  .ph{
+    background:var(--card); border:1px solid var(--line); border-radius:10px;
+    padding:9px 14px; margin-bottom:8px; font-size:14.5px;
+  }
+  .ph .en{display:block; font-size:12px; color:var(--sub); margin-top:1px;}
+  .ph .note{display:block; font-size:12px; color:var(--gold); margin-top:1px;}
+
+  /* ---- november events ---- */
+  .ev{
+    display:flex; gap:14px; background:var(--card); border:1px solid var(--line);
+    border-radius:12px; padding:12px 14px; margin-bottom:10px; align-items:flex-start;
+  }
+  .ev .date{
+    min-width:74px; text-align:center; background:var(--accent); color:#fff;
+    border-radius:10px; padding:6px 4px; font-weight:800; font-size:13px; line-height:1.3;
+  }
+  .ev .date small{display:block; font-weight:600; font-size:10.5px; opacity:.85;}
+  .ev h3{font-size:15.5px;}
+  .ev p{font-size:13px; color:var(--sub);}
+
+  .notebox{
+    background:var(--warn-soft); border:1px solid #ecd9b0; border-radius:12px;
+    padding:13px 16px; font-size:13.5px;
+  }
+  .notebox ul{margin-left:1.2em;}
+  footer{
+    margin-top:40px; padding-top:14px; border-top:1px solid var(--line);
+    font-size:12px; color:var(--sub); text-align:center;
+  }
+  @media (max-width:480px){
+    body{font-size:15px;}
+    h1{font-size:22px;}
+    .ev{gap:10px;}
+    .langbtn{padding:5px 8px; font-size:11px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="langswitch" role="group" aria-label="Language">
+  <button class="langbtn" data-lang="ja" type="button">日本語</button>
+  <button class="langbtn" data-lang="en" type="button">EN</button>
+  <button class="langbtn" data-lang="ko" type="button">한국어</button>
+</div>
+
+<header>
+  <div class="hinner">
+    <div class="kicker">DARREN'S TOKYO MISSION 2026.11</div>
+    <h1><span class="l l-ja">東京で友達を作る作戦シート</span><span class="l l-en">Your Tokyo Friend-Making Playbook</span><span class="l l-ko">도쿄에서 친구 만들기 작전 시트</span></h1>
+    <p class="lead"><span class="l l-ja">3週間の滞在で「また会える人」を作るための、ユウキ調べ・現地確認済みリスト。全部行く必要はないよ。<b>週に2〜3ヶ所、同じ場所に2回行く</b>のがコツです。</span><span class="l l-en">A Yuuki-researched, on-the-ground-verified list to help you find people you can meet again during your 3-week stay. You don't have to go everywhere — the trick is <b>2–3 spots a week, and going to the same place twice</b>.</span><span class="l l-ko">3주 동안 '또 만날 수 있는 사람'을 만들기 위해 유우키가 직접 조사하고 현지 확인까지 마친 리스트예요. 전부 갈 필요는 없어요. <b>일주일에 2~3곳, 같은 곳에 두 번 가는 것</b>이 요령이에요.</span></p>
+    <div class="trip-facts">
+      <span class="fact"><span class="l l-ja">📅 11月・3週間（〜11/23）</span><span class="l l-en">📅 November · 3 weeks (through 11/23)</span><span class="l l-ko">📅 11월 · 3주 (~11/23)</span></span>
+      <span class="fact"><span class="l l-ja">🏠 拠点：墨田区（錦糸町エリア）</span><span class="l l-en">🏠 Base: Sumida (Kinshichō area)</span><span class="l l-ko">🏠 거점: 스미다구 (킨시초 지역)</span></span>
+      <span class="fact"><span class="l l-ja">🎬 11/20 魔法使いの夜 公開</span><span class="l l-en">🎬 Mahoyo premieres 11/20</span><span class="l l-ko">🎬 11/20 마법사의 밤 개봉</span></span>
+      <span class="fact"><span class="l l-ja">🇯🇵 8回目の日本</span><span class="l l-en">🇯🇵 Your 8th trip to Japan</span><span class="l l-ko">🇯🇵 여덟 번째 일본</span></span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<!-- ============ TOP3 ============ -->
+<section>
+  <h2><span class="l l-ja">まずはこの3つ（ユウキの推し）</span><span class="l l-en">Start With These 3 (Yuuki's Picks)</span><span class="l l-ko">우선 이 세 곳부터 (유우키의 추천)</span></h2>
+  <p class="h2sub"><span class="l l-ja">迷ったらここから。3つとも「初参加OK・一人参加OK」を確認済み。</span><span class="l l-en">When in doubt, start here. All three are confirmed newcomer-friendly and fine to attend solo.</span><span class="l l-ko">고민되면 여기부터. 세 곳 모두 '첫 참가 OK · 혼자 참가 OK'를 확인해 뒀어요.</span></p>
+  <div class="top3">
+    <div class="topcard">
+      <span class="rank"><span class="l l-ja">鉄板 No.1</span><span class="l l-en">Sure Thing No.1</span><span class="l l-ko">확실한 카드 No.1</span></span>
+      <h3><span class="l l-ja">ユウキのシェアハウス・水曜ディナーパーティ 🍛</span><span class="l l-en">Yuuki's Share House Wednesday Dinner Party 🍛</span><span class="l l-ko">유우키의 셰어하우스 수요일 디너 파티 🍛</span></h3>
+      <p><span class="l l-ja">錦糸町 <a href="https://www.instagram.com/canal_palace/">@canal_palace</a>。毎週水曜、住人＋ゲストでごはん会。ユウキが直接紹介するから、初回から「友達の友達」ポジションで入れます。家から一番近い作戦拠点。</span><span class="l l-en">Kinshichō, <a href="https://www.instagram.com/canal_palace/">@canal_palace</a>. Every Wednesday the residents and guests share a meal. Yuuki introduces you directly, so from day one you walk in as a "friend of a friend." The closest base of operations to your place.</span><span class="l l-ko">킨시초 <a href="https://www.instagram.com/canal_palace/">@canal_palace</a>. 매주 수요일 거주자와 게스트가 함께 밥을 먹는 모임이에요. 유우키가 직접 소개해 주니까 첫날부터 '친구의 친구' 포지션으로 들어갈 수 있어요. 집에서 가장 가까운 작전 거점이에요.</span></p>
+    </div>
+    <div class="topcard">
+      <span class="rank"><span class="l l-ja">鉄板 No.2</span><span class="l l-en">Sure Thing No.2</span><span class="l l-ko">확실한 카드 No.2</span></span>
+      <h3><span class="l l-ja">JELLY JELLY CAFE 秋葉原「相席ナイト」🎲</span><span class="l l-en">JELLY JELLY CAFE Akihabara — Aiseki Night (shared-table night) 🎲</span><span class="l l-ko">JELLY JELLY CAFE 아키하바라 '아이세키 나이트(합석 나이트)' 🎲</span></h3>
+      <p><span class="l l-ja">水・金・日開催、予約不要・途中入退場自由のボードゲーム相席会。ゲームがあるから沈黙ゼロ、初対面と一番自然に話せる形式。日本人率高め。</span><span class="l l-en">A drop-in board-game shared-table meetup on Wed/Fri/Sun — no reservation, come and go freely. The games mean zero awkward silence, so it's the most natural way to talk to people you've just met. Skews heavily Japanese.</span><span class="l l-ko">수·금·일에 열리는, 예약 불필요·중간 입퇴장 자유의 보드게임 합석 모임이에요. 게임이 있으니 침묵 제로, 처음 만난 사람과 가장 자연스럽게 이야기할 수 있는 형식이에요. 일본인 비율이 높아요.</span></p>
+    </div>
+    <div class="topcard">
+      <span class="rank"><span class="l l-ja">鉄板 No.3</span><span class="l l-en">Sure Thing No.3</span><span class="l l-ko">확실한 카드 No.3</span></span>
+      <h3><span class="l l-ja">Animers（アニメ好きカラオケMeetup）🎤</span><span class="l l-en">Animers (anime-fan karaoke meetup) 🎤</span><span class="l l-ko">Animers (애니 좋아하는 사람들의 노래방 모임) 🎤</span></h3>
+      <p><span class="l l-ja">池袋・月1開催、メンバー2,100人・評価4.7。アニソンを歌いながら友達作り。ここはもう自分の庭みたいなものです。11月の回に事前申込を。</span><span class="l l-en">Ikebukuro, monthly, 2,100 members, rated 4.7. Making friends while singing anime songs — basically your home turf. Sign up in advance for the November session.</span><span class="l l-ko">이케부쿠로, 월 1회, 멤버 2,100명, 평점 4.7. 애니송을 부르면서 친구 만들기. 여긴 이미 자기 앞마당 같은 곳이에요. 11월 회차에 미리 신청해 두세요.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ご近所 ============ -->
+<section>
+  <h2><span class="l l-ja">🏠 ご近所ゾーン（墨田区・浅草）</span><span class="l l-en">🏠 Neighborhood Zone (Sumida · Asakusa)</span><span class="l l-ko">🏠 동네 존 (스미다구 · 아사쿠사)</span></h2>
+  <p class="h2sub"><span class="l l-ja">家から30分以内。「通って顔を覚えてもらう」のに最適なエリア。</span><span class="l l-en">Within 30 minutes of home — the best area for becoming a regular and getting your face remembered.</span><span class="l l-ko">집에서 30분 이내. '자주 다니며 얼굴을 익히기'에 딱 좋은 지역이에요.</span></p>
+
+  <div class="card">
+    <div class="badges"><span class="badge b-near"><span class="l l-ja">徒歩圏</span><span class="l l-en">Walkable</span><span class="l l-ko">도보권</span></span><span class="badge b-easy"><span class="l l-ja">ハードル低</span><span class="l l-en">Easy</span><span class="l l-ko">쉬움</span></span></div>
+    <h3><a href="https://www.instagram.com/canal_palace/"><span class="l l-ja">シェアハウス水曜ディナーパーティ</span><span class="l l-en">Share House Wednesday Dinner Party</span><span class="l l-ko">셰어하우스 수요일 디너 파티</span></a></h3>
+    <p class="meta"><span class="l l-ja"><b>毎週水曜</b> ／ 錦糸町 ／ ユウキ紹介</span><span class="l l-en"><b>Every Wednesday</b> / Kinshichō / Introduced by Yuuki</span><span class="l l-ko"><b>매주 수요일</b> / 킨시초 / 유우키 소개</span></p>
+    <p><span class="l l-ja">上の鉄板No.1。日程はユウキとLINEで調整しよう。</span><span class="l l-en">Sure Thing No.1 from above. Sort out the date with Yuuki over LINE.</span><span class="l l-ko">위의 확실한 카드 No.1. 날짜는 유우키와 LINE으로 맞추면 돼요.</span></p>
+    <div class="phrase">「ユウキさんの生徒のダレンです。今日はお邪魔します！」<span class="en"><span class="l l-ja">I'm Darren, Yuuki's student. Thanks for having me!</span><span class="l l-en">I'm Darren, Yuuki's student. Thanks for having me!</span><span class="l l-ko">유우키 선생님 학생인 대런이에요. 오늘 신세 좀 질게요!</span></span></div>
+  </div>
+
+  <div class="card">
+    <div class="badges"><span class="badge b-near"><span class="l l-ja">浅草</span><span class="l l-en">Asakusa</span><span class="l l-ko">아사쿠사</span></span><span class="badge b-easy"><span class="l l-ja">ハードル低</span><span class="l l-en">Easy</span><span class="l l-ko">쉬움</span></span><span class="badge b-check"><span class="l l-ja">日程は要確認</span><span class="l l-en">Check the schedule</span><span class="l l-ko">일정 확인 필요</span></span></div>
+    <h3><a href="https://www.meetup.com/japanese-cafe-bar/">Japanese &amp; English Language Cafe &amp; Bar</a></h3>
+    <p class="meta"><span class="l l-ja"><b>火・木・土 14:00–16:00</b> ／ 浅草寺から徒歩2分 ／ 500〜1,000円（1ドリンク付）</span><span class="l l-en"><b>Tue/Thu/Sat 14:00–16:00</b> / 2 min from Sensō-ji / ¥500–1,000 (1 drink incl.)</span><span class="l l-ko"><b>화·목·토 14:00–16:00</b> / 센소지에서 도보 2분 / 500~1,000엔 (드링크 1잔 포함)</span></p>
+    <p><span class="l l-ja">予約不要の日英言語交換カフェ。少人数で落ち着いて話せるタイプ。墨田区から隅田川を渡ってすぐ。昼の時間に行ける貴重な選択肢です。</span><span class="l l-en">A drop-in Japanese–English language-exchange café. Small groups, relaxed conversation. Just across the Sumida River from home. A rare option you can hit during the daytime.</span><span class="l l-ko">예약이 필요 없는 일·영 언어교환 카페예요. 소수 인원이라 차분하게 이야기할 수 있는 타입. 스미다구에서 스미다강만 건너면 바로예요. 낮 시간에 갈 수 있는 귀한 선택지예요.</span></p>
+    <div class="phrase">「日本語の練習に来ました。会話メインでやってます」<span class="en"><span class="l l-ja">I came to practice Japanese. I mainly work on conversation.</span><span class="l l-en">I came to practice Japanese. I mainly work on conversation.</span><span class="l l-ko">일본어 연습하러 왔어요. 주로 회화를 해요.</span></span></div>
+  </div>
+
+  <div class="card">
+    <div class="badges"><span class="badge b-near"><span class="l l-ja">錦糸町駅前</span><span class="l l-en">By Kinshichō Stn</span><span class="l l-ko">킨시초역 앞</span></span><span class="badge b-mid"><span class="l l-ja">ハードル中</span><span class="l l-en">Medium</span><span class="l l-ko">보통</span></span><span class="badge b-check"><span class="l l-ja">開催日は要確認</span><span class="l l-en">Check the dates</span><span class="l l-ko">개최일 확인 필요</span></span></div>
+    <h3><a href="http://www.sumidaenglish.com/"><span class="l l-ja">墨田英会話クラブ</span><span class="l l-en">Sumida English Conversation Club</span><span class="l l-ko">스미다 영어회화 클럽</span></a></h3>
+    <p class="meta"><span class="l l-ja"><b>週末 14:00–15:50</b>（休みの週あり）／ 錦糸町駅前・墨田産業会館 ／ 500円</span><span class="l l-en"><b>Weekends 14:00–15:50</b> (some weeks off) / Sumida Sangyō Kaikan by Kinshichō Stn / ¥500</span><span class="l l-ko"><b>주말 14:00–15:50</b> (쉬는 주도 있음) / 킨시초역 앞·스미다 산업회관 / 500엔</span></p>
+    <p><span class="l l-ja">地元の英会話サークル＝日本人だらけ。「英語を教える側」で参加すれば一気に人気者になれる場所。行く前に開催日をサイトで確認しよう。</span><span class="l l-en">A local English-conversation circle — packed with Japanese people. Show up as the one teaching English and you'll become popular in no time. Check the dates on the site before you go.</span><span class="l l-ko">지역 영어회화 동아리 = 일본인 천지예요. '영어를 가르쳐 주는 쪽'으로 참가하면 순식간에 인기인이 될 수 있는 곳이에요. 가기 전에 개최일을 사이트에서 확인하세요.</span></p>
+    <div class="phrase">「英語はネイティブレベルなので、何でも聞いてください」<span class="en"><span class="l l-ja">My English is native level — ask me anything.</span><span class="l l-en">My English is native level — ask me anything.</span><span class="l l-ko">영어는 원어민 수준이니까 뭐든지 물어보세요.</span></span></div>
+  </div>
+
+  <div class="card">
+    <div class="badges"><span class="badge b-near"><span class="l l-ja">錦糸町駅すぐ</span><span class="l l-en">Steps from Kinshichō Stn</span><span class="l l-ko">킨시초역 바로</span></span><span class="badge b-easy"><span class="l l-ja">ハードル低</span><span class="l l-en">Easy</span><span class="l l-ko">쉬움</span></span></div>
+    <h3><a href="https://www.pub-hub.com/index.php/en/shop/detail/61"><span class="l l-ja">HUB 錦糸町店（英国風パブ）</span><span class="l l-en">HUB Kinshichō (British-style pub)</span><span class="l l-ko">HUB 킨시초점 (영국식 펍)</span></a></h3>
+    <p class="meta"><span class="l l-ja"><b>毎日営業</b> ／ 錦糸町駅北口徒歩1分 ／ 飲食代のみ</span><span class="l l-en"><b>Open daily</b> / 1 min from Kinshichō Stn north exit / food &amp; drink only</span><span class="l l-ko"><b>매일 영업</b> / 킨시초역 북쪽 출구 도보 1분 / 음식값만</span></p>
+    <p><span class="l l-ja">外国人と日本人が自然に混ざる定番パブチェーン。スポーツ観戦の日はカウンターで隣と話しやすい。「今日は軽く1杯だけ」の日の保険です。</span><span class="l l-en">A go-to pub chain where foreigners and locals mix naturally. On match days it's easy to chat with whoever's next to you at the counter. Your backup for a "just one quick drink tonight" kind of evening.</span><span class="l l-ko">외국인과 일본인이 자연스럽게 섞이는 대표적인 펍 체인이에요. 스포츠 중계가 있는 날은 카운터에서 옆자리와 이야기하기 쉬워요. '오늘은 가볍게 한 잔만' 하는 날의 보험이에요.</span></p>
+    <div class="phrase">「この試合、どっちを応援してるんですか？」<span class="en"><span class="l l-ja">Which team are you rooting for?</span><span class="l l-en">Which team are you rooting for?</span><span class="l l-ko">이 경기, 어느 쪽 응원하세요?</span></span></div>
+  </div>
+
+  <div class="card">
+    <div class="badges"><span class="badge b-near"><span class="l l-ja">錦糸町・住吉</span><span class="l l-en">Kinshichō · Sumiyoshi</span><span class="l l-ko">킨시초·스미요시</span></span><span class="badge b-hard"><span class="l l-ja">常連化ゲーム</span><span class="l l-en">Become-a-regular game</span><span class="l l-ko">단골 되기 게임</span></span></div>
+    <h3><span class="l l-ja">錦糸町の角打ち・立ち飲み（みつぼし村／角打あだちや／IMADEYA SUMIDA）</span><span class="l l-en">Kinshichō kakuuchi &amp; standing bars (Mitsuboshi-mura / Kakuuchi Adachiya / IMADEYA SUMIDA)</span><span class="l l-ko">킨시초의 카쿠우치·서서 마시는 술집 (미쓰보시무라 / 카쿠우치 아다치야 / IMADEYA SUMIDA)</span></h3>
+    <p class="meta"><span class="l l-ja"><b>毎日営業</b> ／ 錦糸町駅周辺 ／ 数百円〜</span><span class="l l-en"><b>Open daily</b> / around Kinshichō Stn / from a few hundred yen</span><span class="l l-ko"><b>매일 영업</b> / 킨시초역 주변 / 수백 엔~</span></p>
+    <p><span class="l l-ja">下町の常連文化。1回では友達はできないけど、<b>2〜3回通えば必ず顔を覚えてもらえます</b>。おつまみ好きで深酒しないタイプだから、こういう夜の過ごし方が一番合ってると思う。</span><span class="l l-en">Old-town regulars culture. You won't make a friend in one visit, but <b>go 2–3 times and they'll definitely remember your face</b>. Since you love a good snack and drink light, this is probably the way to spend an evening that suits you best.</span><span class="l l-ko">서민 동네의 단골 문화예요. 한 번으로는 친구가 안 생기지만, <b>2~3번 다니면 반드시 얼굴을 기억해 줘요</b>. 안주 좋아하고 술은 가볍게 하는 타입이니까, 이런 밤 보내는 방식이 가장 잘 맞을 거예요.</span></p>
+    <div class="phrase">「近くのAirbnbに3週間泊まってるんです。また来ます！」<span class="en"><span class="l l-ja">I'm staying at an Airbnb nearby for 3 weeks. I'll come again!</span><span class="l l-en">I'm staying at an Airbnb nearby for 3 weeks. I'll come again!</span><span class="l l-ko">근처 에어비앤비에서 3주 묵고 있어요. 또 올게요!</span></span></div>
+  </div>
+
+  <div class="card">
+    <div class="badges"><span class="badge b-near"><span class="l l-ja">蔵前・浅草</span><span class="l l-en">Kuramae · Asakusa</span><span class="l l-ko">쿠라마에·아사쿠사</span></span><span class="badge b-mid"><span class="l l-ja">ハードル中</span><span class="l l-en">Medium</span><span class="l l-ko">보통</span></span><span class="badge b-check"><span class="l l-ja">不定期開催</span><span class="l l-en">Held irregularly</span><span class="l l-ko">비정기 개최</span></span></div>
+    <h3>Asakusa/Kuramae Digital Nomads（AK Nomads）</h3>
+    <p class="meta"><span class="l l-ja"><b>不定期</b> ／ Samurai Bar Asakusa ／ Eventbriteで告知</span><span class="l l-en"><b>Irregular</b> / Samurai Bar Asakusa / announced on Eventbrite</span><span class="l l-ko"><b>비정기</b> / Samurai Bar Asakusa / Eventbrite로 공지</span></p>
+    <p><span class="l l-ja">浅草・蔵前の外国人＋在住日本人のゆるい飲み会。少人数でカジュアル。11月に開催があるかはEventbriteで「AK Nomads」を検索してみて。</span><span class="l l-en">A laid-back drinks meetup for foreigners and locals in Asakusa/Kuramae. Small and casual. To see if there's a November session, search "AK Nomads" on Eventbrite.</span><span class="l l-ko">아사쿠사·쿠라마에의 외국인 + 거주 일본인의 느슨한 술모임이에요. 소수 인원에 캐주얼해요. 11월에 개최가 있는지는 Eventbrite에서 'AK Nomads'로 검색해 보세요.</span></p>
+  </div>
+</section>
+
+<!-- ============ アニメ・オタク ============ -->
+<section>
+  <h2><span class="l l-ja">🎌 アニメ・オタクゾーン</span><span class="l l-en">🎌 Anime &amp; Otaku Zone</span><span class="l l-ko">🎌 애니·오타쿠 존</span></h2>
+  <p class="h2sub"><span class="l l-ja">趣味が同じ＝友達になる最短ルート。フィギュア・型月の話が通じる場所。</span><span class="l l-en">Same hobby = the fastest route to friendship. Places where figure and Type-Moon talk lands.</span><span class="l l-ko">취미가 같다 = 친구가 되는 최단 루트. 피규어·타입문 이야기가 통하는 곳이에요.</span></p>
+
+  <div class="card">
+    <div class="badges"><span class="badge b-easy"><span class="l l-ja">ハードル低</span><span class="l l-en">Easy</span><span class="l l-ko">쉬움</span></span><span class="badge b-mid"><span class="l l-ja">秋葉原</span><span class="l l-en">Akihabara</span><span class="l l-ko">아키하바라</span></span></div>
+    <h3><a href="https://jellyjellycafe.com/"><span class="l l-ja">JELLY JELLY CAFE 秋葉原「相席ナイト」</span><span class="l l-en">JELLY JELLY CAFE Akihabara — Aiseki Night (shared-table night)</span><span class="l l-ko">JELLY JELLY CAFE 아키하바라 '아이세키 나이트(합석 나이트)'</span></a></h3>
+    <p class="meta"><span class="l l-ja"><b>毎週 水・金・日</b> ／ 秋葉原 ／ 予約不要・途中入退場自由</span><span class="l l-en"><b>Every Wed/Fri/Sun</b> / Akihabara / no reservation, come &amp; go freely</span><span class="l l-ko"><b>매주 수·금·일</b> / 아키하바라 / 예약 불필요·중간 입퇴장 자유</span></p>
+    <p><span class="l l-ja">鉄板No.2。ボードゲームを一緒に遊ぶから、会話は勝手に生まれます。初心者・一人参加を店がはっきり歓迎してくれてる。</span><span class="l l-en">Sure Thing No.2. Playing board games together forces conversation to happen. The place clearly welcomes beginners and solo visitors.</span><span class="l l-ko">확실한 카드 No.2. 보드게임을 같이 하니까 대화는 저절로 생겨요. 초보자·혼자 참가를 가게가 확실히 환영해 줘요.</span></p>
+    <div class="phrase">「初めてなんですけど、混ぜてもらえますか？」<span class="en"><span class="l l-ja">It's my first time — can I join you?</span><span class="l l-en">It's my first time — can I join you?</span><span class="l l-ko">처음인데, 껴도 될까요?</span></span></div>
+  </div>
+
+  <div class="card">
+    <div class="badges"><span class="badge b-easy"><span class="l l-ja">ハードル低</span><span class="l l-en">Easy</span><span class="l l-ko">쉬움</span></span><span class="badge b-mid"><span class="l l-ja">池袋</span><span class="l l-en">Ikebukuro</span><span class="l l-ko">이케부쿠로</span></span></div>
+    <h3><a href="https://www.meetup.com/ja-jp/animers/"><span class="l l-ja">Animers（アニメMeetupカラオケ会）</span><span class="l l-en">Animers (anime meetup karaoke)</span><span class="l l-ko">Animers (애니 모임 노래방)</span></a></h3>
+    <p class="meta"><span class="l l-ja"><b>月1回・土曜</b> ／ 池袋 ／ 2,600〜3,700円（飲み放題込）</span><span class="l l-en"><b>Monthly, Saturdays</b> / Ikebukuro / ¥2,600–3,700 (all-you-can-drink incl.)</span><span class="l l-ko"><b>월 1회·토요일</b> / 이케부쿠로 / 2,600~3,700엔 (무제한 음료 포함)</span></p>
+    <p><span class="l l-ja">鉄板No.3。アニソンカラオケ＋雑談。日本人＋外国人ミックスで、「アニメ好きの友達を作る」のが公式の目的。11月の回をMeetupでチェックして事前RSVPを。</span><span class="l l-en">Sure Thing No.3. Anime-song karaoke plus casual chat. A Japanese–foreigner mix whose stated purpose is "making anime-loving friends." Check the November session on Meetup and RSVP in advance.</span><span class="l l-ko">확실한 카드 No.3. 애니송 노래방 + 수다. 일본인 + 외국인 믹스로, '애니 좋아하는 친구 만들기'가 공식 목적이에요. 11월 회차를 Meetup에서 확인하고 미리 RSVP 하세요.</span></p>
+    <div class="phrase">「86の曲、歌ってもいいですか？この作品めっちゃ好きなんです」<span class="en"><span class="l l-ja">Can I sing a song from 86? I love that show.</span><span class="l l-en">Can I sing a song from 86? I love that show.</span><span class="l l-ko">86 노래 불러도 될까요? 이 작품 진짜 좋아해요.</span></span></div>
+  </div>
+
+  <div class="card">
+    <div class="badges"><span class="badge b-mid"><span class="l l-ja">ハードル中</span><span class="l l-en">Medium</span><span class="l l-ko">보통</span></span><span class="badge b-mid"><span class="l l-ja">秋葉原</span><span class="l l-en">Akihabara</span><span class="l l-ko">아키하바라</span></span></div>
+    <h3><a href="https://bar-guild.com/akiba/"><span class="l l-ja">アニソンバーギルド 秋葉原店</span><span class="l l-en">Anison Bar Guild Akihabara</span><span class="l l-ko">애니송 바 길드 아키하바라점</span></a></h3>
+    <p class="meta"><span class="l l-ja"><b>毎日営業（〜翌5時）</b> ／ 電気街口徒歩2分 ／ チャージ＋ドリンク各1,100円</span><span class="l l-en"><b>Open daily (until 5am)</b> / 2 min from Electric Town exit / ¥1,100 charge + ¥1,100 per drink</span><span class="l l-ko"><b>매일 영업 (~새벽 5시)</b> / 덴키가이 출구 도보 2분 / 차지 + 드링크 각 1,100엔</span></p>
+    <p><span class="l l-ja">アニソンカラオケバー。一人客歓迎で、店員さんも客もオタク。カウンターでフィギュアの話をすれば勝手に盛り上がります。池袋店もあり。</span><span class="l l-en">An anime-song karaoke bar. Solo guests welcome, and the staff and customers are all otaku. Start talking figures at the counter and it takes off on its own. There's an Ikebukuro branch too.</span><span class="l l-ko">애니송 노래방 바예요. 혼자 온 손님 환영이고, 점원도 손님도 오타쿠예요. 카운터에서 피규어 이야기를 하면 알아서 분위기가 달아올라요. 이케부쿠로점도 있어요.</span></p>
+    <div class="phrase">「amiamiでレゼのフィギュア予約してるんですよ」<span class="en"><span class="l l-ja">I have a Reze figure on preorder at AmiAmi.</span><span class="l l-en">I have a Reze figure on preorder at AmiAmi.</span><span class="l l-ko">아미아미에서 레제 피규어 예약해 뒀어요.</span></span></div>
+  </div>
+
+  <div class="card">
+    <div class="badges"><span class="badge b-hard"><span class="l l-ja">ハードル高め</span><span class="l l-en">Higher hurdle</span><span class="l l-ko">난이도 높음</span></span><span class="badge b-mid"><span class="l l-ja">秋葉原</span><span class="l l-en">Akihabara</span><span class="l l-ko">아키하바라</span></span></div>
+    <h3><a href="https://club-mogra.jp/"><span class="l l-ja">MOGRA（アニソンDJクラブ）</span><span class="l l-en">MOGRA (anison DJ club)</span><span class="l l-ko">MOGRA (애니송 DJ 클럽)</span></a></h3>
+    <p class="meta"><span class="l l-ja"><b>週末クラブ営業・平日DJバー</b> ／ 秋葉原 ／ 2,500〜3,000円＋1ドリンク</span><span class="l l-en"><b>Club on weekends, DJ bar on weekdays</b> / Akihabara / ¥2,500–3,000 + 1 drink</span><span class="l l-ko"><b>주말 클럽 영업·평일 DJ 바</b> / 아키하바라 / 2,500~3,000엔 + 드링크 1잔</span></p>
+    <p><span class="l l-ja">アニソンDJの聖地。毎月第3土曜の「アニソンインデックス」が名物。最初の一声はハードル高めだけど、ハマれば一番濃い仲間ができる場所。まずは平日のバー営業から入るのがおすすめ。</span><span class="l l-en">The holy land of anison DJing. The 3rd-Saturday "Anison Index" is its signature night. Making that first move is a bit daunting, but if you click with it, this is where you'll find your closest crew. Ease in via the weekday bar hours first.</span><span class="l l-ko">애니송 DJ의 성지예요. 매달 셋째 주 토요일의 '애니송 인덱스'가 명물이에요. 처음 말 거는 건 난이도가 좀 높지만, 빠지면 가장 진한 친구들이 생기는 곳이에요. 우선 평일 바 영업부터 들어가 보는 걸 추천해요.</span></p>
+  </div>
+
+  <div class="card">
+    <div class="badges"><span class="badge b-mid"><span class="l l-ja">中野</span><span class="l l-en">Nakano</span><span class="l l-ko">나카노</span></span><span class="badge b-check"><span class="l l-ja">抽選予約制</span><span class="l l-en">Lottery reservation</span><span class="l l-ko">추첨 예약제</span></span></div>
+    <h3><a href="https://www.ufotable.co.jp/cafe/ufo-tokyo/">ufotable Cafe TOKYO</a></h3>
+    <p class="meta"><span class="l l-ja"><b>月曜休</b> ／ 中野区野方（※高円寺から移転済み）／ 抽選予約制（LivePocket）</span><span class="l l-en"><b>Closed Mondays</b> / Nogata, Nakano (moved from Kōenji) / lottery reservation (LivePocket)</span><span class="l l-ko"><b>월요일 휴무</b> / 나카노구 노가타 (※코엔지에서 이전함) / 추첨 예약제 (LivePocket)</span></p>
+    <p><span class="l l-ja">型月ファンの巡礼地。友達作りというより「同志と空気を共有する場所」。11月の展示内容と抽選日程は渡航前に公式サイトで確認しておこう。</span><span class="l l-en">A pilgrimage site for Type-Moon fans. Less about making friends, more "a place to share the air with fellow believers." Check November's exhibit and the lottery dates on the official site before you fly out.</span><span class="l l-ko">타입문 팬의 성지 순례지예요. 친구 만들기라기보다 '동지들과 분위기를 공유하는 곳'이에요. 11월 전시 내용과 추첨 일정은 출국 전에 공식 사이트에서 확인해 두세요.</span></p>
+  </div>
+
+  <div class="card">
+    <div class="badges"><span class="badge b-check"><span class="l l-ja">活動停止の可能性</span><span class="l l-en">May be inactive</span><span class="l l-ko">활동 중단 가능성</span></span></div>
+    <h3>Tokyo Otaku Unite ／ Otaku from Tokyo</h3>
+    <p><span class="l l-ja">前にレッスンで紹介したTokyo Otaku Uniteは、確認できた開催実績が2019年で止まっていました。<b>今はAnimersが実質的な後継</b>と考えてOKです。</span><span class="l l-en">Tokyo Otaku Unite, which I mentioned in a lesson before, has no confirmed events past 2019. <b>Think of Animers as its de facto successor</b> now.</span><span class="l l-ko">예전에 레슨에서 소개했던 Tokyo Otaku Unite는 확인된 개최 실적이 2019년에서 멈춰 있었어요. <b>지금은 Animers가 사실상의 후계</b>라고 생각하면 돼요.</span></p>
+  </div>
+</section>
+
+<!-- ============ 韓国語という武器 ============ -->
+<section>
+  <h2><span class="l l-ja">🇰🇷 「韓国語ネイティブ」という最強の武器</span><span class="l l-en">🇰🇷 Your Ultimate Weapon: Native Korean</span><span class="l l-ko">🇰🇷 '한국어 원어민'이라는 최강의 무기</span></h2>
+  <p class="h2sub"><span class="l l-ja">日本には韓国語を学びたい日本人がたくさんいます。だから「教えてもらう側」じゃなくて「教える側」に回れる。</span><span class="l l-en">Japan is full of people who want to learn Korean. That means you get to be the one teaching, not the one being taught.</span><span class="l l-ko">일본에는 한국어를 배우고 싶어 하는 일본인이 많아요. 그래서 '배우는 쪽'이 아니라 '가르치는 쪽'이 될 수 있어요.</span></p>
+
+  <div class="card">
+    <div class="badges"><span class="badge b-kr"><span class="l l-ja">韓国語が武器</span><span class="l l-en">Korean = your edge</span><span class="l l-ko">한국어가 무기</span></span><span class="badge b-mid"><span class="l l-ja">新宿</span><span class="l l-en">Shinjuku</span><span class="l l-ko">신주쿠</span></span><span class="badge b-easy"><span class="l l-ja">現役確認済み</span><span class="l l-en">Confirmed active</span><span class="l l-ko">현재 활동 확인됨</span></span></div>
+    <h3><a href="https://www.meetup.com/ja-jp/international-asian-friends_tokyo/"><span class="l l-ja">International Asian Friends TOKYO（日韓交流会）</span><span class="l l-en">International Asian Friends TOKYO (Japan–Korea meetup)</span><span class="l l-ko">International Asian Friends TOKYO (한일 교류회)</span></a></h3>
+    <p class="meta"><span class="l l-ja"><b>月1回程度</b> ／ 西新宿 ／ 韓国人男性500円＋1ドリンク</span><span class="l l-en"><b>About monthly</b> / West Shinjuku / ¥500 for Korean men + 1 drink</span><span class="l l-ko"><b>월 1회 정도</b> / 니시신주쿠 / 한국인 남성 500엔 + 드링크 1잔</span></p>
+    <p><span class="l l-ja">40〜70人規模の日韓交流パーティー＋新大久保で二次会。参加する日本人は「韓国語を話したい人」＝つまり自分と話したい人ばかり。人数は多いけど、役割がはっきりしてるから実は話しやすい。</span><span class="l l-en">A 40–70-person Japan–Korea mixer, with an afterparty in Shin-Ōkubo. The Japanese attendees are all "people who want to speak Korean" — i.e. people who want to talk to you. It's a big crowd, but because the roles are clear, it's actually easy to talk.</span><span class="l l-ko">40~70명 규모의 한일 교류 파티 + 신오쿠보에서 2차. 참가하는 일본인은 '한국어를 하고 싶은 사람' = 즉 나와 이야기하고 싶은 사람들뿐이에요. 인원은 많지만 역할이 분명해서 사실 말 걸기 쉬워요.</span></p>
+    <div class="phrase">「ソウル出身です。韓国語、教えましょうか？」<span class="en"><span class="l l-ja">I'm from Seoul. Want me to teach you some Korean?</span><span class="l l-en">I'm from Seoul. Want me to teach you some Korean?</span><span class="l l-ko">서울 출신이에요. 한국어 가르쳐 드릴까요?</span></span></div>
+  </div>
+
+  <div class="card">
+    <div class="badges"><span class="badge b-kr"><span class="l l-ja">韓国語が武器</span><span class="l l-en">Korean = your edge</span><span class="l l-ko">한국어가 무기</span></span><span class="badge b-mid"><span class="l l-ja">新宿・新大久保</span><span class="l l-en">Shinjuku · Shin-Ōkubo</span><span class="l l-ko">신주쿠·신오쿠보</span></span><span class="badge b-check"><span class="l l-ja">日程要確認</span><span class="l l-en">Check the dates</span><span class="l l-ko">일정 확인 필요</span></span></div>
+    <h3><a href="https://www.japankorea.org/"><span class="l l-ja">日韓文化交流会 ／ ソウルメイトの日韓交流会</span><span class="l l-en">Japan–Korea Cultural Exchange / Seoul Mate's Japan–Korea meetup</span><span class="l l-ko">한일 문화교류회 / 서울메이트 한일 교류회</span></a></h3>
+    <p class="meta"><span class="l l-ja"><b>不定期〜月1回</b> ／ 新宿・新大久保 ／ 数千円</span><span class="l l-en"><b>Irregular to monthly</b> / Shinjuku · Shin-Ōkubo / a few thousand yen</span><span class="l l-ko"><b>비정기~월 1회</b> / 신주쿠·신오쿠보 / 수천 엔</span></p>
+    <p><span class="l l-ja">上のバックアップ。フリートーク形式の言語交換パーティーです。</span><span class="l l-en">A backup for the one above. A free-talk-style language-exchange party.</span><span class="l l-ko">위의 백업이에요. 프리토크 형식의 언어교환 파티예요.</span></p>
+  </div>
+</section>
+
+<!-- ============ 描く人 ============ -->
+<section>
+  <h2><span class="l l-ja">🎨 描く人つながりゾーン</span><span class="l l-en">🎨 Fellow-Artists Zone</span><span class="l l-ko">🎨 그림 그리는 사람들 존</span></h2>
+  <p class="h2sub"><span class="l l-ja">絵は「間に置くもの」があるから、内向的でも話しやすい。自分に一番向いてる社交の形だと思う。</span><span class="l l-en">With drawing, there's always something to put between you and the other person, so it's easy even if you're introverted. I think it's the social format that suits you best.</span><span class="l l-ko">그림은 '사이에 놓을 것'이 있으니까 내향적이어도 말 걸기 쉬워요. 가장 잘 맞는 사교 방식이라고 생각해요.</span></p>
+
+  <div class="card">
+    <div class="badges"><span class="badge b-easy"><span class="l l-ja">ハードル低</span><span class="l l-en">Easy</span><span class="l l-ko">쉬움</span></span><span class="badge b-easy"><span class="l l-ja">無料</span><span class="l l-en">Free</span><span class="l l-ko">무료</span></span></div>
+    <h3><a href="https://www.meetup.com/urban-sketchers-tokyo/">Urban Sketchers Tokyo</a></h3>
+    <p class="meta"><span class="l l-ja"><b>月1〜2回・土日</b> ／ 都内各所（毎回変わる）／ 無料</span><span class="l l-en"><b>1–2×/month, weekends</b> / various spots in Tokyo (changes each time) / free</span><span class="l l-ko"><b>월 1~2회·주말</b> / 도내 각지 (매번 바뀜) / 무료</span></p>
+    <p><span class="l l-ja">街に出てみんなでスケッチ→最後に描いたものを見せ合う国際グループ。評価4.9。日本人も外国人もいて、絵を見せ合う時間が自然な会話のきっかけになります。スケッチブックを持って行こう。</span><span class="l l-en">An international group that heads out into the city to sketch together, then shares what everyone drew at the end. Rated 4.9. Japanese and foreigners both come, and the show-and-tell time is a natural conversation starter. Bring a sketchbook.</span><span class="l l-ko">거리로 나가 다 함께 스케치하고, 마지막에 그린 것을 서로 보여 주는 국제 그룹이에요. 평점 4.9. 일본인도 외국인도 있고, 그림을 서로 보여 주는 시간이 자연스러운 대화의 계기가 돼요. 스케치북을 챙겨 가세요.</span></p>
+    <div class="phrase">「その画材、何を使ってるんですか？」<span class="en"><span class="l l-ja">What art supplies are you using?</span><span class="l l-en">What art supplies are you using?</span><span class="l l-ko">그 화구, 뭘 쓰세요?</span></span></div>
+  </div>
+
+  <div class="card">
+    <div class="badges"><span class="badge b-mid"><span class="l l-ja">渋谷</span><span class="l l-en">Shibuya</span><span class="l l-ko">시부야</span></span><span class="badge b-check"><span class="l l-ja">継続開催は要確認</span><span class="l l-en">Confirm it's still running</span><span class="l l-ko">지속 개최 여부 확인</span></span></div>
+    <h3><a href="https://www.facebook.com/PauseDraw/"><span class="l l-ja">PauseDraw（バイリンガルお絵描き会）</span><span class="l l-en">PauseDraw (bilingual drawing meetup)</span><span class="l l-ko">PauseDraw (바이링구얼 그림 모임)</span></a></h3>
+    <p class="meta"><span class="l l-ja"><b>毎月第1日曜</b> ／ 渋谷のカフェ ／ 無料</span><span class="l l-en"><b>1st Sunday monthly</b> / a Shibuya café / free</span><span class="l l-ko"><b>매달 첫째 주 일요일</b> / 시부야 카페 / 무료</span></p>
+    <p><span class="l l-ja">「向かいの人を描く」ゲーム形式で交流が生まれる日英ミックス会。コンセプトは自分にドンピシャだけど、直近ちゃんと開催されてるかはFacebookで要確認。</span><span class="l l-en">A Japanese–English mixer where the "draw the person across from you" game gets people interacting. The concept is right up your alley — just check Facebook to confirm it's still running lately.</span><span class="l l-ko">'맞은편 사람을 그린다'는 게임 형식으로 교류가 생기는 일·영 믹스 모임이에요. 콘셉트는 딱 맞지만, 최근에 제대로 열리는지는 Facebook에서 확인해야 해요.</span></p>
+  </div>
+
+  <div class="card">
+    <div class="badges"><span class="badge b-mid"><span class="l l-ja">単発向き</span><span class="l l-en">Good as a one-off</span><span class="l l-ko">단발성으로 적합</span></span></div>
+    <h3><a href="https://artbar.co.jp/en">Artbar Tokyo（Paint &amp; Wine）</a></h3>
+    <p class="meta"><span class="l l-ja"><b>常時予約可</b> ／ 代官山・銀座ほか ／ 数千円（ワイン込み）</span><span class="l l-en"><b>Reservations anytime</b> / Daikanyama, Ginza, etc. / a few thousand yen (wine incl.)</span><span class="l l-ko"><b>상시 예약 가능</b> / 다이칸야마·긴자 등 / 수천 엔 (와인 포함)</span></p>
+    <p><span class="l l-ja">ワインを飲みながらみんなで1枚描く商業スタジオ。常連にはなりにくいけど、一人参加が多くて隣席と話しやすい。「軽く飲む＋描く」の夜にどうぞ。</span><span class="l l-en">A commercial studio where everyone paints one canvas over wine. Hard to become a regular, but lots of solo attendees, so it's easy to chat with whoever's next to you. For a "light drink + paint" kind of night.</span><span class="l l-ko">와인을 마시면서 다 함께 한 장 그리는 상업 스튜디오예요. 단골이 되긴 어렵지만, 혼자 오는 사람이 많아 옆자리와 이야기하기 쉬워요. '가볍게 마시며 + 그리는' 밤에 어울려요.</span></p>
+  </div>
+</section>
+
+<!-- ============ 言語交換・国際交流 ============ -->
+<section>
+  <h2><span class="l l-ja">🗣 言語交換・国際交流ゾーン</span><span class="l l-en">🗣 Language Exchange &amp; International Zone</span><span class="l l-ko">🗣 언어교환·국제교류 존</span></h2>
+  <p class="h2sub"><span class="l l-ja">とにかく数を当たりたいならここ。日本語は上級だから「日本語メインの回」を選ぶといいよ。</span><span class="l l-en">If you just want to play the numbers, this is the place. Your Japanese is advanced, so pick the "Japanese-focused" sessions.</span><span class="l l-ko">일단 많이 만나 보고 싶다면 여기예요. 일본어가 상급이니까 '일본어 메인 회차'를 고르면 좋아요.</span></p>
+
+  <div class="card">
+    <div class="badges"><span class="badge b-easy"><span class="l l-ja">規模最大</span><span class="l l-en">Biggest scale</span><span class="l l-ko">규모 최대</span></span><span class="badge b-mid"><span class="l l-ja">渋谷・新宿ほか</span><span class="l l-en">Shibuya, Shinjuku, etc.</span><span class="l l-ko">시부야·신주쿠 등</span></span></div>
+    <h3><a href="https://tokyointernationalmeetup.com/">TIFE（Tokyo International Friends &amp; Events）</a></h3>
+    <p class="meta"><span class="l l-ja"><b>月50件以上・水曜は日英言語交換</b> ／ 基本無料（RSVP制）</span><span class="l l-en"><b>50+ events/month, Wed is JP–EN exchange</b> / mostly free (RSVP)</span><span class="l l-ko"><b>월 50건 이상·수요일은 일영 언어교환</b> / 기본 무료 (RSVP제)</span></p>
+    <p><span class="l l-ja">会員35,000人超の最大手。イベント数が多いから、少人数の回を選べば内向的でも大丈夫。まずMeetupでグループに入って、11月のカレンダーを眺めるところから始めよう。</span><span class="l l-en">The biggest player, with 35,000+ members. So many events that if you pick the small-group ones, being introverted is no problem. Start by joining the group on Meetup and browsing the November calendar.</span><span class="l l-ko">회원 35,000명이 넘는 최대 규모예요. 이벤트 수가 많으니까 소수 인원 회차를 고르면 내향적이어도 괜찮아요. 우선 Meetup에서 그룹에 가입하고 11월 캘린더를 둘러보는 것부터 시작하세요.</span></p>
+  </div>
+
+  <div class="card">
+    <div class="badges"><span class="badge b-easy"><span class="l l-ja">小グループ制</span><span class="l l-en">Small-group format</span><span class="l l-ko">소그룹제</span></span><span class="badge b-mid"><span class="l l-ja">渋谷・原宿</span><span class="l l-en">Shibuya · Harajuku</span><span class="l l-ko">시부야·하라주쿠</span></span></div>
+    <h3><a href="https://www.welcometokyoevents.com/events-language-exchange">Welcome Tokyo Events</a></h3>
+    <p class="meta"><span class="l l-ja"><b>ほぼ毎日</b> ／ 渋谷・原宿のカフェ／バー ／ 500〜1,500円＋1ドリンク</span><span class="l l-en"><b>Almost daily</b> / cafés &amp; bars in Shibuya/Harajuku / ¥500–1,500 + 1 drink</span><span class="l l-ko"><b>거의 매일</b> / 시부야·하라주쿠의 카페/바 / 500~1,500엔 + 드링크 1잔</span></p>
+    <p><span class="l l-ja">3〜4人の小グループで席替えしていく形式。大人数が苦手なタイプには、実はTIFEよりこっちが合うかも。</span><span class="l l-en">A 3–4-person small-group format with seat rotations. If big crowds aren't your thing, this might actually suit you better than TIFE.</span><span class="l l-ko">3~4명 소그룹으로 자리를 바꿔 가는 형식이에요. 많은 인원이 부담스러운 타입에게는 사실 TIFE보다 이쪽이 더 맞을지도 몰라요.</span></p>
+  </div>
+
+  <div class="card">
+    <div class="badges"><span class="badge b-mid"><span class="l l-ja">神保町</span><span class="l l-en">Jimbōchō</span><span class="l l-ko">진보초</span></span></div>
+    <h3><a href="https://englishonlycafe.com/en/language-exchange/"><span class="l l-ja">English Only Cafe（言語別交流会）</span><span class="l l-en">English Only Cafe (language-specific meetups)</span><span class="l l-ko">English Only Cafe (언어별 교류회)</span></a></h3>
+    <p class="meta"><span class="l l-ja"><b>ほぼ毎日・曜日により言語が変わる</b> ／ 神保町 ／ 無料＋1ドリンク</span><span class="l l-en"><b>Almost daily; language varies by day</b> / Jimbōchō / free + 1 drink</span><span class="l l-ko"><b>거의 매일·요일에 따라 언어가 바뀜</b> / 진보초 / 무료 + 드링크 1잔</span></p>
+    <p><span class="l l-ja">日本語の日・韓国語の日もある言語交換カフェ。錦糸町から総武線1本で行けるのも楽。</span><span class="l l-en">A language-exchange café with Japanese days and Korean days too. Easy to reach — one Sōbu Line ride from Kinshichō.</span><span class="l l-ko">일본어의 날·한국어의 날도 있는 언어교환 카페예요. 킨시초에서 소부선 한 번으로 갈 수 있어 편해요.</span></p>
+  </div>
+</section>
+
+<!-- ============ 11月カレンダー ============ -->
+<section>
+  <h2><span class="l l-ja">📅 滞在中の確定イベント</span><span class="l l-en">📅 Confirmed Events During Your Stay</span><span class="l l-ko">📅 체류 중 확정된 이벤트</span></h2>
+  <p class="h2sub"><span class="l l-ja">日付が決まっているのはこれだけ。ここを軸に週の予定を組もう。</span><span class="l l-en">These are the only date-fixed items. Build your weekly plan around them.</span><span class="l l-ko">날짜가 정해진 건 이것뿐이에요. 이걸 축으로 주간 일정을 짜세요.</span></p>
+
+  <div class="ev">
+    <div class="date">11/14<small><span class="l l-ja">土</span><span class="l l-en">Sat</span><span class="l l-ko">토</span></small>–15<small><span class="l l-ja">日</span><span class="l l-en">Sun</span><span class="l l-ko">일</span></small></div>
+    <div>
+      <h3><a href="https://designfesta.com/"><span class="l l-ja">デザインフェスタ vol.64</span><span class="l l-en">Design Festa vol.64</span><span class="l l-ko">디자인 페스타 vol.64</span></a><span class="l l-ja">（東京ビッグサイト）</span><span class="l l-en"> (Tokyo Big Sight)</span><span class="l l-ko"> (도쿄 빅사이트)</span></h3>
+      <p><span class="l l-ja">アジア最大級のアートイベント。開催は確定済み。クリエイター本人がブースにいるから「この絵、好きです」から会話が始まる。絵を描く自分にとって最高の狩場だよ。</span><span class="l l-en">One of Asia's largest art events. Confirmed to happen. The creators themselves are at their booths, so a conversation starts from "I love this piece." For an artist like you, it's the perfect hunting ground.</span><span class="l l-ko">아시아 최대급 아트 이벤트예요. 개최는 확정됐어요. 크리에이터 본인이 부스에 있으니 '이 그림 좋아요'에서 대화가 시작돼요. 그림 그리는 사람에게는 최고의 사냥터예요.</span></p>
+    </div>
+  </div>
+  <div class="ev">
+    <div class="date">11/20<small><span class="l l-ja">金</span><span class="l l-en">Fri</span><span class="l l-ko">금</span></small></div>
+    <div>
+      <h3><span class="l l-ja">劇場版「魔法使いの夜」公開初日 🎬</span><span class="l l-en">"Mahoyo" (Witch on the Holy Night) film — opening day 🎬</span><span class="l l-ko">극장판 「마법사의 밤」 개봉 첫날 🎬</span></h3>
+      <p><span class="l l-ja"><b>ユウキと一緒に観に行く約束済み。</b>それまでに月姫→空の境界の予習をしておこう！公開に合わせたコラボカフェは秋に告知される可能性大→collabo-cafe.comを直前にチェック。</span><span class="l l-en"><b>You and Yuuki already have plans to see it together.</b> Before then, brush up on Tsukihime → Kara no Kyōkai! A tie-in collab café will likely be announced in autumn — check collabo-cafe.com right before the trip.</span><span class="l l-ko"><b>유우키와 함께 보러 가기로 이미 약속했어요.</b> 그전에 월희 → 공의 경계를 예습해 두세요! 개봉에 맞춘 콜라보 카페는 가을에 공지될 가능성이 커요 → collabo-cafe.com을 직전에 체크하세요.</span></p>
+    </div>
+  </div>
+  <div class="ev">
+    <div class="date"><span class="l l-ja">毎週</span><span class="l l-en">Every</span><span class="l l-ko">매주</span><small><span class="l l-ja">水曜</span><span class="l l-en">Wed</span><span class="l l-ko">수요일</span></small></div>
+    <div>
+      <h3><span class="l l-ja">シェアハウス・ディナーパーティ／JELLY JELLY相席ナイト</span><span class="l l-en">Share House Dinner Party / JELLY JELLY Aiseki Night</span><span class="l l-ko">셰어하우스 디너 파티 / JELLY JELLY 아이세키 나이트</span></h3>
+      <p><span class="l l-ja">水曜はどちらかに必ず行く「固定曜日」にするのがおすすめ。</span><span class="l l-en">I'd make Wednesday a "fixed day" when you always go to one or the other.</span><span class="l l-ko">수요일은 둘 중 하나에 반드시 가는 '고정 요일'로 정하는 걸 추천해요.</span></p>
+    </div>
+  </div>
+
+  <div class="notebox" style="margin-top:14px;">
+    <b><span class="l l-ja">⚠️ 渡航前チェックリスト（10月末にユウキと一緒に確認しよう）</span><span class="l l-en">⚠️ Pre-departure checklist (check together with Yuuki in late October)</span><span class="l l-ko">⚠️ 출국 전 체크리스트 (10월 말에 유우키와 함께 확인해요)</span></b>
+    <ul>
+      <li><span class="l l-ja">魔法使いの夜コラボカフェの開催有無（collabo-cafe.com）</span><span class="l l-en">Whether the Mahoyo collab café is happening (collabo-cafe.com)</span><span class="l l-ko">마법사의 밤 콜라보 카페 개최 여부 (collabo-cafe.com)</span></li>
+      <li><span class="l l-ja">Animers・Urban Sketchers・日韓交流会の11月の開催日（各Meetupページ）</span><span class="l l-en">November dates for Animers, Urban Sketchers, and the Japan–Korea meetup (each Meetup page)</span><span class="l l-ko">Animers·Urban Sketchers·한일 교류회의 11월 개최일 (각 Meetup 페이지)</span></li>
+      <li><span class="l l-ja">COMIC CITY SPARK 11月分の日程発表（akaboo.jp）※COMITIAは11月開催なし</span><span class="l l-en">COMIC CITY SPARK November date announcement (akaboo.jp) — note: no COMITIA in November</span><span class="l l-ko">COMIC CITY SPARK 11월분 일정 발표 (akaboo.jp) ※COMITIA는 11월 개최 없음</span></li>
+      <li><span class="l l-ja">浅草Language Cafe・墨田英会話クラブの最新スケジュール</span><span class="l l-en">Latest schedules for the Asakusa Language Cafe and Sumida English Conversation Club</span><span class="l l-ko">아사쿠사 Language Cafe·스미다 영어회화 클럽의 최신 스케줄</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 週間モデルプラン ============ -->
+<section>
+  <h2><span class="l l-ja">🗓 モデル週間プラン</span><span class="l l-en">🗓 Model Weekly Plan</span><span class="l l-ko">🗓 모델 주간 플랜</span></h2>
+  <p class="h2sub"><span class="l l-ja">全部やる必要はなし。「固定の曜日」を2つ作れば、2週目から「また来たね！」が始まるよ。</span><span class="l l-en">You don't have to do it all. Make two "fixed days" and by week two the "hey, you're back!" starts.</span><span class="l l-ko">전부 할 필요는 없어요. '고정 요일'을 두 개 만들면 둘째 주부터 '또 왔네!'가 시작돼요.</span></p>
+  <div class="tablewrap">
+  <table>
+    <tr><th><span class="l l-ja">曜日</span><span class="l l-en">Day</span><span class="l l-ko">요일</span></th><th><span class="l l-ja">昼</span><span class="l l-en">Afternoon</span><span class="l l-ko">낮</span></th><th><span class="l l-ja">夜</span><span class="l l-en">Evening</span><span class="l l-ko">저녁</span></th></tr>
+    <tr><td><span class="l l-ja">月</span><span class="l l-en">Mon</span><span class="l l-ko">월</span></td><td><span class="l l-ja">観光・買い物（アキバ穴場など）</span><span class="l l-en">Sightseeing &amp; shopping (Akiba hidden gems, etc.)</span><span class="l l-ko">관광·쇼핑 (아키바 숨은 명소 등)</span></td><td><span class="l l-ja">休息 or 錦糸町の角打ちに顔を出す</span><span class="l l-en">Rest, or drop by a Kinshichō kakuuchi</span><span class="l l-ko">휴식 or 킨시초 카쿠우치에 얼굴 내밀기</span></td></tr>
+    <tr><td><span class="l l-ja">火</span><span class="l l-en">Tue</span><span class="l l-ko">화</span></td><td><span class="l l-ja">浅草 Language Cafe（14–16時）</span><span class="l l-en">Asakusa Language Cafe (14:00–16:00)</span><span class="l l-ko">아사쿠사 Language Cafe (14~16시)</span></td><td><span class="l l-ja">フリー</span><span class="l l-en">Free</span><span class="l l-ko">자유</span></td></tr>
+    <tr><td><span class="l l-ja">水</span><span class="l l-en">Wed</span><span class="l l-ko">수</span></td><td><span class="l l-ja">フリー</span><span class="l l-en">Free</span><span class="l l-ko">자유</span></td><td><span class="l l-ja">⭐ シェアハウスディナー or 相席ナイト</span><span class="l l-en">⭐ Share House dinner or Aiseki Night</span><span class="l l-ko">⭐ 셰어하우스 디너 or 아이세키 나이트</span></td></tr>
+    <tr><td><span class="l l-ja">木</span><span class="l l-en">Thu</span><span class="l l-ko">목</span></td><td><span class="l l-ja">浅草 Language Cafe（14–16時）</span><span class="l l-en">Asakusa Language Cafe (14:00–16:00)</span><span class="l l-ko">아사쿠사 Language Cafe (14~16시)</span></td><td><span class="l l-ja">アニソンバーギルド</span><span class="l l-en">Anison Bar Guild</span><span class="l l-ko">애니송 바 길드</span></td></tr>
+    <tr><td><span class="l l-ja">金</span><span class="l l-en">Fri</span><span class="l l-ko">금</span></td><td><span class="l l-ja">フリー</span><span class="l l-en">Free</span><span class="l l-ko">자유</span></td><td><span class="l l-ja">相席ナイト or MOGRA</span><span class="l l-en">Aiseki Night or MOGRA</span><span class="l l-ko">아이세키 나이트 or MOGRA</span></td></tr>
+    <tr><td><span class="l l-ja">土</span><span class="l l-en">Sat</span><span class="l l-ko">토</span></td><td><span class="l l-ja">Urban Sketchers／デザフェス／イベント</span><span class="l l-en">Urban Sketchers / Design Festa / events</span><span class="l l-ko">Urban Sketchers / 디자인 페스타 / 이벤트</span></td><td><span class="l l-ja">Animers／日韓交流会（開催週）</span><span class="l l-en">Animers / Japan–Korea meetup (on weeks held)</span><span class="l l-ko">Animers / 한일 교류회 (개최 주)</span></td></tr>
+    <tr><td><span class="l l-ja">日</span><span class="l l-en">Sun</span><span class="l l-ko">일</span></td><td><span class="l l-ja">墨田英会話クラブ（開催週）</span><span class="l l-en">Sumida English Club (on weeks held)</span><span class="l l-ko">스미다 영어회화 클럽 (개최 주)</span></td><td><span class="l l-ja">相席ナイト（軽め）</span><span class="l l-en">Aiseki Night (light)</span><span class="l l-ko">아이세키 나이트 (가볍게)</span></td></tr>
+  </table>
+  </div>
+</section>
+
+<!-- ============ フレーズ集 ============ -->
+<section>
+  <h2><span class="l l-ja">💬 友達作りフレーズ集（レッスン教材）</span><span class="l l-en">💬 Friend-Making Phrasebook (lesson material)</span><span class="l l-ko">💬 친구 만들기 표현집 (레슨 교재)</span></h2>
+  <p class="h2sub"><span class="l l-ja">敬語で始めて、相手がタメ口になったら合わせる。これが日本での距離の縮め方です。</span><span class="l l-en">Start in polite speech, then match the other person once they switch to casual. That's how you close the distance in Japan.</span><span class="l l-ko">존댓말로 시작하고, 상대가 반말이 되면 맞춰 가기. 이게 일본에서 거리를 좁히는 방법이에요.</span></p>
+
+  <div class="ph-group">
+    <h3><span class="l l-ja">① 話しかける（最初の10秒）</span><span class="l l-en">① Breaking the ice (first 10 seconds)</span><span class="l l-ko">① 말 걸기 (처음 10초)</span></h3>
+    <div class="ph">「隣、いいですか？」<span class="en"><span class="l l-ja">Is this seat free? / Mind if I sit here?</span><span class="l l-en">Is this seat free? / Mind if I sit here?</span><span class="l l-ko">옆자리 앉아도 될까요? / 여기 앉아도 돼요?</span></span></div>
+    <div class="ph">「初めて来たんですけど、よく来るんですか？」<span class="en"><span class="l l-ja">It's my first time here — do you come often?</span><span class="l l-en">It's my first time here — do you come often?</span><span class="l l-ko">처음 왔는데, 자주 오세요?</span></span><span class="note"><span class="l l-ja">★どの店でも使える万能キー</span><span class="l l-en">★A universal opener that works at any venue</span><span class="l l-ko">★어느 가게에서나 통하는 만능 키</span></span></div>
+    <div class="ph">「それ、〇〇のグッズですよね？僕も好きなんです」<span class="en"><span class="l l-ja">That's from ___, right? I'm a fan too.</span><span class="l l-en">That's from ___, right? I'm a fan too.</span><span class="l l-ko">그거 ○○ 굿즈죠? 저도 좋아해요.</span></span></div>
+  </div>
+
+  <div class="ph-group">
+    <h3><span class="l l-ja">② 自己紹介（30秒バージョン）</span><span class="l l-en">② Introducing yourself (30-second version)</span><span class="l l-ko">② 자기소개 (30초 버전)</span></h3>
+    <div class="ph">「ダレンです。ニュージーランドから来ました。出身はソウルです。11月いっぱい、墨田区に泊まってます」<span class="en"><span class="l l-ja">I'm Darren, from New Zealand, originally from Seoul. I'm staying in Sumida through November.</span><span class="l l-en">I'm Darren, from New Zealand, originally from Seoul. I'm staying in Sumida through November.</span><span class="l l-ko">대런이에요. 뉴질랜드에서 왔어요. 출신은 서울이에요. 11월 내내 스미다구에 묵고 있어요.</span></span></div>
+    <div class="ph">「日本は8回目なんですけど、今回が一番長い滞在なんです」<span class="en"><span class="l l-ja">This is my 8th time in Japan, but my longest stay.</span><span class="l l-en">This is my 8th time in Japan, but my longest stay.</span><span class="l l-ko">일본은 여덟 번째인데, 이번이 가장 긴 체류예요.</span></span><span class="note"><span class="l l-ja">★「8回目」は必ずウケる。そこから話が広がる</span><span class="l l-en">★"8th time" always lands — the conversation grows from there</span><span class="l l-ko">★'여덟 번째'는 반드시 먹혀요. 거기서 이야기가 퍼져요</span></span></div>
+  </div>
+
+  <div class="ph-group">
+    <h3><span class="l l-ja">③ 会話を続ける（あいづちの「さしすせそ」＋質問）</span><span class="l l-en">③ Keeping it going (the "sa-shi-su-se-so" of aizuchi + questions)</span><span class="l l-ko">③ 대화 이어가기 (맞장구의 '사시스세소' + 질문)</span></h3>
+    <div class="ph">さすがですね／知らなかったです／すごいですね／センスありますね／そうなんだ！<span class="en"><span class="l l-ja">The "sa-shi-su-se-so" of aizuchi — keeps any conversation alive.</span><span class="l l-en">The "sa-shi-su-se-so" of aizuchi — keeps any conversation alive.</span><span class="l l-ko">맞장구의 '사시스세소' — 어떤 대화든 살려 줘요.</span></span></div>
+    <div class="ph">「おすすめの〇〇、ありますか?」<span class="en"><span class="l l-ja">Any recommendations for ___? (a shop, anime, a snack, an area…)</span><span class="l l-en">Any recommendations for ___? (a shop, anime, a snack, an area…)</span><span class="l l-ko">추천하는 ○○ 있어요? (가게·애니·안주·지역…)</span></span></div>
+  </div>
+
+  <div class="ph-group">
+    <h3><span class="l l-ja">④ 連絡先を交換する（ここが一番大事）</span><span class="l l-en">④ Swapping contacts (this is the most important part)</span><span class="l l-ko">④ 연락처 교환하기 (여기가 제일 중요해요)</span></h3>
+    <div class="ph">「よかったら、LINE交換しませんか？」<span class="en"><span class="l l-ja">If you'd like, shall we exchange LINE?</span><span class="l l-en">If you'd like, shall we exchange LINE?</span><span class="l l-ko">괜찮으면 LINE 교환할까요?</span></span><span class="note"><span class="l l-ja">★日本はInstagramよりLINEが基本。QRコードを出せるように練習しておく</span><span class="l l-en">★In Japan, LINE beats Instagram as the default. Practice pulling up your QR code</span><span class="l l-ko">★일본은 인스타그램보다 LINE이 기본이에요. QR 코드를 바로 띄울 수 있게 연습해 두세요</span></span></div>
+    <div class="ph">「インスタやってますか？絵を描くので、よかったら見てください」<span class="en"><span class="l l-ja">Are you on Instagram? I draw, so check out my art if you like.</span><span class="l l-en">Are you on Instagram? I draw, so check out my art if you like.</span><span class="l l-ko">인스타 하세요? 그림을 그리니까 괜찮으면 봐 주세요.</span></span><span class="note"><span class="l l-ja">★絵のアカウントは最強の名刺</span><span class="l l-en">★An art account is the ultimate business card</span><span class="l l-ko">★그림 계정은 최강의 명함이에요</span></span></div>
+  </div>
+
+  <div class="ph-group">
+    <h3><span class="l l-ja">⑤ 次につなげる</span><span class="l l-en">⑤ Setting up the next time</span><span class="l l-ko">⑤ 다음으로 이어가기</span></h3>
+    <div class="ph">「来週もまた来ます。また会えたら嬉しいです」<span class="en"><span class="l l-ja">I'll come again next week. Hope to see you!</span><span class="l l-en">I'll come again next week. Hope to see you!</span><span class="l l-ko">다음 주에도 또 올게요. 또 만나면 좋겠어요.</span></span></div>
+    <div class="ph">「11月20日に魔法使いの夜を観に行くんですけど、興味ありますか？」<span class="en"><span class="l l-ja">I'm going to see Mahoyo on Nov 20 — interested?</span><span class="l l-en">I'm going to see Mahoyo on Nov 20 — interested?</span><span class="l l-ko">11월 20일에 마법사의 밤 보러 가는데, 관심 있으세요?</span></span></div>
+    <div class="ph">「今度、一緒に秋葉原行きませんか？いい店知ってるんで」<span class="en"><span class="l l-ja">Want to hit Akihabara together sometime? I know some good spots.</span><span class="l l-en">Want to hit Akihabara together sometime? I know some good spots.</span><span class="l l-ko">다음에 같이 아키하바라 갈래요? 좋은 가게 알고 있어요.</span></span><span class="note"><span class="l l-ja">★8回目なら、もう案内する側に回れる</span><span class="l l-en">★On your 8th trip, you can be the one showing people around</span><span class="l l-ko">★여덟 번째니까 이제 안내하는 쪽이 될 수 있어요</span></span></div>
+  </div>
+
+  <div class="ph-group">
+    <h3><span class="l l-ja">⑥ やんわり切り上げる（無理しない用）</span><span class="l l-en">⑥ Bowing out gently (for when you need to)</span><span class="l l-ko">⑥ 부드럽게 마무리하기 (무리하지 않기 위해)</span></h3>
+    <div class="ph">「そろそろ行きますね。今日は話せて楽しかったです！」<span class="en"><span class="l l-ja">I should get going. It was great talking with you!</span><span class="l l-en">I should get going. It was great talking with you!</span><span class="l l-ko">슬슬 가 볼게요. 오늘 이야기 나눠서 즐거웠어요!</span></span></div>
+  </div>
+</section>
+
+<!-- ============ 作戦のコツ ============ -->
+<section>
+  <h2><span class="l l-ja">🧭 作戦の3原則</span><span class="l l-en">🧭 The 3 Principles of the Plan</span><span class="l l-ko">🧭 작전의 3원칙</span></h2>
+  <div class="card">
+    <p><span class="l l-ja"><b>1. 「1回の全力」より「2回目の顔出し」。</b>日本の人間関係は2回目から始まる。気に入った場所には必ずもう一度行こう。</span><span class="l l-en"><b>1. A second visit beats going all-out once.</b> Relationships in Japan start on the second meeting. Always go back to a place you liked.</span><span class="l l-ko"><b>1. '한 번의 전력'보다 '두 번째 얼굴 내밀기'.</b> 일본의 인간관계는 두 번째부터 시작돼요. 마음에 든 곳에는 반드시 한 번 더 가세요.</span></p>
+    <p><span class="l l-ja"><b>2. 役割を持って参加する。</b>「英語を教えられる人」「韓国語ネイティブ」「絵が描ける人」「アキバに詳しい人」——カードを4枚も持ってるんだから、それを使おう。教わる側より教える側の方が友達はできやすい。</span><span class="l l-en"><b>2. Show up with a role.</b> "Someone who can teach English," "a Korean native," "someone who draws," "someone who knows Akiba" — you're holding four cards, so play them. It's easier to make friends as the one teaching than the one being taught.</span><span class="l l-ko"><b>2. 역할을 가지고 참가하기.</b> '영어를 가르칠 수 있는 사람', '한국어 원어민', '그림을 그리는 사람', '아키바에 훤한 사람' — 카드를 네 장이나 쥐고 있으니 그걸 쓰세요. 배우는 쪽보다 가르치는 쪽이 친구를 만들기 쉬워요.</span></p>
+    <p><span class="l l-ja"><b>3. 疲れたら休む。</b>3週間は長い。週2〜3ヶ所で十分。無理して大人数パーティに行くより、角打ちで1人とじっくり話す方が、きっと自分には合ってる。</span><span class="l l-en"><b>3. Rest when you're tired.</b> Three weeks is long. Two or three spots a week is plenty. Rather than forcing yourself to big parties, talking deeply with one person at a kakuuchi probably suits you better.</span><span class="l l-ko"><b>3. 지치면 쉬기.</b> 3주는 길어요. 일주일에 2~3곳이면 충분해요. 무리해서 대규모 파티에 가기보다, 카쿠우치에서 한 사람과 깊이 이야기하는 편이 분명 더 잘 맞을 거예요.</span></p>
+  </div>
+</section>
+
+<footer>
+  <span class="l l-ja">作成：ユウキ（2026年7月）｜ 掲載情報は2026年7月時点のWeb確認ベース。⚠️マークの項目は渡航前に最新情報を再確認してください。</span><span class="l l-en">Made by Yuuki (July 2026) | Info based on web checks as of July 2026. Re-confirm the latest details for ⚠️ items before you travel.</span><span class="l l-ko">작성: 유우키 (2026년 7월) | 게재 정보는 2026년 7월 시점의 웹 확인 기준이에요. ⚠️ 표시 항목은 출국 전에 최신 정보를 다시 확인하세요.</span><br>
+  <span class="l l-ja">単語クイズはこちら → </span><span class="l l-en">Vocab quiz here → </span><span class="l l-ko">단어 퀴즈는 여기 → </span><a href="https://yukitchy.github.io/lesson-quiz/darren-a65c/">yukitchy.github.io/lesson-quiz/darren-a65c</a>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  function setLang(l){
+    document.documentElement.setAttribute('data-lang', l);
+    document.documentElement.setAttribute('lang', l);
+    try{ localStorage.setItem('darren-lang', l); }catch(e){}
+    var btns = document.querySelectorAll('.langbtn');
+    for(var i=0;i<btns.length;i++){
+      btns[i].setAttribute('aria-pressed', String(btns[i].dataset.lang===l));
+    }
+  }
+  var cur = document.documentElement.getAttribute('data-lang') || 'ja';
+  setLang(cur);
+  var btns = document.querySelectorAll('.langbtn');
+  for(var i=0;i<btns.length;i++){
+    (function(b){ b.addEventListener('click', function(){ setLang(b.dataset.lang); }); })(btns[i]);
+  }
+})();
+</script>
+
+</body>
+</html>
