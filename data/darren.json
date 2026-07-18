@@ -1,20 +1,194 @@
 {
-  "student": "Darren",
-  "items": [
-    {"ja": "控える", "yomi": "ひかえる", "en": "to refrain from, to hold back", "d": "2026-07-05", "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"},
-    {"ja": "避ける", "yomi": "さける", "en": "to avoid", "d": "2026-07-05", "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"},
-    {"ja": "でございます", "yomi": null, "en": "to be (very formal/polite copula, keigo)", "d": "2026-07-05", "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"},
-    {"ja": "さようでございます", "yomi": null, "en": "yes, that is correct (very formal)", "d": "2026-07-05", "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"},
-    {"ja": "剥げる", "yomi": "はげる", "en": "to peel off, to wear off (e.g. paint, print)", "d": "2026-07-05", "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"},
-    {"ja": "カウンター席", "yomi": "カウンターせき", "en": "counter seat", "d": "2026-07-05", "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"},
-    {"ja": "貸切風呂", "yomi": "かしきりぶろ", "en": "private/reservable bath", "d": "2026-07-05", "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"},
-    {"ja": "本館", "yomi": "ほんかん", "en": "main building", "d": "2026-07-05", "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"},
-    {"ja": "別館", "yomi": "べっかん", "en": "annex (building)", "d": "2026-07-05", "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"},
-    {"ja": "アネックス", "yomi": null, "en": "annex", "d": "2026-07-05", "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"},
-    {"ja": "個室風呂", "yomi": "こしつぶろ", "en": "private bath (in a private room)", "d": "2026-07-05", "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"},
-    {"ja": "アメニティ", "yomi": null, "en": "amenities (toiletries, guest supplies)", "d": "2026-07-05", "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"},
-    {"ja": "お通し", "yomi": "おとおし", "en": "starter dish automatically served at an izakaya (with a small cover charge)", "d": "2026-07-05", "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"},
-    {"ja": "中小企業", "yomi": "ちゅうしょうきぎょう", "en": "small and medium-sized enterprise (SME)", "d": "2026-07-05", "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"},
-    {"ja": "ハングル", "yomi": null, "en": "Hangul (the Korean writing system)", "d": "2026-07-05", "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"}
-  ]
+ "student": "Darren",
+ "items": [
+  {
+   "ja": "控える",
+   "yomi": "ひかえる",
+   "en": "to refrain from, to hold back",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"
+  },
+  {
+   "ja": "避ける",
+   "yomi": "さける",
+   "en": "to avoid",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"
+  },
+  {
+   "ja": "でございます",
+   "yomi": null,
+   "en": "to be (very formal/polite copula, keigo)",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"
+  },
+  {
+   "ja": "さようでございます",
+   "yomi": null,
+   "en": "yes, that is correct (very formal)",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"
+  },
+  {
+   "ja": "剥げる",
+   "yomi": "はげる",
+   "en": "to peel off, to wear off (e.g. paint, print)",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"
+  },
+  {
+   "ja": "カウンター席",
+   "yomi": "カウンターせき",
+   "en": "counter seat",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"
+  },
+  {
+   "ja": "貸切風呂",
+   "yomi": "かしきりぶろ",
+   "en": "private/reservable bath",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"
+  },
+  {
+   "ja": "本館",
+   "yomi": "ほんかん",
+   "en": "main building",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"
+  },
+  {
+   "ja": "別館",
+   "yomi": "べっかん",
+   "en": "annex (building)",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"
+  },
+  {
+   "ja": "アネックス",
+   "yomi": null,
+   "en": "annex",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"
+  },
+  {
+   "ja": "個室風呂",
+   "yomi": "こしつぶろ",
+   "en": "private bath (in a private room)",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"
+  },
+  {
+   "ja": "アメニティ",
+   "yomi": null,
+   "en": "amenities (toiletries, guest supplies)",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"
+  },
+  {
+   "ja": "お通し",
+   "yomi": "おとおし",
+   "en": "starter dish automatically served at an izakaya (with a small cover charge)",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"
+  },
+  {
+   "ja": "中小企業",
+   "yomi": "ちゅうしょうきぎょう",
+   "en": "small and medium-sized enterprise (SME)",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"
+  },
+  {
+   "ja": "ハングル",
+   "yomi": null,
+   "en": "Hangul (the Korean writing system)",
+   "d": "2026-07-05",
+   "src": "2026-07-05-Darren-ロールプレイ接客敬語と韓国ハングル談義.md"
+  },
+  {
+   "ja": "聖地巡礼",
+   "yomi": "せいちじゅんれい",
+   "en": "pilgrimage to an anime/media location",
+   "d": "2026-07-18",
+   "src": "2026-07-18-Darren-11月来日プランとタイプムーン予習.md"
+  },
+  {
+   "ja": "拠点",
+   "yomi": "きょてん",
+   "en": "base, hub",
+   "d": "2026-07-18",
+   "src": "2026-07-18-Darren-11月来日プランとタイプムーン予習.md"
+  },
+  {
+   "ja": "双方向的",
+   "yomi": "そうほうこうてき",
+   "en": "bidirectional, two-way",
+   "d": "2026-07-18",
+   "src": "2026-07-18-Darren-11月来日プランとタイプムーン予習.md"
+  },
+  {
+   "ja": "匿名性",
+   "yomi": "とくめいせい",
+   "en": "anonymity",
+   "d": "2026-07-18",
+   "src": "2026-07-18-Darren-11月来日プランとタイプムーン予習.md"
+  },
+  {
+   "ja": "客観的",
+   "yomi": "きゃっかんてき",
+   "en": "objective",
+   "d": "2026-07-18",
+   "src": "2026-07-18-Darren-11月来日プランとタイプムーン予習.md"
+  },
+  {
+   "ja": "傾斜",
+   "yomi": "けいしゃ",
+   "en": "slope, incline",
+   "d": "2026-07-18",
+   "src": "2026-07-18-Darren-11月来日プランとタイプムーン予習.md"
+  },
+  {
+   "ja": "穏やか",
+   "yomi": "おだやか",
+   "en": "calm, gentle, peaceful",
+   "d": "2026-07-18",
+   "src": "2026-07-18-Darren-11月来日プランとタイプムーン予習.md"
+  },
+  {
+   "ja": "吸血鬼",
+   "yomi": "きゅうけつき",
+   "en": "vampire",
+   "d": "2026-07-18",
+   "src": "2026-07-18-Darren-11月来日プランとタイプムーン予習.md"
+  },
+  {
+   "ja": "予習",
+   "yomi": "よしゅう",
+   "en": "preparation, studying in advance",
+   "d": "2026-07-18",
+   "src": "2026-07-18-Darren-11月来日プランとタイプムーン予習.md"
+  },
+  {
+   "ja": "脱線",
+   "yomi": "だっせん",
+   "en": "digression, getting off track",
+   "d": "2026-07-18",
+   "src": "2026-07-18-Darren-11月来日プランとタイプムーン予習.md"
+  },
+  {
+   "ja": "免許切り替え",
+   "yomi": "めんきょきりかえ",
+   "en": "driver's license conversion",
+   "d": "2026-07-18",
+   "src": "2026-07-18-Darren-11月来日プランとタイプムーン予習.md"
+  },
+  {
+   "ja": "パラレルワールド",
+   "yomi": null,
+   "en": "parallel world",
+   "d": "2026-07-18",
+   "src": "2026-07-18-Darren-11月来日プランとタイプムーン予習.md"
+  }
+ ]
 }
