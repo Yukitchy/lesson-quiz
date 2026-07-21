@@ -1,2 +1,23 @@
 .claude/
 .DS_Store
+
+# --- auto backup job ---
+.env
+*.env
+.env.*
+credentials*
+token*
+*_secret*
+*.pem
+*.key
+client_secret*.json
+service-account*.json
+node_modules/
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+*.log
+.DS_Store
+.claude/
