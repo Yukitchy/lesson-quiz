@@ -1,73 +1,77 @@
 {
   "base_url": "https://yukitchy.github.io/lesson-quiz",
   "students": {
-    "pedro": {
-      "flag": "🇧🇷",
-      "slug": "pedro-028e"
-    },
-    "rolando": {
-      "flag": "🇺🇸",
-      "slug": "rolando-862c"
-    },
-    "suzy": {
-      "flag": "🇺🇸",
-      "slug": "suzy-7c8f"
-    },
-    "michael": {
-      "flag": "🇺🇸",
-      "slug": "michael-ddbb"
-    },
-    "sam": {
-      "flag": "🇬🇧",
-      "slug": "sam-4158"
-    },
-    "chester": {
-      "flag": "🇨🇦",
-      "slug": "chester-0830"
-    },
-    "kelsi": {
-      "flag": "🇺🇸",
-      "slug": "kelsi-7e76"
-    },
     "ben": {
       "flag": "🇺🇸",
       "slug": "ben-59b4"
-    },
-    "jan-kristian": {
-      "flag": "🇫🇮",
-      "slug": "jan-kristian-7b6f"
-    },
-    "mason": {
-      "flag": "🇺🇸",
-      "slug": "mason-52f3"
     },
     "caleb": {
       "flag": "🇺🇸",
       "slug": "caleb-9cd5"
     },
+    "chester": {
+      "flag": "🇨🇦",
+      "slug": "chester-0830"
+    },
     "darren": {
       "flag": "🇰🇷",
       "slug": "darren-a65c"
     },
-    "robert": {
-      "flag": "🇺🇸",
-      "slug": "robert-f727"
+    "jan-kristian": {
+      "flag": "🇫🇮",
+      "slug": "jan-kristian-7b6f"
     },
-    "shane": {
+    "justin": {
       "flag": "🇺🇸",
-      "slug": "shane-a4bf"
+      "slug": "justin-8e1b"
+    },
+    "kelsi": {
+      "flag": "🇺🇸",
+      "slug": "kelsi-7e76"
     },
     "lance": {
       "flag": "🇺🇸",
       "slug": "lance-c5ef"
     },
-    "myles": {
-      "flag": "🌍",
-      "slug": "myles-ea52"
+    "mason": {
+      "flag": "🇺🇸",
+      "slug": "mason-52f3"
+    },
+    "michael": {
+      "flag": "🇺🇸",
+      "slug": "michael-ddbb"
     },
     "michael-ajison": {
       "flag": "🇨🇦",
       "slug": "michael-ajison-3bdc"
+    },
+    "myles": {
+      "flag": "🌍",
+      "slug": "myles-ea52"
+    },
+    "pedro": {
+      "flag": "🇧🇷",
+      "slug": "pedro-028e"
+    },
+    "robert": {
+      "flag": "🇺🇸",
+      "slug": "robert-f727"
+    },
+    "rolando": {
+      "flag": "🇺🇸",
+      "slug": "rolando-862c"
+    },
+    "sam": {
+      "flag": "🇬🇧",
+      "slug": "sam-4158"
+    },
+    "shane": {
+      "flag": "🇺🇸",
+      "slug": "shane-a4bf"
+    },
+    "suzy": {
+      "flag": "🇺🇸",
+      "slug": "suzy-7c8f"
     }
   }
 }
