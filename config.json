@@ -108,6 +108,10 @@
     "stevo": {
       "flag": "🇬🇧",
       "slug": "stevo-24b7"
+    },
+    "rowan": {
+      "flag": "🇫🇷",
+      "slug": "rowan-26ea"
     }
   }
 }
