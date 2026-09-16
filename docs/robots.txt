@@ -1,0 +1,73 @@
+# quiz.animesenseijp.com — 生徒個人の板書・語彙ページ。公開の場に出さない。
+# 検索エンジンには「クロールは許す・索引には載せない」。各ページの
+# <meta name="robots" content="noindex"> を読ませる必要があるため Disallow にしない。
+User-agent: Googlebot
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+# 生成AIのクローラは noindex を見ない（robots.txt しか見ない）ので、ここで止める。
+# 生徒の名前と学習内容が学習データや回答に混ざるのを防ぐ（2026-09-17）。
+User-agent: GPTBot
+Disallow: /
+
+User-agent: OAI-SearchBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Claude-SearchBot
+Disallow: /
+
+User-agent: Claude-User
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Perplexity-User
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: DuckAssistBot
+Disallow: /
+
+User-agent: YouBot
+Disallow: /
+
+User-agent: MistralAI-User
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: Timpibot
+Disallow: /
