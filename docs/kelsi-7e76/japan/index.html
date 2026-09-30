@@ -357,7 +357,7 @@ R.forEach((p,i)=>L.marker([p[0],p[1]],{icon:pin(i+1)}).addTo(rm).bindTooltip(p[2
 rm.fitBounds(line,{padding:[20,20]});
 document.querySelectorAll('.citymap').forEach(el=>{const P=JSON.parse(el.dataset.pts);if(!P.length){el.remove();return}
 const m=L.map(el,{scrollWheelZoom:false});tiles().addTo(m);const sec=el.closest('.city');const mk={};P.forEach(p=>{mk[p[2]]=L.marker([p[0],p[1]],{icon:pin(p[2])}).addTo(m).bindTooltip(p[3]).on('click',()=>{const c=sec.querySelector(`.card[data-n="${p[2]}"]`);c.open=true;c.scrollIntoView({behavior:'smooth',block:'center'});c.classList.add('flash');setTimeout(()=>c.classList.remove('flash'),1200)})});sec.querySelectorAll('.card').forEach(c=>c.addEventListener('toggle',()=>{const t=mk[c.dataset.n];if(c.open&&t){t.openTooltip()}}));
-P.length>1?m.fitBounds(P.map(p=>[p[0],p[1]]),{padding:[30,30],maxZoom:14}):m.setView([P[0][0],P[0][1]],13);});
+P.length>1?m.fitBounds(P.map(p=>[p[0],p[1]]),{padding:[30,30],maxZoom:16}):m.setView([P[0][0],P[0][1]],15);});
 const setL=l=>{document.documentElement.dataset.lang=l;document.querySelectorAll('.toggle button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.l===l));try{localStorage.setItem('lang',l)}catch(e){}};
 document.querySelectorAll('.toggle button').forEach(b=>b.onclick=()=>setL(b.dataset.l));
 try{const s=localStorage.getItem('lang');if(s)setL(s)}catch(e){}
