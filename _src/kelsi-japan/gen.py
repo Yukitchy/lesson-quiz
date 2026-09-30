@@ -83,7 +83,7 @@ for key, en, ja, lat, lng in ROUTE:
         if ph.get("url"):
             credits.append(f'<li>{e(it["name_en"])}: <a href="{e(ph.get("commons_page"))}" target="_blank" rel="noopener">{e(ph.get("credit") or "Wikimedia Commons")}</a></li>')
     extra = ""
-    sections.append(f'''<details class="citywrap" open>
+    sections.append(f'''<details class="citywrap">
 <summary class="cityhead"><p class="step">{ROUTE.index((key, en, ja, lat, lng)) + 1:02d}</p><h2>{en} <span class="sub" lang="ja">{ja}</span></h2><span class="chev" aria-hidden="true"></span></summary>
 <section class="city" id="{key}">
 <div class="citymap" data-pts='{e(json.dumps(pts))}'></div>
