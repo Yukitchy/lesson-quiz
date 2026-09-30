@@ -1,0 +1,318 @@
+[
+ {
+  "city": "Hiroshima",
+  "category": "culture",
+  "name_en": "Hiroshima Peace Memorial Museum",
+  "name_ja": "広島平和記念資料館",
+  "why_en": "The museum sits in the Peace Memorial Park next to the A-Bomb Dome and tells the story of August 1945 with objects and personal accounts. It is a quiet, serious stop that people usually want to do together.",
+  "why_ja": "平和記念公園の中、原爆ドームのすぐそばにあり、遺品や証言で1945年8月の出来事を伝えています。二人で静かに見学する時間になります。",
+  "tip_en": "In the fall season the museum opens at 7:30 and takes last entry at 18:30; early-morning and evening slots need an online booking, so book ahead.",
+  "tip_ja": "秋期は7:30開館、最終入館18:30です。早朝と夕方の枠はWEB予約が必須なので、事前に予約してください。",
+  "official_url": "https://hpmmuseum.jp/",
+  "maps_query": "Hiroshima Peace Memorial Museum",
+  "lat": 34.3915,
+  "lng": 132.4527,
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Oct2025._Hiroshima_Peace_Memorial_Museum,_Japan_04.jpg/1280px-Oct2025._Hiroshima_Peace_Memorial_Museum,_Japan_04.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Oct2025._Hiroshima_Peace_Memorial_Museum,_Japan_04.jpg",
+   "credit": "Ridiculopathy, CC0, via Wikimedia Commons"
+  },
+  "season_note": "Open in late October (next closure is Feb 15-20, 2027). Autumn is comfortable for walking the park.",
+  "verified": "Opened hpmmuseum.jp: fall hours 7:30-19:00, no closure in Oct 2026, English page exists."
+ },
+ {
+  "city": "Hiroshima",
+  "category": "culture",
+  "name_en": "Itsukushima Shrine (Miyajima)",
+  "name_ja": "厳島神社（宮島）",
+  "why_en": "The shrine's buildings stand over the water and the great torii looks like it floats at high tide. It is an easy half-day with deer, shops and a ferry ride from Hiroshima.",
+  "why_ja": "社殿が海の上に建ち、満潮時には大鳥居が水に浮かんで見えます。フェリーで渡り、鹿や商店街も楽しめる半日コースです。",
+  "tip_en": "Check the tide table: at high tide the torii stands in water, at low tide you can walk out to it. Miyajima charges a small visitor tax collected on arrival (Hatsukaichi City, in effect since October 2023). Oysters are a local specialty; eat lunch on the island.",
+  "tip_ja": "潮見表を確認してください。満潮なら海に立つ鳥居、干潮なら歩いて近づけます。宮島では廿日市市の宮島訪問税（2023年10月開始）を島に渡る際に払います。牡蠣が名物なので昼食は島でどうぞ。",
+  "official_url": "https://itsukushimajinja.jp/en/",
+  "maps_query": "Itsukushima Shrine, Miyajima, Hatsukaichi, Hiroshima",
+  "lat": 34.2959,
+  "lng": 132.3199,
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/20181111_Itsukushima_Shrine_torii-1.jpg/1280px-20181111_Itsukushima_Shrine_torii-1.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:20181111_Itsukushima_Shrine_torii-1.jpg",
+   "credit": "Balon Greyjoy, CC0, via Wikimedia Commons"
+  },
+  "season_note": "Autumn leaves in Momijidani Park peak mid-to-late November per the Miyajima tourist association, so late October is early; expect green with first colour at most.",
+  "verified": "Opened shrine English site (World Heritage, address); visitor tax confirmed on city.hatsukaichi.hiroshima.jp; hours not on page - dates/hours to confirm."
+ },
+ {
+  "city": "Hiroshima",
+  "category": "nature",
+  "name_en": "Mt. Misen via Miyajima Ropeway",
+  "name_ja": "弥山（宮島ロープウェー）",
+  "why_en": "You can ride the ropeway up and hike the last stretch to the summit for a view over the Seto Inland Sea. It suits a couple who likes hiking and nature views.",
+  "why_ja": "ロープウェーで登り、山頂まで歩くと瀬戸内海の眺めが広がります。ハイキングや自然の景色が好きな二人に向いています。",
+  "tip_en": "Upbound rides run 9:00-16:00 and the last ride down is 16:30 (as listed on 30 Sept 2026), so start early. The site lists Oct 11 as a reservation-only day; check the calendar for your date.",
+  "tip_ja": "上りは9:00~16:00、下りの最終は16:30です（2026年9月30日時点の掲載）。早めに出発してください。10月11日は予約制の日と掲載されていますので、お二人の日付はカレンダーで確認してください。",
+  "official_url": "https://miyajima-ropeway.info/",
+  "maps_query": "Miyajima Ropeway Momijidani Station, Hatsukaichi, Hiroshima",
+  "lat": 34.2941,
+  "lng": 132.3167,
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Miyajima_Ropeway-02.jpg/1280px-Miyajima_Ropeway-02.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Miyajima_Ropeway-02.jpg",
+   "credit": "Bernard Gagnon, CC BY-SA 3.0, via Wikimedia Commons"
+  },
+  "season_note": "Foliage on the mountain is likely still early in late October (Momijidani peak is mid-to-late November).",
+  "verified": "Opened miyajima-ropeway.info: hours and Oct 11 reservation notice; no Oct 2026 closure listed."
+ },
+ {
+  "city": "Hiroshima",
+  "category": "food",
+  "name_en": "Okonomimura (Hiroshima okonomiyaki)",
+  "name_ja": "お好み村",
+  "why_en": "Okonomimura is a building of small okonomiyaki counters where you watch it cooked on the griddle. It is a casual dinner and the Hiroshima-style layered version has noodles and cabbage.",
+  "why_ja": "お好み焼き店が入った建物で、目の前の鉄板で焼いてもらえます。麺とキャベツを重ねる広島風を気軽に夕食にできます。",
+  "tip_en": "If you prefer seafood, ask each counter whether they have seafood versions (shrimp, squid, oysters in season).",
+  "tip_ja": "海鮮系（えび、いか、季節なら牡蠣）があるか、各店で聞いてみてください。",
+  "official_url": "http://www.okonomimura.jp/",
+  "maps_query": "Okonomimura, Nakamachi, Naka Ward, Hiroshima",
+  "lat": 34.3925,
+  "lng": 132.459,
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Okonomimura_Building_at_night.jpg/1280px-Okonomimura_Building_at_night.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Okonomimura_Building_at_night.jpg",
+   "credit": "そらみみ, CC BY-SA 4.0, via Wikimedia Commons"
+  },
+  "season_note": "Indoors, so unaffected by weather.",
+  "verified": "Official site opens (title: original Hiroshima okonomiyaki Okonomimura); floor hours not confirmed - dates/hours to confirm; site is Japanese."
+ },
+ {
+  "city": "Nagasaki",
+  "category": "horror",
+  "name_en": "Gunkanjima (Hashima) Landing Tour",
+  "name_ja": "軍艦島上陸ツアー",
+  "why_en": "Gunkanjima is an abandoned coal-mining island covered in crumbling concrete apartment blocks, and a landing tour lets you walk a marked route on it. It is a strong fit for a Silent Hill and horror fan.",
+  "why_ja": "廃墟となった炭鉱の島で、崩れかけたコンクリートの集合住宅が並びます。上陸ツアーで決められた見学路を歩けるので、サイレントヒルなどホラー好きに向いています。",
+  "tip_en": "Landing is cancelled in rough weather: Yamasa Shipping does not land if wind exceeds 5 m/s, waves exceed 0.5 m, or visibility drops below 500 m. Book a day with slack in the schedule. Tours leave from Nagasaki Port Terminal and take about 2.5 hours; reservations are required.",
+  "tip_ja": "風速5m/s超、波高0.5m超、視界500m未満などでは上陸できません（やまさ海運）。予備日がある日程で予約してください。長崎港ターミナル発で約2時間30分、予約制です。",
+  "official_url": "https://www.gunkan-jima.net/en/",
+  "maps_query": "Gunkanjima Hashima Island, Nagasaki",
+  "lat": 32.6277,
+  "lng": 129.7387,
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Hashima,_Nagasaki,_Japan,_20240814_1421_3370.jpg/1280px-Hashima,_Nagasaki,_Japan,_20240814_1421_3370.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Hashima,_Nagasaki,_Japan,_20240814_1421_3370.jpg",
+   "credit": "Jakub Hałun, CC BY 4.0, via Wikimedia Commons"
+  },
+  "season_note": "Autumn seas are usually calmer than summer typhoon season, but cancellations still happen; the operator runs April-March.",
+  "verified": "Opened Yamasa Shipping site: departure port, duration, weather limits, English page (2026-10 dates not published; dates to confirm)."
+ },
+ {
+  "city": "Nagasaki",
+  "category": "couple",
+  "name_en": "Mt. Inasa Observatory & Nagasaki Ropeway",
+  "name_ja": "稲佐山展望台（長崎ロープウェイ）",
+  "why_en": "The observatory looks over Nagasaki harbour and was named one of the World's New Three Great Night Views in 2021. It is an easy evening for two.",
+  "why_ja": "長崎港を見下ろす展望台で、2021年に「世界新三大夜景」に認定されました。二人で夕方から夜を過ごすのにちょうどいい場所です。",
+  "tip_en": "The observatory is open 9:00-22:00 and the rooftop terrace is open 24 hours. Sunset in late October is around 17:20, so arrive before it to see the light change.",
+  "tip_ja": "展望台は9:00~22:00、屋上テラスは24時間開放です。10月下旬の日没は17:20頃なので、その前に着くと景色の変化が見られます。",
+  "official_url": "https://inasayama.info/observatory/",
+  "maps_query": "Mt. Inasa Observatory, Nagasaki",
+  "lat": 32.7505,
+  "lng": 129.8485,
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/%E9%95%B7%E5%B4%8E%E5%B8%82%E3%80%81%E7%A8%B2%E4%BD%90%E5%B1%B1%E3%81%8B%E3%82%89%E5%A4%9C%E3%81%AE%E7%9C%BA%E3%82%81_-_panoramio.jpg/1280px-%E9%95%B7%E5%B4%8E%E5%B8%82%E3%80%81%E7%A8%B2%E4%BD%90%E5%B1%B1%E3%81%8B%E3%82%89%E5%A4%9C%E3%81%AE%E7%9C%BA%E3%82%81_-_panoramio.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:%E9%95%B7%E5%B4%8E%E5%B8%82%E3%80%81%E7%A8%B2%E4%BD%90%E5%B1%B1%E3%81%8B%E3%82%89%E5%A4%9C%E3%81%AE%E7%9C%BA%E3%82%81_-_panoramio.jpg",
+   "credit": "百合の國, CC BY 3.0, via Wikimedia Commons"
+  },
+  "season_note": "Clear, cool October evenings are good for the view; a jacket helps at 333 m.",
+  "verified": "Opened official page: hours, rooftop terrace 24h, night-view certification. Ropeway maintenance dates not listed - dates to confirm."
+ },
+ {
+  "city": "Nagasaki",
+  "category": "couple",
+  "name_en": "Glover Garden",
+  "name_ja": "グラバー園",
+  "why_en": "Glover Garden is a hillside park of Meiji-era Western houses with harbour views, and two heart-shaped stones are set into the paving. Finding them is a small game for a couple.",
+  "why_ja": "明治期の洋館が建つ丘の公園で、港が見渡せます。敷地の石畳にハート型の石が2つ埋まっていて、二人で探すのが楽しみになります。",
+  "tip_en": "The heart stones are not signposted; the map handed out at the entrance shows the approximate spots.",
+  "tip_ja": "ハート石には案内表示がありません。入口で配られるマップに大まかな場所が載っています。",
+  "official_url": "https://www.glover-garden.jp/",
+  "maps_query": "Glover Garden, Minamiyamate-machi, Nagasaki",
+  "lat": 32.7337,
+  "lng": 129.8688,
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Heart_paving_stone_in_Glover_Garden.jpg/1280px-Heart_paving_stone_in_Glover_Garden.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Heart_paving_stone_in_Glover_Garden.jpg",
+   "credit": "heartoftheworld, CC BY-SA 3.0, via Wikimedia Commons"
+  },
+  "season_note": "Nagasaki Kunchi is held in early October and will already be over. Garden events in late October to confirm.",
+  "verified": "Opened glover-garden.jp (address, events list showing September); hours are on /guide - dates/hours to confirm. Heart stones per Nagasaki tourism sources."
+ },
+ {
+  "city": "Nagasaki",
+  "category": "onsen",
+  "name_en": "Unzen Onsen and Unzen Jigoku",
+  "name_ja": "雲仙温泉・雲仙地獄",
+  "why_en": "Unzen is a hot spring town in Japan's first national park, next to the Jigoku area where volcanic steam and sulphur vents rise from bare rock. The eerie steam fields suit a horror fan, and the town has plenty of onsen baths.",
+  "why_ja": "日本初の国立公園にある温泉街で、すぐそばの雲仙地獄では岩肌から硫黄の蒸気が噴き上がります。不気味な景色はホラー好きに合い、温泉にも入れます。",
+  "tip_en": "Unzen is about 1 hour 20 minutes by car from Nagasaki city. The nearby Nita Pass has autumn colour from around late October to mid-November; a shuttle bus from Unzen Onsen to Nita Pass ran daily from Nov 1 last year, so check this year's dates.",
+  "tip_ja": "長崎市内から車で約1時間20分です。近くの仁田峠は10月下旬〜11月中旬が紅葉の見頃とされます。昨年は11月1日から雲仙温泉と仁田峠を結ぶシャトルバスが毎日運行していました。今年の日程は確認が必要です。",
+  "official_url": "https://www.unzen.org/",
+  "maps_query": "Unzen Jigoku, Unzen, Nagasaki",
+  "lat": 32.7358,
+  "lng": 130.2606,
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/140322_Unzen_Onsen_Jigoku_Unzen_Nagasaki_pref_Japan13o.JPG/1280px-140322_Unzen_Onsen_Jigoku_Unzen_Nagasaki_pref_Japan13o.JPG",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:140322_Unzen_Onsen_Jigoku_Unzen_Nagasaki_pref_Japan13o.JPG",
+   "credit": "663highland, CC BY 2.5, via Wikimedia Commons"
+  },
+  "season_note": "Nita Pass foliage is at or near peak in late October to early November per tourism sources; Unzen is colder than Nagasaki city.",
+  "verified": "Opened unzen.org (Unzen Onsen Tourist Association; Jigoku, Nita Pass listed). Bath hours/foliage 2026 not on page - dates to confirm."
+ },
+ {
+  "city": "Nagasaki",
+  "category": "food",
+  "name_en": "Shikairo (birthplace of Nagasaki champon)",
+  "name_ja": "四海樓",
+  "why_en": "Shikairo is the restaurant where the founder created champon, a noodle soup with seafood and vegetables. The building also has a champon museum.",
+  "why_ja": "創業者がちゃんぽんを考案したとされる店で、魚介と野菜の入った麺料理です。建物内にはちゃんぽんミュージアムもあります。",
+  "tip_en": "Ask about a seafood-heavy bowl; the site also describes sara udon, the crispy-noodle version.",
+  "tip_ja": "魚介が多めの一杯を選ぶのがおすすめです。公式サイトには、パリパリ麺の皿うどんも紹介されています。",
+  "official_url": "https://shikairou.com/",
+  "maps_query": "Shikairo, Matsugae-machi, Nagasaki",
+  "lat": 32.7324,
+  "lng": 129.8698,
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Shikairo_Nagasaki_Japan01n.jpg/1280px-Shikairo_Nagasaki_Japan01n.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Shikairo_Nagasaki_Japan01n.jpg",
+   "credit": "663highland, CC BY 2.5, via Wikimedia Commons"
+  },
+  "season_note": "Indoors; no seasonal closure known.",
+  "verified": "Opened shikairou.com (founder/champon history text); business hours page exists (営業のご案内) but not read - dates/hours to confirm."
+ },
+ {
+  "city": "Okinawa",
+  "category": "nature",
+  "name_en": "Okinawa Churaumi Aquarium",
+  "name_ja": "沖縄美ら海水族館",
+  "why_en": "The Kuroshio Sea tank holds whale sharks and manta rays. It is a dry-weather-proof activity for two on the Motobu peninsula.",
+  "why_ja": "黒潮の海の大水槽ではジンベエザメやマンタが泳ぎます。雨でも楽しめる、本部半島の二人向けの見どころです。",
+  "tip_en": "Hours shown on the site are 8:30-18:30 with last entry at 17:30. Combine it with Kouri Island, about 25 minutes away.",
+  "tip_ja": "サイトの表示では8:30~18:30、最終入館17:30です。約25分の古宇利島と同じ日に回せます。",
+  "official_url": "https://churaumi.okinawa/en/",
+  "maps_query": "Okinawa Churaumi Aquarium, Motobu, Okinawa",
+  "lat": 26.6942,
+  "lng": 127.8779,
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Churaumi_Aquarium_main_tank_'Kuroshio_Sea'.jpg/1280px-Churaumi_Aquarium_main_tank_'Kuroshio_Sea'.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Churaumi_Aquarium_main_tank_'Kuroshio_Sea'.jpg",
+   "credit": "Megapixie, Public domain, via Wikimedia Commons"
+  },
+  "season_note": "Late October is still warm (about 25 C). Typhoon season runs into October; the aquarium can close for a typhoon.",
+  "verified": "Opened churaumi.okinawa/en: hours and no closure listed for late Oct 2026 (only dolphin shows paused Jan 4-9, 2027)."
+ },
+ {
+  "city": "Okinawa",
+  "category": "couple",
+  "name_en": "Kouri Ocean Tower (Kouri Island)",
+  "name_ja": "古宇利オーシャンタワー",
+  "why_en": "Kouri Island is joined to the mainland by a long bridge over clear water, and the tower gives a view of the bridge and sea. The island is known as a couples' spot because of a heart-shaped rock at Tinu Beach.",
+  "why_ja": "古宇利島は澄んだ海に架かる長い橋でつながり、タワーからは橋と海が見渡せます。ティーヌ浜のハート形の岩でカップルに人気の島です。",
+  "tip_en": "Tower hours are 10:00-17:00 on weekdays and 10:00-18:00 on weekends (last entry 30 minutes earlier). The Heart Rock is not on the tower's site, so ask the staff or use a map; it shows best at low tide.",
+  "tip_ja": "タワーは平日10:00~17:00、土日10:00~18:00（最終入場は30分前）です。ハートロックはタワーの公式サイトには載っていないので、現地で場所を確認してください。干潮時にきれいに見えます。",
+  "official_url": "https://www.kouri-oceantower.com/english/",
+  "maps_query": "Kouri Ocean Tower, Nakijin, Okinawa",
+  "lat": 26.6996,
+  "lng": 128.0161,
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Nago_Okinawa_Kouri-Bridge-01.jpg/1280px-Nago_Okinawa_Kouri-Bridge-01.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Nago_Okinawa_Kouri-Bridge-01.jpg",
+   "credit": "CEphoto, Uwe Aranas, CC BY-SA 3.0, via Wikimedia Commons"
+  },
+  "season_note": "The tower shuts during typhoons; October still carries a typhoon risk.",
+  "verified": "Opened tower's English site (hours, typhoon closure, access). Heart Rock is not on that site (sourced from japan.travel search) - photo shows Kouri Bridge, not the rock."
+ },
+ {
+  "city": "Okinawa",
+  "category": "nature",
+  "name_en": "Cape Maeda and the Blue Cave",
+  "name_ja": "真栄田岬（青の洞窟）",
+  "why_en": "Cape Maeda is the entry point for snorkeling in the Blue Cave, where sunlight turns the water blue. It is a shared activity that suits a couple who likes the outdoors.",
+  "why_ja": "青の洞窟でのシュノーケリングの拠点で、日が差すと水が青く光ります。アウトドア好きの二人で楽しめます。",
+  "tip_en": "The Cape Maeda site lists a life jacket requirement, parking 7:00-19:00 and a viewing platform for non-swimmers. Book a licensed tour operator and expect cancellation on windy days.",
+  "tip_ja": "真栄田岬の公式サイトでは救命胴衣の着用が必要と案内されています。駐車場は7:00~19:00で、泳がない人向けの展望台もあります。ツアー会社は事前に予約し、風の強い日は中止になる場合があります。",
+  "official_url": "https://maedamisaki.jp/",
+  "maps_query": "Cape Maeda Blue Cave, Onna, Okinawa",
+  "lat": 26.4428,
+  "lng": 127.7736,
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/%E7%9C%9F%E6%A0%84%E7%94%B0%E5%B2%AC_-_panoramio.jpg/1280px-%E7%9C%9F%E6%A0%84%E7%94%B0%E5%B2%AC_-_panoramio.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:%E7%9C%9F%E6%A0%84%E7%94%B0%E5%B2%AC_-_panoramio.jpg",
+   "credit": "Arichika Taniguchi, CC BY-SA 3.0, via Wikimedia Commons"
+  },
+  "season_note": "Late October water is still swimmable per tour sites, but a wetsuit may be needed; rough seas after typhoons close the entry.",
+  "verified": "Opened maedamisaki.jp (hours, life jacket rule, sea status link); no seasonal closure stated. Sea condition to confirm on the day."
+ },
+ {
+  "city": "Okinawa",
+  "category": "culture",
+  "name_en": "Shuri Castle Park",
+  "name_ja": "首里城公園",
+  "why_en": "Shuri Castle was the palace of the Ryukyu Kingdom. The main hall is still being rebuilt after the 2019 fire, and you can watch the restoration work.",
+  "why_ja": "琉球王国の王城の跡です。2019年の火災後の正殿の復元工事が続いていて、復元の現場を見ることができます。",
+  "tip_en": "The official site lists the main hall's public opening for Nov 23, 2026, after your trip, so you will see it under construction. A Reconstruction Festival is listed for Nov 1-3, also after your dates.",
+  "tip_ja": "公式サイトでは正殿の一般公開は2026年11月23日予定で、旅行の後になります。復興祭も11月1日~3日で、日程には入りません。",
+  "official_url": "https://oki-park.jp/shurijo/",
+  "maps_query": "Shuri Castle Park, Naha, Okinawa",
+  "lat": 26.217,
+  "lng": 127.7196,
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Naha_Okinawa_Japan_Shuri-Castle-01.jpg/1280px-Naha_Okinawa_Japan_Shuri-Castle-01.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Naha_Okinawa_Japan_Shuri-Castle-01.jpg",
+   "credit": "CEphoto, Uwe Aranas, CC BY-SA 3.0, via Wikimedia Commons"
+  },
+  "season_note": "Free zone open 8:00-19:30, paid zone 8:30-19:00 on the site; the photo shows the castle before the 2019 fire.",
+  "verified": "Opened oki-park.jp/shurijo: Seiden opening Nov 23, 2026, hours, guided tour."
+ },
+ {
+  "city": "Okinawa",
+  "category": "food",
+  "name_en": "Tamaya Soba",
+  "name_ja": "玉家そば",
+  "why_en": "Okinawa soba is a different noodle from the soba you know: wheat noodles in a pork and bonito broth. Tamaya serves soki (spare rib) soba and other pork toppings in Nanjo, in the south.",
+  "why_ja": "そば好きなら一度は食べてほしい、小麦麺を豚骨とかつおの出汁で食べる沖縄そばを紹介します。玉家そばは南城市にあり、ソーキそばなど豚肉の具が中心です。",
+  "tip_en": "Open 10:30-15:00 and closed Wednesdays. The menu is pork-based, so ask about toppings if you prefer seafood.",
+  "tip_ja": "営業は10:30~15:00、水曜定休です。豚肉中心のメニューなので、魚介派の方は具材を確認してください。",
+  "official_url": "http://www.tamaya-soba.jp/",
+  "maps_query": "Tamaya Soba, Furuken, Nanjo, Okinawa",
+  "lat": null,
+  "lng": null,
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Soki_soba_in_Naha.jpg/1280px-Soki_soba_in_Naha.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Soki_soba_in_Naha.jpg",
+   "credit": "ayustety / CC BY-SA 2.0",
+   "example": true
+  },
+  "season_note": "Small shop, indoor eating; no season issue.",
+  "verified": "Opened official site: address, hours, Wednesday closure. No Commons photo of this shop found; coordinates not verified."
+ },
+ {
+  "city": "Okinawa",
+  "category": "food",
+  "name_en": "Blue Seal Ice Cream",
+  "name_ja": "ブルーシール",
+  "why_en": "Blue Seal is an Okinawa ice cream chain with local flavours. A cone fits the warm weather.",
+  "why_ja": "沖縄のアイスクリームチェーンで、地元らしいフレーバーがあります。暖かい沖縄でアイスを一本どうぞ。",
+  "tip_en": "The official flavour pages list Beni-imo (purple sweet potato), Salt Chinsuko, Mint Chocolate and Chocolate. I did not find cherry or raspberry chocolate on those pages.",
+  "tip_ja": "公式のフレーバーページには、紅いも、塩ちんすこう、ミントチョコ、チョコレートなどが載っています。チェリーやラズベリーのチョコは確認できませんでした。",
+  "official_url": "https://www.blueseal.co.jp/products/flavor/index.html",
+  "maps_query": "Blue Seal Ice Cream, Naha, Okinawa",
+  "lat": 26.2158825,
+  "lng": 127.6866086,
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Blue-seal-ice-cream-ESCA.jpg/1280px-Blue-seal-ice-cream-ESCA.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Blue-seal-ice-cream-ESCA.jpg",
+   "credit": "HQA02330, CC BY-SA 4.0, via Wikimedia Commons"
+  },
+  "season_note": "Warm weather; ice cream works all through October.",
+  "verified": "Opened official flavor and soft-serve pages (Beni-imo, Salt Chinsuko, Mint Chocolate confirmed). Which shop to visit not chosen."
+ }
+]

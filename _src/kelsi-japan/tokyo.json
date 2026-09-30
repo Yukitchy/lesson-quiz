@@ -1,0 +1,271 @@
+[
+ {
+  "city": "Tokyo",
+  "category": "anime",
+  "name_en": "Jujutsu Kaisen Shibuya Incident walk (Shibuya Scramble Crossing and station area)",
+  "name_ja": "呪術廻戦「渋谷事変」の舞台さんぽ(渋谷スクランブル交差点・渋谷駅周辺)",
+  "why_en": "The Shibuya Incident arc is drawn around the real station, the Scramble Crossing and the underground passages, so you can walk the places Nanami fights in.",
+  "why_ja": "渋谷事変は実在の渋谷駅、スクランブル交差点、地下通路をもとに描かれているので、七海が戦う場所を実際に歩けます。",
+  "tip_en": "Start at Hachiko Square and the Scramble Crossing in daylight, then come back after dark for the neon look. On Oct 31 the area is heavily restricted for Halloween, so do this walk earlier in the trip.",
+  "tip_ja": "ハチ公広場とスクランブル交差点は昼に見て、暗くなってからもう一度ネオンの雰囲気を見るのがおすすめです。10月31日はハロウィン規制が強いので、この散策は早い日程で組んでください。",
+  "official_url": "https://www.gotokyo.org/en/spot/78/index.html",
+  "maps_query": "Shibuya Scramble Crossing, Shibuya, Tokyo",
+  "lat": 35.6595,
+  "lng": 139.7005,
+  "season_note": "Oct 31: Shibuya bans street drinking 6pm-5am, asks stores not to sell alcohol and restricts traffic/crowds near the crossing; the official 2026 Halloween details are usually announced late Sep/early Oct (dates to confirm). Sunset in Tokyo is around 17:10 in late October.",
+  "verified": "Opened GO TOKYO (official tourism guide) page for the crossing; the JJK location link (Shibuya arc based on real station) is from several fan pilgrimage guides, not an official JJK source.",
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Shibuya_scramble_av_night_from_Stream.jpg/1280px-Shibuya_scramble_av_night_from_Stream.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File%3AShibuya_scramble_av_night_from_Stream.jpg",
+   "credit": "Syced / CC0 via Wikimedia Commons"
+  }
+ },
+ {
+  "city": "Tokyo",
+  "category": "couple",
+  "name_en": "SHIBUYA SKY",
+  "name_ja": "渋谷スカイ",
+  "why_en": "An open-air rooftop over the same Shibuya crossing you may have just walked, with a good view at sunset and after dark for two people.",
+  "why_ja": "先ほど歩いたかもしれない渋谷スクランブル交差点を屋上から見下ろせます。夕方から夜にかけてふたりで景色を楽しめます。",
+  "tip_en": "Entry is by timed ticket. Tickets are reported to open 14 days ahead, so check the official ticket page around Oct 3 for an Oct 17 visit and pick a slot about 30 minutes before sunset.",
+  "tip_ja": "入場は時間指定のチケットです。14日前に販売開始と案内されているので、10月17日なら10月3日ごろに公式サイトで確認し、日没の約30分前の枠がおすすめです。",
+  "official_url": "https://www.shibuya-scramble-square.com/sky/en/",
+  "maps_query": "SHIBUYA SKY, Shibuya Scramble Square, Tokyo",
+  "lat": 35.6584,
+  "lng": 139.7022,
+  "season_note": "Open-air, so wind is cooler in late October. Open 10:00-22:30 (last entry 21:20), but rain or strong wind can restrict the rooftop (hours to confirm).",
+  "verified": "Opened official site (200) and GO TOKYO page; hours from GO TOKYO/search summary; ticket-timing rule from third-party sources, so tell guests to confirm.",
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Shibuya_Scramble_Square_-_SHIBUYA_SKY_10.jpg/1280px-Shibuya_Scramble_Square_-_SHIBUYA_SKY_10.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File%3AShibuya_Scramble_Square_-_SHIBUYA_SKY_10.jpg",
+   "credit": "Kakidai / CC BY-SA 4.0 via Wikimedia Commons"
+  }
+ },
+ {
+  "city": "Tokyo",
+  "category": "horror",
+  "name_en": "Dark Wedding: The Haunted House of the Shun Family (Tokyo Dome City Attractions)",
+  "name_ja": "暗闇婚礼 ~シュン家の妖怪屋敷~(東京ドームシティ アトラクションズ)",
+  "why_en": "A walk-through haunted house about a bride marrying into an old mountain family, made by a well-known Japanese horror producer. It suits a horror fan couple who just got married.",
+  "why_ja": "山奥の旧家に嫁ぐ花嫁の物語を歩いて体験するお化け屋敷で、有名なホラープロデューサーが手がけています。新婚のホラー好きご夫婦にぴったりです。",
+  "tip_en": "It is a Japanese-language story and each person gets a different mission, so a host can explain the story before you go in. It is right next to the Baseball Hall of Fame and about 15 minutes from Kanda soba.",
+  "tip_ja": "ストーリーは日本語で、入る人ごとに違うミッションが与えられます。入る前にホストがあらすじを説明するとより楽しめます。野球殿堂博物館のすぐ隣で、神田のそば店からも近いです。",
+  "official_url": "https://en.www.at-raku.com/attractions/laqua/obakeyashiki/",
+  "maps_query": "Tokyo Dome City Attractions LaQua, Bunkyo, Tokyo",
+  "lat": 35.7056,
+  "lng": 139.7519,
+  "season_note": "Ongoing attraction (opened Nov 2025 per official page; listed as current on the park events page). Halloween season: the park also lists an Ao Oni x Tokyo Dome City event Oct 23-Nov 23, 2026 (see next item).",
+  "verified": "Opened official Tokyo Dome City Attractions page (opening Nov 6 2025, LaQua 1F) and event list; confirm it is still running on the day.",
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Tokyo_Dome_City_LaQua.JPG/1280px-Tokyo_Dome_City_LaQua.JPG",
+   "commons_page": "https://commons.wikimedia.org/wiki/File%3ATokyo_Dome_City_LaQua.JPG",
+   "credit": "ITA-ATU / CC BY-SA 4.0 via Wikimedia Commons"
+  }
+ },
+ {
+  "city": "Tokyo",
+  "category": "horror",
+  "name_en": "Ao Oni x Tokyo Dome City Attractions (Ao Oni Festival)",
+  "name_ja": "青鬼 × 東京ドームシティ アトラクションズ ~青鬼フェスティバル~",
+  "why_en": "A collaboration with the Japanese horror game Ao Oni running through the Halloween season, in the same park as the haunted house.",
+  "why_ja": "日本のホラーゲーム「青鬼」とのコラボが、ハロウィンの時期に同じ園内で開催されます。",
+  "tip_en": "Starts Oct 23, so it fits the end-of-trip Tokyo days (around Oct 30-31), not the start. Details (what is included) are not yet published, so check the official event page.",
+  "tip_ja": "10月23日開始のため、旅の最初(10月17日ごろ)ではなく最終盤の東京滞在(10月30~31日ごろ)に合います。内容は未発表の部分があるので公式イベントページで確認してください。",
+  "official_url": "https://en.www.at-raku.com/event/",
+  "maps_query": "Tokyo Dome City Attractions, Bunkyo, Tokyo",
+  "lat": 35.7056,
+  "lng": 139.7519,
+  "season_note": "Oct 23-Nov 23, 2026 (from the official event list). Also Cosplay Festa TDC on Oct 18 at the same park.",
+  "verified": "Opened official events page listing 'Ao Oni x Tokyo Dome City Attractions' with 2026-10-23 to 11-23.",
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Tokyo_Dome_City_Attractions_162013-2.JPG/1280px-Tokyo_Dome_City_Attractions_162013-2.JPG",
+   "commons_page": "https://commons.wikimedia.org/wiki/File%3ATokyo_Dome_City_Attractions_162013-2.JPG",
+   "credit": "ITA-ATU / CC BY-SA 4.0 via Wikimedia Commons"
+  }
+ },
+ {
+  "city": "Tokyo",
+  "category": "culture",
+  "name_en": "Baseball Hall of Fame and Museum (Tokyo Dome)",
+  "name_ja": "野球殿堂博物館(東京ドーム内)",
+  "why_en": "A Japanese baseball museum inside Tokyo Dome, good for a Cardinals fan who wants to see how the game is honored here.",
+  "why_ja": "東京ドーム内にある日本の野球の博物館です。カージナルスファンのおふたりが、日本での野球の歴史に触れられます。",
+  "tip_en": "Usually closed on Mondays and open 10:00-17:00 in October (hours to confirm on the official calendar). Late October is the pro-baseball playoff season, so ask the host about any Tokyo Dome games.",
+  "tip_ja": "通常は月曜休館で、10月は10時~17時です(公式カレンダーで要確認)。10月末はプロ野球のポストシーズンなので、東京ドームの試合があるかホストに調べてもらいましょう。",
+  "official_url": "https://baseball-museum.or.jp/en/",
+  "maps_query": "Baseball Hall of Fame and Museum, Tokyo Dome, Bunkyo, Tokyo",
+  "lat": 35.7057,
+  "lng": 139.7518,
+  "season_note": "Monday closures and event-day changes possible; 10:00-17:00 is shown on the official page for the day checked.",
+  "verified": "Opened official English page (address 1-3-61 Koraku, hours 10:00-17:00 shown); Monday closure and Oct hours come from search summaries, so mark to confirm.",
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Baseball_Hall_of_Fame_and_Museum_%28Japan%29_Entrance.jpg/1280px-Baseball_Hall_of_Fame_and_Museum_%28Japan%29_Entrance.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File%3ABaseball_Hall_of_Fame_and_Museum_%28Japan%29_Entrance.jpg",
+   "credit": "Kaidai / CC BY-SA 4.0 via Wikimedia Commons"
+  }
+ },
+ {
+  "city": "Tokyo",
+  "category": "food",
+  "name_en": "Kanda Matsuya (soba, Kanda Sudacho)",
+  "name_ja": "神田まつや 本店",
+  "why_en": "A soba restaurant founded in 1884 in the old Kanda downtown, a good first stop for someone whose favorite Japanese dish is soba.",
+  "why_ja": "1884年創業の老舗そば店で、神田の下町にあります。そばが一番好きな方に向いています。",
+  "tip_en": "Reported open Tue-Fri 11:00-20:30 and Sat 11:00-19:30, closed Sun and Mon (confirm before going). It is a short walk from Akihabara.",
+  "tip_ja": "火~金は11時~20時30分、土は11時~19時30分、日・月は休みと案内されています(行く前に要確認)。秋葉原から歩けます。",
+  "official_url": "http://www.kanda-matsuya.jp/",
+  "maps_query": "Kanda Matsuya, 1-13 Kanda Sudacho, Chiyoda, Tokyo",
+  "lat": 35.6968,
+  "lng": 139.7709,
+  "season_note": "Autumn is a good time for soba; check the official site for temporary closure notices (it posts them).",
+  "verified": "Opened official site (HTTP only, shows 2026 holiday notices); hours/address from Tabelog-type summaries, so confirm.",
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Kanda_Matsuya1.JPG/1280px-Kanda_Matsuya1.JPG",
+   "commons_page": "https://commons.wikimedia.org/wiki/File%3AKanda_Matsuya1.JPG",
+   "credit": "江戸村のとくぞう (Edomura no Tokuzo) / CC BY-SA 4.0 via Wikimedia Commons"
+  }
+ },
+ {
+  "city": "Tokyo",
+  "category": "food",
+  "name_en": "Kanda Yabu Soba",
+  "name_ja": "かんだやぶそば",
+  "why_en": "A famous soba house founded in 1880, rebuilt after a fire in 2013, known for its seiro (cold soba on a bamboo tray). Another good soba stop near Awajicho.",
+  "why_ja": "1880年創業の有名なそば店で、2013年の火災後に再建されました。せいろそばが名物です。淡路町にあります。",
+  "tip_en": "Closed every Wednesday; open from 11:30 with last order at 20:00. It takes reservations for the first-floor seating, so book through the official site if you can.",
+  "tip_ja": "毎週水曜定休で、11時30分開店、ラストオーダーは20時です。1階席の予約ができるので、公式サイトから予約すると安心です。",
+  "official_url": "http://www.yabusoba.net/",
+  "maps_query": "Kanda Yabu Soba, 2-10 Kanda Awajicho, Chiyoda, Tokyo",
+  "lat": 35.6963,
+  "lng": 139.7671,
+  "season_note": "Autumn tempura is on the seasonal menu per the official site; year-end notices only so far.",
+  "verified": "Opened official site: address Kanda Awajicho 2-10, 11:30 open, LO 20:00, closed Wednesdays.",
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Kanda_Yabusoba3.JPG/1280px-Kanda_Yabusoba3.JPG",
+   "commons_page": "https://commons.wikimedia.org/wiki/File%3AKanda_Yabusoba3.JPG",
+   "credit": "江戸村のとくぞう (Edomura no Tokuzo) / CC BY-SA 4.0 via Wikimedia Commons"
+  }
+ },
+ {
+  "city": "Tokyo",
+  "category": "anime",
+  "name_en": "Nakano Broadway",
+  "name_ja": "中野ブロードウェイ",
+  "why_en": "A shopping complex with dozens of subculture shops for anime, manga and collectibles, good for Vagabond, Berserk and JJK goods.",
+  "why_ja": "アニメ、漫画、コレクターグッズなどのサブカル系ショップが集まる商業施設です。バガボンドやベルセルク、呪術廻戦のグッズ探しに向いています。",
+  "tip_en": "Most shops open around 12:00 and close about 20:00, so go in the afternoon. Hours differ by shop and some close on Wednesdays.",
+  "tip_ja": "多くの店は12時ごろ開店、20時ごろ閉店なので午後に行くのがおすすめです。店ごとに営業時間が違い、水曜休みの店もあります。",
+  "official_url": "https://nakano-broadway.com/",
+  "maps_query": "Nakano Broadway, Nakano, Tokyo",
+  "lat": 35.7079,
+  "lng": 139.6659,
+  "season_note": "No seasonal closures expected; hours vary by shop.",
+  "verified": "Opened official site (subculture: 84 shops listed); typical hours from GO TOKYO-style summaries, so confirm per shop.",
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Nakano_broadway_entrance.JPG/1280px-Nakano_broadway_entrance.JPG",
+   "commons_page": "https://commons.wikimedia.org/wiki/File%3ANakano_broadway_entrance.JPG",
+   "credit": "User:Kentin / CC BY-SA 3.0 via Wikimedia Commons"
+  }
+ },
+ {
+  "city": "Tokyo",
+  "category": "anime",
+  "name_en": "EVANGELION STORE TOKYO-01 (Ikebukuro PARCO)",
+  "name_ja": "エヴァンゲリオンストア TOKYO-01(池袋PARCO)",
+  "why_en": "The official Evangelion shop, inside Ikebukuro PARCO, for merchandise and limited items.",
+  "why_ja": "エヴァンゲリオンの公式ショップで、池袋PARCO内にあります。グッズや限定品が並びます。",
+  "tip_en": "The mall is open 11:00-21:00; the store has its own schedule, so check before going. Sunshine City is a short walk away if you want more anime shops.",
+  "tip_ja": "館は11時~21時ですが、ストアの営業は別なので事前に確認してください。サンシャインシティが近く、他のアニメショップも回れます。",
+  "official_url": "https://en.ikebukuro.parco.jp/shop/detail/?cd=009509",
+  "maps_query": "EVANGELION STORE TOKYO-01, Ikebukuro PARCO, Tokyo",
+  "lat": 35.7309,
+  "lng": 139.7124,
+  "season_note": "Store location and any collab pop-ups (dates to confirm) are shown on the PARCO page.",
+  "verified": "Opened official Ikebukuro PARCO shop page (6F Main Building, 11:00-21:00). Photo shows PARCO building, not the shop.",
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/IKEBUKURO_PARCO.jpg/1280px-IKEBUKURO_PARCO.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File%3AIKEBUKURO_PARCO.jpg",
+   "credit": "Tokumeigakarinoaoshima / CC BY-SA 4.0 via Wikimedia Commons"
+  }
+ },
+ {
+  "city": "Tokyo",
+  "category": "culture",
+  "name_en": "Ghibli Museum, Mitaka",
+  "name_ja": "三鷹の森ジブリ美術館",
+  "why_en": "The Studio Ghibli museum in a park in Mitaka. A calm, indoor half-day visit for two.",
+  "why_ja": "三鷹の公園内にあるスタジオジブリの美術館です。ふたりで静かに半日楽しめます。",
+  "tip_en": "Entry is by advance reservation only. October tickets went on sale on Sep 10 through Lawson Ticket, so they may already be sold out; check the official ticket page now. Closed most Tuesdays.",
+  "tip_ja": "入館は完全日時指定の事前予約制です。10月分は9月10日にローソンチケットで発売済みのため売り切れの可能性があります。今すぐ公式のチケットページで確認してください。火曜休館が中心です。",
+  "official_url": "https://www.ghibli-museum.jp/en/",
+  "maps_query": "Ghibli Museum, Mitaka, Tokyo",
+  "lat": 35.6962,
+  "lng": 139.5704,
+  "season_note": "Autumn park scenery; check the official calendar for closure days (dates to confirm).",
+  "verified": "Opened official site: advance reservation only, 10:00-18:00, monthly sale on the 10th, Lawson Ticket; Oct 2026 closures not read.",
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Ghibli_Museum_Mitaka_Well.jpg/1280px-Ghibli_Museum_Mitaka_Well.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File%3AGhibli_Museum_Mitaka_Well.jpg",
+   "credit": "kidcadaver / Public domain via Wikimedia Commons"
+  }
+ },
+ {
+  "city": "Tokyo",
+  "category": "couple",
+  "name_en": "teamLab Planets TOKYO (Toyosu)",
+  "name_ja": "チームラボプラネッツ TOKYO(豊洲)",
+  "why_en": "A walk-through digital art space where you walk barefoot through water and rooms of light. It works well as a shared evening activity for a couple.",
+  "why_ja": "裸足で水の中や光の部屋を歩くデジタルアート空間です。ふたりで夕方から楽しむのに向いています。",
+  "tip_en": "Wear clothes that can be rolled up above the knee; skirts are not recommended. Entry is by date and time ticket booked online, and closed days are irregular (Oct 17 is listed as closed), so check the official calendar.",
+  "tip_ja": "ひざ上までまくれる服装がおすすめで、スカートは向きません。日時指定のオンラインチケットで、休館日は不定期です(10月17日は休館と案内されています)。公式カレンダーで確認してください。",
+  "official_url": "https://www.teamlab.art/e/planets/",
+  "maps_query": "teamLab Planets TOKYO, Toyosu, Koto, Tokyo",
+  "lat": 35.6489,
+  "lng": 139.7899,
+  "season_note": "Extended to the end of 2027; indoor, so weather does not matter. Oct 17 closure is from a search summary (dates to confirm).",
+  "verified": "Official page opens (200) but is script-rendered; extension to end of 2027 and Oct 17 closure from search summary.",
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Teamlab_toyosu.jpg/1280px-Teamlab_toyosu.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File%3ATeamlab_toyosu.jpg",
+   "credit": "Syced / CC0 via Wikimedia Commons"
+  }
+ },
+ {
+  "city": "Tokyo",
+  "category": "onsen",
+  "name_en": "Hakone Yuryo (day-trip onsen with private open-air baths)",
+  "name_ja": "箱根湯寮",
+  "why_en": "A day-trip hot spring about a 3-minute free shuttle from Hakone-Yumoto Station. It has 19 rentable private open-air baths, so a couple can soak together.",
+  "why_ja": "箱根湯本駅から無料シャトルバスで約3分の日帰り温泉施設です。貸切露天風呂が19室あり、ふたりで入れます。",
+  "tip_en": "Public baths do not admit people with tattoos, and the guests have none, so both options are open. Book a private bath early; reservations open up to one month ahead. Autumn leaves in Hakone are usually best from early to mid November, so late October may be only beginning.",
+  "tip_ja": "大浴場はタトゥーのある方は入れませんが、おふたりは問題ありません。貸切風呂は1か月前から予約できるので早めに予約してください。箱根の紅葉は例年11月上旬~中旬がピークで、10月末はまだ色づき始めです。",
+  "official_url": "https://www.hakoneyuryo.jp/english/",
+  "maps_query": "Hakone Yuryo, Hakone, Kanagawa",
+  "lat": 35.2338333,
+  "lng": 139.0958329,
+  "season_note": "Open 365 days except temporary maintenance (one closure listed in June 2026); no October closures found. Hakone also has typhoon-season rain risk in early autumn.",
+  "verified": "Opened official English FAQ/top: shuttle from Hakone-Yumoto, tattoo rule, hours 10:00-20:00 (until 21:00 weekends), open 365 days; no Commons photo found.",
+  "photo": null
+ },
+ {
+  "city": "Tokyo",
+  "category": "couple",
+  "name_en": "Tokyo Cruise: Sumida River waterbus (Asakusa to Hinode Pier)",
+  "name_ja": "東京クルーズ 水上バス(浅草~日の出桟橋)",
+  "why_en": "A waterbus down the Sumida River from Asakusa, passing under many bridges toward Hama-rikyu, a quiet way to see Tokyo together.",
+  "why_ja": "浅草から隅田川を下り、多くの橋の下を通って浜離宮方面へ向かう水上バスです。ふたりで静かに東京を眺められます。",
+  "tip_en": "Tokyo Cruise runs the Himiko and Hotaluna ships on this area. Check the official timetable and real-time operating status, as rain or wind can cancel sailings.",
+  "tip_ja": "この周辺ではヒミコとホタルナが東京クルーズにより運航されています。雨や風で欠航することがあるので、公式の時刻表と運航状況を確認してください。",
+  "official_url": "https://www.suijobus.co.jp/en/",
+  "maps_query": "Tokyo Cruise Asakusa Pier, Taito, Tokyo",
+  "lat": 35.7107,
+  "lng": 139.7975,
+  "season_note": "Typhoon or strong-wind cancellations possible; late-October evenings are cool and dark by about 17:30 (dates to confirm).",
+  "verified": "Opened official English site (Tokyo Cruise, HIMIKO/HOTALUNA, Asakusa/Hinode piers).",
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Water_buses_Hotaluna_and_Himiko_201604.jpg/1280px-Water_buses_Hotaluna_and_Himiko_201604.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File%3AWater_buses_Hotaluna_and_Himiko_201604.jpg",
+   "credit": "Tak1701d\n\n This photo was taken with Fujifilm FinePix F900EXR / CC BY-SA 3.0 via Wikimedia Commons"
+  }
+ }
+]

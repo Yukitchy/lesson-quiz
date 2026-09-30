@@ -1,0 +1,229 @@
+[
+ {
+  "city": "Osaka",
+  "category": "horror",
+  "name_en": "Resident Evil Requiem: The Dive (Halloween Horror Nights 2026), Universal Studios Japan",
+  "name_ja": "バイオハザード：レクイエム・ザ・ダイブ（ハロウィーン・ホラー・ナイト 2026）ユニバーサル・スタジオ・ジャパン",
+  "why_en": "A walk-through Resident Evil attraction set in the Wrenwood Hotel and sanatorium, on at USJ alongside the Halloween Horror Nights event. Good fit for someone who loves Resident Evil and horror.",
+  "why_ja": "ホラー・ナイトと同時期にUSJで開催中の、ホテルと療養所を舞台にしたバイオハザードの体験型アトラクションです。バイオハザードとホラーが好きな方に向いています。",
+  "tip_en": "Rated 15+ (age 14 and under not admitted); entry is by timed e-ticket through the USJ app. Halloween Horror Nights runs Sep 11 to Nov 8, 2026 and The Dive runs Sep 11 to Dec 27, so Oct 23-26 falls inside. Ticket rules and closing time to confirm on the official page.",
+  "tip_ja": "15歳以上が対象（14歳以下は入場不可）で、入場はUSJアプリの時間指定チケットです。ホラー・ナイトは2026年9月11日〜11月8日、ザ・ダイブは9月11日〜12月27日なので10月23〜26日は期間内です。チケットの条件と閉園時間は公式ページでご確認ください。",
+  "official_url": "https://www.usj.co.jp/web/en/us/events/halloween-extreme-autumn-2026/halloween-horror-nights/resident-evil-requiem-the-dive",
+  "maps_query": "Universal Studios Japan, Osaka",
+  "lat": 34.6654,
+  "lng": 135.4323,
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Universal_Studios_Japan_entrance.jpg/1280px-Universal_Studios_Japan_entrance.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Universal_Studios_Japan_entrance.jpg",
+   "credit": "Csii (per Commons record), CC BY-SA 4.0"
+  },
+  "season_note": "Halloween season: the whole park is dressed for Halloween Horror Nights (Sep 11 - Nov 8, 2026). Super Nintendo World not verified for Zelda content, so not listed.",
+  "verified": "Opened official USJ URL (200) and the Tokyo Weekender guide; dates and R-15 rule taken from those and search results. USJ page is JS-rendered so text not read directly."
+ },
+ {
+  "city": "Osaka",
+  "category": "food",
+  "name_en": "Kuromon Market",
+  "name_ja": "黒門市場",
+  "why_en": "A covered market of about 150 shops with fresh seafood, including crab and scallops that you can eat on the spot. It suits a dietitian who likes seafood.",
+  "why_ja": "約150店が並ぶアーケードの市場で、カニやホタテなどの新鮮な海鮮をその場で味わえます。海鮮好きに向いています。",
+  "tip_en": "Shop hours differ and many shops close on Sundays and holidays. Oct 25 is a Sunday, so go on Oct 23, 24 or 26 if you can. Go in the morning for the most open stalls.",
+  "tip_ja": "店ごとに営業時間が違い、日曜・祝日休みの店が多いです。10月25日は日曜なので、可能なら10月23・24・26日がおすすめです。午前中が一番多くの店が開いています。",
+  "official_url": "https://kuromon.com/en/",
+  "maps_query": "Kuromon Market, Nipponbashi, Chuo-ku, Osaka",
+  "lat": 34.6654,
+  "lng": 135.5068,
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Kuromon-ichiba_in_201408.JPG/1280px-Kuromon-ichiba_in_201408.JPG",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Kuromon-ichiba_in_201408.JPG",
+   "credit": "Mc681, CC BY-SA 4.0"
+  },
+  "season_note": "Autumn crab season is getting started; what is on sale varies by shop.",
+  "verified": "Opened official site (200); address, ~150 shops, Sunday/holiday closures and crab/scallop stock read from it."
+ },
+ {
+  "city": "Kobe (from Osaka)",
+  "category": "onsen",
+  "name_en": "Arima Onsen: Kin no Yu (Gold Bath) and Gin no Yu (Silver Bath)",
+  "name_ja": "有馬温泉 金の湯・銀の湯",
+  "why_en": "Arima is one of Japan's oldest hot spring towns, reachable from Osaka as a half-day. Kin no Yu has the rust-brown iron-rich water; Gin no Yu is clear and carbonated. Both are public day-bath houses, so you can visit without staying overnight.",
+  "why_ja": "有馬は日本最古級の温泉地で、大阪から半日で行けます。金の湯は鉄分を含む赤茶色のお湯、銀の湯は透明の炭酸泉です。どちらも日帰り入浴の公共浴場で、宿泊しなくても利用できます。",
+  "tip_en": "Hot-spring baths are gender-separated. Kin no Yu closes on the 2nd and 4th Tuesday (Oct 13 and 27); Gin no Yu on the 1st and 3rd Tuesday (Oct 6 and 20), so both are open Oct 23-26. Gin no Yu hours: 9:00-21:00 (last entry 20:30).",
+  "tip_ja": "浴場は男女別です。金の湯は第2・第4火曜（10月13日・27日）、銀の湯は第1・第3火曜（10月6日・20日）が休みなので、10月23〜26日はどちらも営業です。銀の湯は9:00〜21:00（最終受付20:30）です。",
+  "official_url": "http://arimaspa-kingin.jp/",
+  "maps_query": "Arima Onsen Kin no Yu, Kita-ku, Kobe",
+  "lat": 34.7967,
+  "lng": 135.2481,
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Kin-no-yu_Arima_Onsen01s3200.jpg/1280px-Kin-no-yu_Arima_Onsen01s3200.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Kin-no-yu_Arima_Onsen01s3200.jpg",
+   "credit": "663highland, CC BY 2.5"
+  },
+  "season_note": "Arima's maples turn a little later than mountain Kyoto; expect at most first color in late October (not verified for 2026).",
+  "verified": "Opened official site arimaspa-kingin.jp (200) and Hyogo tourism page for Kin no Yu (closed days, address); Gin no Yu hours from Arima Onsen tourism directory."
+ },
+ {
+  "city": "Kyoto",
+  "category": "anime",
+  "name_en": "Kyoto International Manga Museum",
+  "name_ja": "京都国際マンガミュージアム",
+  "why_en": "A former school building turned into a manga museum where visitors can read manga inside. Good for a manga reader.",
+  "why_ja": "旧小学校の建物を使ったマンガ専門の博物館で、館内でマンガを読めます。マンガがお好きなお二人に合います。",
+  "tip_en": "Open 10:00-17:00 (last entry 16:30). Closed Wednesdays and on Oct 11, 12 and 29, so Oct 23-26 is open. Check whether they carry English editions of your favorites.",
+  "tip_ja": "開館は10:00〜17:00（最終入館16:30）で、水曜と10月11日・12日・29日が休館のため、10月23〜26日は開館です。好きな作品の英語版があるかは館で確認してください。",
+  "official_url": "https://www.kyotomm.jp/en/",
+  "maps_query": "Kyoto International Manga Museum, Karasuma-Oike, Kyoto",
+  "lat": 35.0119,
+  "lng": 135.7592,
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Kyoto_International_Manga_Museum_exterior.jpg/1280px-Kyoto_International_Manga_Museum_exterior.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Kyoto_International_Manga_Museum_exterior.jpg",
+   "credit": "Kento Ikeda, CC BY 2.0"
+  },
+  "season_note": "Indoors, good for a rainy day.",
+  "verified": "Opened the official site and calendar page: hours, closed Wednesdays, closures 10/11, 10/12, 10/29 read from the calendar."
+ },
+ {
+  "city": "Kyoto",
+  "category": "anime",
+  "name_en": "Uzumasa Kyoto Village (formerly Toei Kyoto Studio Park)",
+  "name_ja": "太秦映画村（UZUMASA KYOTO VILLAGE）",
+  "why_en": "A working film-set park of Edo-period streets, reopened in March 2026 with ninja and samurai themes and evening hours. It ties in with Vagabond, Dororo and Assassin's Creed Shadows.",
+  "why_ja": "時代劇の撮影所を兼ねた江戸の街並みのテーマパークで、2026年3月にリニューアルし、忍者や侍の体験と夜の営業が加わりました。『バガボンド』『どろろ』『アサシン クリード シャドウズ』とつながります。",
+  "tip_en": "Dates to confirm: I could not read the October 2026 calendar or closed days. Press reports say kimono rental and night hours are part of the renewal, which suits a couple.",
+  "tip_ja": "要確認：2026年10月の営業日・休園日は確認できませんでした。報道ではリニューアルで着物レンタルと夜間営業が加わったとされ、ご夫婦向きです。",
+  "official_url": "https://en.eigamura.com/",
+  "maps_query": "Uzumasa Kyoto Village Toei Kyoto Studio Park, Ukyo-ku, Kyoto",
+  "lat": 35.0154,
+  "lng": 135.7078,
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/130706_Toei_Kyoto_Studio_Park_Kyoto_Japan02n.jpg/1280px-130706_Toei_Kyoto_Studio_Park_Kyoto_Japan02n.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:130706_Toei_Kyoto_Studio_Park_Kyoto_Japan02n.jpg",
+   "credit": "663highland, CC BY-SA 4.0"
+  },
+  "season_note": "Old park photo, pre-renewal.",
+  "verified": "Official site en.eigamura.com (200) and Kyoto tourism page confirm the name and address; renewal, night hours from press (TTG Asia, Japan Guide blog). October calendar NOT confirmed."
+ },
+ {
+  "city": "Kyoto",
+  "category": "nature",
+  "name_en": "Kurama-dera and Kurama Onsen (hike over the mountain to Kibune)",
+  "name_ja": "鞍馬寺・くらま温泉（貴船へ抜けるハイキング）",
+  "why_en": "A hike up through the forest to Kurama-dera, then a soak in Kurama Onsen's outdoor bath afterward. It fits hiking plus onsen as a couple, and the mountain trees color earlier than the city.",
+  "why_ja": "森の中を鞍馬寺まで歩き、その後くらま温泉の露天風呂に入れます。ハイキングと温泉をご夫婦で楽しめ、山は市街地より早く紅葉が始まります。",
+  "tip_en": "Kurama Onsen day bath is open 10:00-21:00 and needs no reservation. The temple's main hall is open 9:00-16:15 and the cable car runs until about 16:25, so start by early afternoon. Both hotel and temple say to check the day's status.",
+  "tip_ja": "くらま温泉の日帰り入浴は10:00〜21:00で予約不要です。鞍馬寺の本殿は9:00〜16:15、ケーブルカーは16:25頃までなので、午後早めに出発してください。",
+  "official_url": "https://kurama-spa.com/",
+  "maps_query": "Kurama Onsen, Sakyo-ku, Kyoto",
+  "lat": 35.1229,
+  "lng": 135.7746,
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Kurama-Dera_%28Kyoto_Sakyo-ku%29_Temple_hdsr_S5_17.jpg/1280px-Kurama-Dera_%28Kyoto_Sakyo-ku%29_Temple_hdsr_S5_17.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Kurama-Dera_(Kyoto_Sakyo-ku)_Temple_hdsr_S5_17.jpg",
+   "credit": "Hyppolyte de Saint-Rambert, CC BY 4.0"
+  },
+  "season_note": "Colors: Kyoto's red maples are forecast late (around Dec 11 for the city), but Kurama and Takao mountain areas are listed as Oct 25 to Nov 15, so late October is early color at best, not peak. Do not promise leaves.",
+  "verified": "Opened kurama-spa.com (200, via fetch) and kuramadera.or.jp (200): hours, tattoo-friendly, no reservation. Foliage from japan-guide-based search results, not an official forecast page."
+ },
+ {
+  "city": "Kyoto",
+  "category": "nature",
+  "name_en": "Fushimi Inari Taisha at dawn",
+  "name_ja": "伏見稲荷大社（早朝）",
+  "why_en": "The thousands of torii gates on the mountain path are quietest early in the morning. It is easy walking or a longer hike up the mountain.",
+  "why_ja": "山道に続く千本鳥居は早朝が一番静かです。軽い散策も、山頂までの本格的なハイキングもできます。",
+  "tip_en": "The grounds are open at all hours according to secondary sources, but the shrine office is only staffed from about 8:30. Going before 7:30 avoids most crowds.",
+  "tip_ja": "参道は終日入れるとされていますが、社務所は8時半頃からです。7時半前に行くと混雑をほぼ避けられます。",
+  "official_url": "https://inari.jp/en/",
+  "maps_query": "Fushimi Inari Taisha, Fushimi-ku, Kyoto",
+  "lat": 34.9671,
+  "lng": 135.7727,
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Double_torii_path_at_Fushimi_Inari_Taisha_Shrine%2C_Kyoto%2C_Japan.jpg/1280px-Double_torii_path_at_Fushimi_Inari_Taisha_Shrine%2C_Kyoto%2C_Japan.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Double_torii_path_at_Fushimi_Inari_Taisha_Shrine,_Kyoto,_Japan.jpg",
+   "credit": "Basile Morin, CC BY-SA 4.0"
+  },
+  "season_note": "Foliage not the draw in late October.",
+  "verified": "Opened official site (200), address confirmed; 24-hour access is from japan-guide/other search results, not the official page."
+ },
+ {
+  "city": "Kyoto",
+  "category": "anime",
+  "name_en": "Hachidai Shrine and the Ichijoji Sagarimatsu pine (Miyamoto Musashi)",
+  "name_ja": "八大神社（一乗寺下り松）",
+  "why_en": "The shrine grounds are where tradition places Musashi's duel with the Yoshioka school, the arc you know from Vagabond. A small quiet shrine and a pine marker.",
+  "why_ja": "宮本武蔵が吉岡一門と決闘したと伝わる場所で、『バガボンド』の吉岡編でおなじみの舞台です。小さく静かな神社に下り松が祀られています。",
+  "tip_en": "The duel is tradition and fiction, not proven history. The second Yoshioka duel is said to be at Sanjusangendo (official site: https://www.sanjusangendo.jp/), which is also worth a visit. Shrine hours about 9:00-17:00 (from a third-party listing, to confirm).",
+  "tip_ja": "決闘は伝承と創作で、史実として確定してはいません。吉岡との二度目の決闘は三十三間堂とされ（公式：https://www.sanjusangendo.jp/）、そちらも見どころです。神社の時間は9〜17時頃（外部情報のため要確認）です。",
+  "official_url": "https://www.hatidai-jinja.com",
+  "maps_query": "Hachidai Shrine, Ichijoji, Sakyo-ku, Kyoto",
+  "lat": 35.0461,
+  "lng": 135.7967,
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/IchijojiSagarimatsuKyoto.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:IchijojiSagarimatsuKyoto.jpg",
+   "credit": "Fg2 (English Wikipedia), Public domain"
+  },
+  "season_note": "Northeast Kyoto, quiet; near Shisendo which has early color.",
+  "verified": "Opened official site hatidai-jinja.com (200, title Hachidai Jinja); Sanjusangendo site opened (200). Duel story from Wikipedia-type sources; Sanjusangendo duel is legend."
+ },
+ {
+  "city": "Himeji (from Osaka)",
+  "category": "culture",
+  "name_en": "Himeji Castle",
+  "name_ja": "姫路城",
+  "why_en": "Japan's best-preserved castle, and a map location that press covered for Assassin's Creed Shadows. You can climb the same keep you may have run across in the game.",
+  "why_ja": "日本で最も保存状態の良い城のひとつで、『アサシン クリード シャドウズ』の舞台として報道された場所です。ゲームで走った城を実際に登れます。",
+  "tip_en": "Open 9:00-17:00 (entry until 16:00) and no closures listed for Oct 2026. About an hour from Osaka by train. Press reports (MobileSyrup after a Ubisoft-organized trip) say the game recreates it; Ubisoft's own pages I could open did not name Himeji, only Iga and the Kyoto region.",
+  "tip_ja": "9:00〜17:00（入城16:00まで）で、2026年10月に休城日の掲載はありません。大阪から電車で約1時間です。ゲーム内の再現はUbisoft主催の取材旅行後の報道によるもので、Ubisoft公式で開けたページに姫路城の名前は見つかりませんでした。",
+  "official_url": "https://www.himejicastle.jp/en/",
+  "maps_query": "Himeji Castle, Honmachi, Himeji, Hyogo",
+  "lat": 34.8394,
+  "lng": 134.6939,
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Himeji_Castle%2C_Hy%C5%8Dgo_Prefecture%3B_August_2018_%2807%29.jpg/1280px-Himeji_Castle%2C_Hy%C5%8Dgo_Prefecture%3B_August_2018_%2807%29.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Himeji_Castle,_Hy%C5%8Dgo_Prefecture%3B_August_2018_(07).jpg",
+   "credit": "_steffen, CC BY-SA 2.0"
+  },
+  "season_note": "Autumn color on the grounds is limited in late October.",
+  "verified": "Opened official site and read hours/closures; AC Shadows link from MobileSyrup press only (article text), not Ubisoft official."
+ },
+ {
+  "city": "Kyoto (Arashiyama)",
+  "category": "food",
+  "name_en": "Arashiyama Yoshimura (soba)",
+  "name_ja": "嵐山よしむら",
+  "why_en": "Hand-made soba from buckwheat ground in-house, next to the Togetsukyo bridge in Arashiyama. A good stop for a soba lover.",
+  "why_ja": "店内で石臼挽きしたそば粉で打つ手打ちそばの店で、嵐山の渡月橋のそばにあります。そば好きに向いています。",
+  "tip_en": "Listed hours are about 11:00-16:00, later on weekends and in the tourist season; the group says it is open all year. Expect a wait at midday. Honke Owariya (a famous old soba shop) closed in January 2026, so do not plan for it.",
+  "tip_ja": "営業は11:00〜16:00頃で、土日や観光シーズンは長くなります。グループは年中無休としています。昼は待ちが出ます。老舗の本家尾張屋は2026年1月に休業したため、予定に入れないでください。",
+  "official_url": "https://yoshimura-gr.com/arashiyama/",
+  "maps_query": "Arashiyama Yoshimura, Sagatenryuji Susukinobabacho, Ukyo-ku, Kyoto",
+  "lat": 35.0128,
+  "lng": 135.6774,
+  "photo": null,
+  "season_note": "Pair with a walk on Togetsukyo; Arashiyama color usually peaks in November.",
+  "verified": "Opened official site (200): open all year, hand-milled buckwheat. Hours from a search snippet. No Commons photo of the shop itself, so null."
+ },
+ {
+  "city": "Kyoto (Kameoka)",
+  "category": "couple",
+  "name_en": "Hozugawa River Boat Ride",
+  "name_ja": "保津川下り",
+  "why_en": "A two-hour boat trip down a river gorge in a traditional boat, with a boatman. A calm outdoor activity for two, and the hills may show some early color.",
+  "why_ja": "伝統的な舟で渓谷を約2時間かけて下る、船頭付きの舟下りです。ご夫婦で静かに自然を楽しめ、山側は早い紅葉が見られるかもしれません。",
+  "tip_en": "Runs Mar 10 to Dec 13, 2026, boats hourly 9:00-15:00. It can be cancelled for rain or high water, so check the operation status on the day. The two-hour length is general knowledge, not read on the page.",
+  "tip_ja": "2026年3月10日〜12月13日の運航で、9:00〜15:00に毎時出発します。雨や増水で運休になるため、当日の運航状況を確認してください。所要約2時間は一般情報で、公式ページでは未確認です。",
+  "official_url": "https://www.hozugawakudari.jp/",
+  "maps_query": "Hozugawa Kudari boarding, Kameoka, Kyoto",
+  "lat": 35.0206,
+  "lng": 135.5833,
+  "photo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Hozugawa-Kudari_201126a.jpg/1280px-Hozugawa-Kudari_201126a.jpg",
+   "commons_page": "https://commons.wikimedia.org/wiki/File:Hozugawa-Kudari_201126a.jpg",
+   "credit": "江戸村のとくぞう, CC BY-SA 4.0"
+  },
+  "season_note": "Operating period covers Oct 23-26; late-Oct color is early.",
+  "verified": "Opened official site hozugawakudari.jp (200): 2026 schedule Mar 10 - Dec 13 in news; hours from search result."
+ }
+]
