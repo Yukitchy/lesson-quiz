@@ -61,11 +61,11 @@ def card(it, n):
     tip = f'<p class="tip">{bi(it.get("tip_en"), it.get("tip_ja"))}</p>' if it.get("tip_en") else ""
     maplink = f'<a class="maplink" href="{e(gmaps(it))}" target="_blank" rel="noopener">{bi("Map", "地図")}</a>'
     official = f'<a href="{e(it["official_url"])}" target="_blank" rel="noopener">{bi("Official site", "公式サイト")}</a>' if it.get("official_url") else ""
-    return f'''<details class="card c-{e(it.get("category"))}" data-n="{n}">
-<summary><span class="num inline">{n}</span><span class="head"><span class="cat">{bi(cat_en, cat_ja)}</span>
-<span class="name">{e(it["name_en"].split(" (")[0])}</span><small>{e(("(" + it["name_en"].split(" (",1)[1]) if " (" in it["name_en"] else "")}</small><small lang="ja">{e(it.get("name_ja"))}</small></span>{maplink}<span class="chev" aria-hidden="true"></span></summary>
+    return f'''<div class="card c-{e(it.get("category"))}" data-n="{n}">
+<div class="summary"><span class="num inline">{n}</span><span class="head"><span class="cat">{bi(cat_en, cat_ja)}</span>
+<span class="name">{e(it["name_en"].split(" (")[0])}</span><small>{e(("(" + it["name_en"].split(" (",1)[1]) if " (" in it["name_en"] else "")}</small><small lang="ja">{e(it.get("name_ja"))}</small></span>{maplink}</div>
 {img}<div class="body"><p class="why">{bi(it.get("why_en"), it.get("why_ja"))}</p>{tip}
-<div class="links">{official}</div></div></details>'''
+<div class="links">{official}</div></div></div>'''
 
 
 sections, markers, credits = [], [], []
@@ -83,10 +83,11 @@ for key, en, ja, lat, lng in ROUTE:
         if ph.get("url"):
             credits.append(f'<li>{e(it["name_en"])}: <a href="{e(ph.get("commons_page"))}" target="_blank" rel="noopener">{e(ph.get("credit") or "Wikimedia Commons")}</a></li>')
     extra = ""
-    sections.append(f'''<section class="city" id="{key}">
-<header><p class="step">{ROUTE.index((key, en, ja, lat, lng)) + 1:02d}</p><h2>{en} <span class="sub" lang="ja">{ja}</span></h2></header>
+    sections.append(f'''<details class="citywrap" open>
+<summary class="cityhead"><p class="step">{ROUTE.index((key, en, ja, lat, lng)) + 1:02d}</p><h2>{en} <span class="sub" lang="ja">{ja}</span></h2><span class="chev" aria-hidden="true"></span></summary>
+<section class="city" id="{key}">
 <div class="citymap" data-pts='{e(json.dumps(pts))}'></div>
-<div class="grid">{"".join(cards)}</div>{extra}</section>''')
+<div class="grid">{"".join(cards)}</div>{extra}</section></details>''')
     markers.append([lat, lng, en, key])
 
 exec((D / 'extras.py').read_text())
@@ -133,17 +134,19 @@ a{{color:inherit}}
 .city h2 .sub{{font:500 .5em "Noto Sans JP";color:var(--sub);margin-left:6px}}
 .citymap{{height:260px;border-radius:12px;margin:20px 0;border:1px solid var(--line)}}
 .grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px;align-items:start}}
+.citywrap{{border:none;padding:0;margin:0}}
+.citywrap summary{{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:0 0 20px 0;border:none;background:none}}
+.cityhead{{font:inherit;color:inherit}}
+.cityhead .chev{{width:10px;height:10px;border-right:2px solid var(--sub);border-bottom:2px solid var(--sub);transform:rotate(-45deg);margin-left:auto;margin-right:0;margin-bottom:0}}
+.citywrap[open] .cityhead .chev{{transform:rotate(-135deg)}}
 .card{{background:var(--card);border-radius:14px;overflow:hidden;border:1px solid var(--line)}}
-.card summary{{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:14px 16px}}
-.card summary::-webkit-details-marker{{display:none}}
+.card .summary{{display:flex;align-items:center;gap:12px;padding:14px 16px}}
 .card .head{{flex:1;min-width:0;display:flex;flex-direction:column}}
 .card .name{{font:700 18px/1.25 Fraunces,serif}}
 .card .head small{{font:500 12px "Noto Sans JP";color:var(--sub)}}
 .card .head .cat{{font-size:11px}}
 .maplink{{flex:none;font:600 13px Inter,"Noto Sans JP";color:var(--red);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:6px 12px}}
-.chev{{flex:none;width:10px;height:10px;border-right:2px solid var(--sub);border-bottom:2px solid var(--sub);transform:rotate(45deg);margin:0 4px 4px}}
-.card[open] .chev{{transform:rotate(-135deg);margin-bottom:-4px}}
-.card[open]{{box-shadow:0 6px 20px rgba(0,0,0,.08)}}
+.card{{box-shadow:0 2px 8px rgba(0,0,0,.04)}}
 .card.flash{{outline:2px solid var(--red)}}
 .ph{{position:relative;aspect-ratio:3/2;background:#e9e4da}}
 .ph img{{width:100%;height:100%;object-fit:cover;display:block}}
