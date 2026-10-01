@@ -135,10 +135,12 @@ a{{color:inherit}}
 .citymap{{height:260px;border-radius:12px;margin:20px 0;border:1px solid var(--line)}}
 .grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px;align-items:start}}
 .citywrap{{border:none;padding:0;margin:0}}
-.citywrap summary{{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:0 0 20px 0;border:none;background:none}}
+.citywrap summary{{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:0 0 0 0;border:none;background:none}}
 .cityhead{{font:inherit;color:inherit}}
 .cityhead .chev{{width:10px;height:10px;border-right:2px solid var(--sub);border-bottom:2px solid var(--sub);transform:rotate(-45deg);margin-left:auto;margin-right:0;margin-bottom:0}}
 .citywrap[open] .cityhead .chev{{transform:rotate(-135deg)}}
+.citywrap:not([open]) .city{{padding:20px 0}}
+.citywrap:not([open]) .grid{{display:none}}
 .card{{background:var(--card);border-radius:14px;overflow:hidden;border:1px solid var(--line)}}
 .card .summary{{display:flex;align-items:center;gap:12px;padding:14px 16px}}
 .card .head{{flex:1;min-width:0;display:flex;flex-direction:column}}
