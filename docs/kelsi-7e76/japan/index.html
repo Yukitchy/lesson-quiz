@@ -44,7 +44,8 @@ a{color:inherit}
 .cityhead{font:inherit;color:inherit}
 .cityhead .chev{width:10px;height:10px;border-right:2px solid var(--sub);border-bottom:2px solid var(--sub);transform:rotate(-45deg);margin-left:auto;margin-right:0;margin-bottom:0}
 .citywrap[open] .cityhead .chev{transform:rotate(-135deg)}
-.citywrap:not([open]) .city{padding:20px 0}
+.citywrap:not([open]) .city{padding:0}
+.citywrap:not([open]) .citymap{display:none}
 .citywrap:not([open]) .grid{display:none}
 .card{background:var(--card);border-radius:14px;overflow:hidden;border:1px solid var(--line)}
 .card .summary{display:flex;align-items:center;gap:12px;padding:14px 16px}
