@@ -37,7 +37,7 @@ def build():
                .replace("__STUDENT__", html.escape(student))
                .replace("__FLAG__", s["flag"])
                .replace("__BUILD__", build_stamp)
-               .replace("__DATA__", json.dumps(payload, ensure_ascii=False)))
+               .replace("__DATA__", json.dumps(payload, ensure_ascii=False).replace("</script", "<\\/script")))
         d = docs / s["slug"]
         d.mkdir(exist_ok=True)
         (d / "index.html").write_text(out)

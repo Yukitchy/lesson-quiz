@@ -284,10 +284,11 @@ function showResult() {
   document.getElementById("resScore").textContent = `${state.score} / ${state.qs.length}`;
   document.getElementById("resMsg").textContent =
     pct === 1 ? "Perfect! すごい！" : pct >= .8 ? "Great job! いいね！" : pct >= .5 ? "Nice — keep going! その調子！" : "Review time — がんばって！";
-  const prev = +(localStorage.getItem(bestKey(state.mode)) || 0);
+  const storedBest = localStorage.getItem(bestKey(state.mode));
+  const prev = storedBest ? storedBest.split("/").reduce((a, b) => a / b) : 0; // "N/M"文字列は+では数値化できずNaNになるため分数のまま計算
   const scoreStr = `${state.score}/${state.qs.length}`;
   let isBest = false;
-  if (state.score / state.qs.length >= prev) { localStorage.setItem(bestKey(state.mode), scoreStr); isBest = state.score > 0 && pct > prev; }
+  if (pct >= prev) { localStorage.setItem(bestKey(state.mode), scoreStr); isBest = state.score > 0 && pct > prev; }
   document.getElementById("resBest").innerHTML = isBest ? `<span class="newBest">New best score!</span>` : "";
   const has = state.wrong.length > 0;
   document.getElementById("reviewLabel").style.display = has ? "" : "none";
